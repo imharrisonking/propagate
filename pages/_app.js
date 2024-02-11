@@ -87,8 +87,10 @@ const robotoMono = localFont({
 
 export default function App({ Component, pageProps }) {
 	return (
-		<main className={`${maisonNeue.variable} ${robotoMono.variable}`}>
-			<Component {...pageProps} />
-		</main>
+		<html lang="en" className={`${maisonNeue.variable} ${robotoMono.variable}`}>
+			<main className="text-grey-500">
+				<Component {...pageProps} />
+			</main>
+		</html>
 	);
 }

@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
     @font-face {
         font-family: 'Maison Neue';
         font-weight: 100;
         src: url('/styles/fonts/maison-neue/MaisonNeue-Light.woff2') format('woff2'),
             url('/styles/fonts/maison-neue/MaisonNeue-Light.woff') format('woff');
     }
-}
+} */
