@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import LogoIcon from './LogoIcon';
 
-export default function Logo({ className }) {
+export default function Logo() {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
@@ -14,7 +14,7 @@ export default function Logo({ className }) {
 		>
 			<LogoIcon className={isHovered ? 'fill-grey-300' : 'fill-grey-500'} />
 			<span
-				className={`ml-3 font-sans font-semibold tracking-[0.07em] text-xl ${
+				className={`ml-3 font-semibold tracking-[0.07em] text-xl ${
 					isHovered ? 'text-grey-300' : ''
 				}`}
 			>

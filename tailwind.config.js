@@ -8,8 +8,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['var(--font-maison-neue)'],
-				mono: ['var(--font-roboto-mono)'],
+				sans: ['Maison Neue', 'sans-serif'],
+				mono: ['Roboto Mono', 'monospace'],
 			},
 		},
 		colors: {
