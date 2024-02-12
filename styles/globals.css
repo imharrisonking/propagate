@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-grey-300: #9D9D9D;
+    --color-grey-400: #676769;
+    --color-grey-500: #424242;
+    --color-grey-950: #1C1C1C;
+    --color-green-300: #A1FFCD;
+    --color-green-700: #478978;
+}
+
 html {
     font-size: 14px;
 }
@@ -9,6 +20,40 @@ html {
     html {
         font-size: 16px;
     }
+}
+
+nav {
+    @apply pr-10
+}
+
+.nav-item {
+    position: relative;
+    transition-behavior: normal;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+    display: inline-block;
+}
+
+.nav-item::after {
+    content: ' ';
+    position: absolute;
+    width: 2.5rem;
+    top: 50%;
+    height: 1px;
+    background: var(--color-grey-500);
+    transform: translate3d(101%,0,0);
+    transition-behavior: normal;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: transform;
+
+}
+
+.nav-item:hover::after {
+    transform: translate3d(0,0,0);
 }
 
 @layer base {
@@ -151,6 +196,32 @@ html {
     }
 
     h1 {
-        @apply text-xl
+        @apply text-9xl
     }
+
+    h2 {
+        @apply text-8xl
+    }
+
+    h3 {
+        @apply text-7xl
+    }
+
+    h4 {
+        @apply text-6xl
+    }
+
+    h5 {
+        @apply text-4xl
+    }
+
+    h6 {
+        @apply text-2xl
+    }
+
+    p {
+        @apply text-base
+    }
+
+
 }

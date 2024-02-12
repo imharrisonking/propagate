@@ -14,7 +14,7 @@ export default function Logo() {
 		>
 			<LogoIcon className={isHovered ? 'fill-grey-300' : 'fill-grey-500'} />
 			<span
-				className={`ml-3 font-semibold tracking-[0.07em] text-xl ${
+				className={`ml-3 font-semibold tracking-[0.07em] text-2xl ${
 					isHovered ? 'text-grey-300' : ''
 				}`}
 			>
