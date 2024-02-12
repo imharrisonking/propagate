@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    font-size: 14px;
+}
+@media (min-width: 640px) {
+    html {
+        font-size: 16px;
+    }
+}
+
 @layer base {
     /* Maison Neue Light */
     @font-face {
@@ -127,5 +136,21 @@
         font-weight: 700;
         font-display: optional;
         src: url('../styles/fonts/roboto-mono/RobotoMono-BoldItalic.ttf') format('truetype');
+    }
+
+    html, body {
+        @apply font-sans text-grey-500 m-0
+    }
+
+    * {
+        @apply box-border
+    }
+
+    body {
+        @apply text-base
+    }
+
+    h1 {
+        @apply text-xl
     }
 }
