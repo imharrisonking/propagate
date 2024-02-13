@@ -6,18 +6,9 @@ export default function Logo() {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
-		<Link
-			href="/"
-			className="flex items-center"
-			onMouseEnter={() => setIsHovered(true)}
-			onMouseLeave={() => setIsHovered(false)}
-		>
-			<LogoIcon className={isHovered ? 'fill-grey-300' : 'fill-grey-500'} />
-			<span
-				className={`ml-3 font-semibold tracking-[0.07em] text-xl ${
-					isHovered ? 'text-grey-300' : ''
-				}`}
-			>
+		<Link href="/" className="flex items-center align-top">
+			<LogoIcon className="fill-grey-500" />
+			<span className="ml-3 font-semibold tracking-[0.07em] text-xl leading-none">
 				Propagate
 			</span>
 		</Link>

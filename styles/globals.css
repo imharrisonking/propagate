@@ -29,7 +29,6 @@ html {
     transition-timing-function: ease;
     transition-delay: 0s;
     transition-property: all;
-    display: inline-block;
 }
 
 .nav-item::after {
@@ -181,11 +180,7 @@ html {
     }
 
     html, body {
-        @apply font-sans text-grey-500 m-0
-    }
-
-    * {
-        @apply box-border
+        @apply font-sans text-grey-500 m-0 w-full overflow-x-hidden
     }
 
     body {
