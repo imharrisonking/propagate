@@ -1,15 +1,19 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Logo from './Logo';
+import Hamburger from './Hamburger';
 
 export default function Header() {
+	const [menuOpen, setMenuOpened] = useState(false);
 	const pathname = usePathname();
 
 	return (
-		<header className="flex justify-between items-start mt-12 ml-10">
+		<header className="flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 p-4">
 			<Logo />
-			<nav className="text-end pr-10">
+			{/* Navigation menu for larger screens */}
+			<nav className="hidden md:block text-end pr-10">
 				<ul className="flex flex-col leading-none gap-4">
 					<li>
 						<Link
@@ -43,6 +47,15 @@ export default function Header() {
 					</li>
 				</ul>
 			</nav>
+			{/* Hamburger menu for small screens */}
+			<div className="md:hidden flex justify-center">
+				<button
+					aria-label="Open Navigation Menu"
+					onClick={() => setMenuOpened((prevState) => !prevState)}
+				>
+					<Hamburger active={menuOpen} className={'stroke-grey-500'} />
+				</button>
+			</div>
 		</header>
 	);
 }
