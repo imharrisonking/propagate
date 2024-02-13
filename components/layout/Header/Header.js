@@ -10,7 +10,6 @@ export default function Header() {
 		<header className="flex justify-between items-start mt-12 ml-10">
 			<Logo />
 			<nav className="text-end pr-10">
-				{/* <ul className="leading-none gap-5"> */}
 				<ul className="flex flex-col leading-none gap-4">
 					<li>
 						<Link
