@@ -9,8 +9,8 @@ export default function Header() {
 	return (
 		<header className="flex justify-between items-start mt-12 ml-10">
 			<Logo />
-			<nav className="text-end">
-				<ul>
+			<nav className="text-end pr-10">
+				<ul className="">
 					<li>
 						<Link
 							href="/community"
@@ -19,16 +19,6 @@ export default function Header() {
 							}`}
 						>
 							Community
-						</Link>
-					</li>
-					<li>
-						<Link
-							href="/about"
-							className={`nav-item hover:text-grey-300 ${
-								pathname === '/about' ? 'active' : ''
-							}`}
-						>
-							About
 						</Link>
 					</li>
 					<li>
