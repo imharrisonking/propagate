@@ -6,7 +6,7 @@ export default function Hamburger({ active, className }) {
 			<svg
 				id="close-menu-svg"
 				xmlns="http://www.w3.org/2000/svg"
-				className={twMerge('w-6 h-6', className)}
+				className={twMerge('w-7 h-7', className)}
 				fill="none"
 				viewBox="0 0 24 24"
 			>
@@ -18,7 +18,7 @@ export default function Hamburger({ active, className }) {
 			<svg
 				id="open-menu-svg"
 				xmlns="http://www.w3.org/2000/svg"
-				className={twMerge('w-6 h-6', className)}
+				className={twMerge('w-7 h-7', className)}
 				fill="none"
 				viewBox="0 0 24 24"
 			>

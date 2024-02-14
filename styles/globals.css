@@ -16,6 +16,11 @@
 html {
     font-size: 14px;
 }
+@media (min-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
 @media (min-width: 640px) {
     html {
         font-size: 16px;
@@ -143,11 +148,29 @@ html {
         src: url('../styles/fonts/roboto-mono/RobotoMono-LightItalic.ttf') format('truetype');
     }
 
-    /* Roboto Mono Medium */
+    /* Roboto Mono Regular */
     @font-face {
         font-family: 'Roboto Mono';
         font-style: normal;
         font-weight: 400;
+        font-display: optional;
+        src: url('../styles/fonts/roboto-mono/RobotoMono-Regular.ttf') format('truetype');
+    }
+
+    /* Roboto Mono Regular Italic */
+    @font-face {
+        font-family: 'Roboto Mono';
+        font-style: italic;
+        font-weight: 400;
+        font-display: optional;
+        src: url('../styles/fonts/roboto-mono/RobotoMono-Italic.ttf') format('truetype');
+    }
+
+    /* Roboto Mono Medium */
+    @font-face {
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-weight: 500;
         font-display: optional;
         src: url('../styles/fonts/roboto-mono/RobotoMono-Medium.ttf') format('truetype');
     }
@@ -156,7 +179,7 @@ html {
     @font-face {
         font-family: 'Roboto Mono';
         font-style: italic;
-        font-weight: 400;
+        font-weight: 500;
         font-display: optional;
         src: url('../styles/fonts/roboto-mono/RobotoMono-MediumItalic.ttf') format('truetype');
     }
@@ -213,6 +236,10 @@ html {
 
     p {
         @apply text-base
+    }
+
+    button {
+        @apply font-mono
     }
 
 

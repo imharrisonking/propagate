@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import Logo from './Logo';
 import Hamburger from './Hamburger';
 
@@ -10,7 +9,7 @@ export default function Header() {
 	const pathname = usePathname();
 
 	return (
-		<header className="flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 p-4">
+		<header className="flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
 			<Logo />
 			{/* Navigation menu for larger screens */}
 			<nav className="hidden md:block text-end pr-10">
@@ -48,8 +47,18 @@ export default function Header() {
 				</ul>
 			</nav>
 			{/* Hamburger menu for small screens */}
-			<div className="md:hidden flex justify-center">
+			<div className="md:hidden flex">
+				{/* Book a call button */}
+				<button>
+					<Link
+						href="/book"
+						className="text-white bg-grey-500 sm:text-xs text-sm px-4 py-2 rounded-lg"
+					>
+						BOOK A CALL
+					</Link>
+				</button>
 				<button
+					className="min-w-16 min-h-20 flex items-center justify-center"
 					aria-label="Open Navigation Menu"
 					onClick={() => setMenuOpened((prevState) => !prevState)}
 				>
