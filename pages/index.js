@@ -10,7 +10,7 @@ export default function Home() {
 			<GridContainer>
 				<Grid>
 					<Cell cols={13}>
-						<header className="text-5xl">
+						<header className="text-6xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl">
 							Spread your knowledge, scale your impact.
 						</header>
 					</Cell>

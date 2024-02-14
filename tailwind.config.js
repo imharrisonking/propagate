@@ -32,6 +32,14 @@ module.exports = {
 				'12xl': [base(6.5), { lineHeight: base(8.5) }], // 130px, 170px
 				'13xl': [base(17.5), { lineHeight: base(22.5) }], // 350px, 450px
 			},
+			maxWidth: {
+				'screen-xs': '350px',
+				'screen-sm': '600px',
+				'screen-md': '600px',
+				'screen-lg': '830px',
+				'screen-xl': '1080px',
+				'screen-2xl': '1280px',
+			},
 		},
 		colors: {
 			transparent: 'transparent',

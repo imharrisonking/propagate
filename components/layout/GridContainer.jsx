@@ -1,10 +1,13 @@
 import React from 'react';
-import { gridContainerWidth } from '../../styles/css/structure';
+import { gridOverflow } from '../../styles/css/structure';
 import { twMerge } from 'tailwind-merge';
 
 export default function GridContainer({ children }) {
-	const containerWidth = `max-w-[${gridContainerWidth}px]`;
-
-	return <div className={twMerge('my-auto mx-auto', containerWidth)}>{children}</div>;
-	// return <div className={`max-w-screen-xl my-auto mx-auto`}>{children}</div>;
+	return (
+		<div
+			className={`max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl my-auto mx-auto`}
+		>
+			{children}
+		</div>
+	);
 }
