@@ -29,7 +29,7 @@ export default function Home() {
 								businesses.
 							</h5>
 						</Cell>
-						<Cell cols={4}>
+						<Cell cols={14} className="flex justify-center md:justify-start">
 							<button>
 								<Link
 									href="/demo"
