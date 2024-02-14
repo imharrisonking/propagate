@@ -1,8 +1,10 @@
 import Layout from '@/components/layout/Layout';
 import Header from '@/components/layout/Header/Header';
-import { Grid, Cell } from '@faceless-ui/css-grid';
-import GridContainer from '@/components/layout/GridContainer';
 import Footer from '@/components/layout/Footer/Footer';
+import GridContainer from '@/components/layout/GridContainer';
+import Button from '@/components/buttons/Button';
+
+import { Grid, Cell } from '@faceless-ui/css-grid';
 import Link from 'next/link';
 
 export default function Home() {
@@ -30,14 +32,9 @@ export default function Home() {
 							</h5>
 						</Cell>
 						<Cell cols={14} className="flex justify-center md:justify-start">
-							<button>
-								<Link
-									href="/demo"
-									className="text-grey-500 bg-green-300 px-4 py-3 rounded-xl"
-								>
-									Watch the demo—it&apos;s free
-								</Link>
-							</button>
+							<Link href="/demo">
+								<Button theme="light">Watch the demo—it&apos;s free</Button>
+							</Link>
 						</Cell>
 					</Grid>
 				</div>

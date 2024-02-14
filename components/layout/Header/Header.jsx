@@ -70,7 +70,10 @@ export default function Header() {
 			<div className="md:hidden flex">
 				{/* Book a call button */}
 				<button>
-					<Link href="/book" className="bg-green-300 text-xs px-4 py-2 rounded-lg">
+					<Link
+						href="/book"
+						className="bg-green-300 text-grey-500 text-xs px-4 py-2 rounded-lg"
+					>
 						Free demo
 					</Link>
 				</button>
