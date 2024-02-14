@@ -14,8 +14,8 @@ export default function Home() {
 					<Grid>
 						<Cell cols={13}>
 							<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl">
-								Spread your knowledge, scale{' '}
-								<span className="highlight-dark-text">your impact.</span>
+								Spread your knowledge, scale
+								<span className="highlight-dark-text"> your impact.</span>
 							</h1>
 						</Cell>
 					</Grid>
@@ -35,7 +35,7 @@ export default function Home() {
 									href="/demo"
 									className="text-grey-500 bg-green-300 px-4 py-3 rounded-xl"
 								>
-									Watch the demo—it's free
+									Watch the demo—it&apos;s free
 								</Link>
 							</button>
 						</Cell>
