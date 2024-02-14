@@ -12,8 +12,18 @@ export default function Header() {
 		<header className="flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
 			<Logo />
 			{/* Navigation menu for larger screens */}
-			<nav className="hidden md:block text-end pr-10">
+			<nav className="hidden md:block text-base text-end pr-10">
 				<ul className="flex flex-col leading-none gap-4">
+					<li>
+						<Link
+							href="/testimonials"
+							className={`nav-item hover:text-grey-300 ${
+								pathname === '/testimonials' ? 'active' : ''
+							}`}
+						>
+							Testimonials
+						</Link>
+					</li>
 					<li>
 						<Link
 							href="/community"
@@ -22,6 +32,16 @@ export default function Header() {
 							}`}
 						>
 							Community
+						</Link>
+					</li>
+					<li>
+						<Link
+							href="/blog"
+							className={`nav-item hover:text-grey-300 ${
+								pathname === '/blog' ? 'active' : ''
+							}`}
+						>
+							Blog
 						</Link>
 					</li>
 					<li>
@@ -50,11 +70,8 @@ export default function Header() {
 			<div className="md:hidden flex">
 				{/* Book a call button */}
 				<button>
-					<Link
-						href="/book"
-						className="text-white bg-grey-500 sm:text-xs text-sm px-4 py-2 rounded-lg"
-					>
-						BOOK A CALL
+					<Link href="/book" className="bg-green-300 text-xs px-4 py-2 rounded-lg">
+						Free demo
 					</Link>
 				</button>
 				<button

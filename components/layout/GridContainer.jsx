@@ -1,6 +1,5 @@
 import React from 'react';
 import { gridOverflow } from '../../styles/css/structure';
-import { twMerge } from 'tailwind-merge';
 
 export default function GridContainer({ children }) {
 	return (

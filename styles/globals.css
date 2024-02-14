@@ -11,10 +11,13 @@
     --color-grey-950: #1C1C1C;
     --color-green-300: #A1FFCD;
     --color-green-700: #478978;
+    --highlight-z-index: -10;
+    --page-z-index: 20;
 }
 
 html {
     font-size: 14px;
+    z-index: var(--page-z-index);
 }
 @media (min-width: 768px) {
     html {
@@ -56,6 +59,50 @@ html {
 .nav-item:hover::after {
     transform: translate3d(0,0,0);
 }
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-grey-500);
+
+  }
+
+.outline-white-text {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-white);
+  }
+
+.highlight {
+    color: var(--color-green-700);
+    background: linear-gradient(0deg, var(--color-green-300) 50%, transparent 50%);
+}
+
+@keyframes heightAnimation {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 50%;
+    }
+  }
+
+  .highlight-dark-text {
+      color: var(--color-green-700);
+      position: relative;
+      display: inline-block; /* or inline-flex */
+  }
+
+  .highlight-dark-text::before {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      width: 100%; /* cover the full width of the parent */
+      height: 0; /* start from 0 height */
+      bottom: 0;
+      left: 0; /* start from the left edge of the parent */
+      background: var(--color-green-300);
+      z-index: var(--highlight-z-index);
+      animation: heightAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards; /* animate the height */
+  }
 
 @layer base {
     /* Maison Neue Light */
@@ -239,7 +286,7 @@ html {
     }
 
     button {
-        @apply font-mono
+        @apply text-base font-semibold
     }
 
 
