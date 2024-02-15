@@ -82,7 +82,7 @@ export default function Header() {
 					aria-label="Open Navigation Menu"
 					onClick={() => setMenuOpened((prevState) => !prevState)}
 				>
-					<Hamburger active={menuOpen} className={'stroke-grey-500'} />
+					<Hamburger active={menuOpen} theme={'light'} />
 				</button>
 			</div>
 		</header>
