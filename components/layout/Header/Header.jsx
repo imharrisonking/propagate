@@ -15,13 +15,13 @@ export default function Header() {
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
 
-	// Get scroll position
+	// Get scroll position to determine if the header
 	const { y, yPercentage } = useScrollInfo();
-	console.log(y, yPercentage);
+	const headerExpanded = y === 0 || yPercentage >= 100;
 
 	return (
 		<header className="sticky top-0 md:top-12 flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
-			<Logo />
+			<Logo headerExpanded={headerExpanded} />
 			{/* Navigation menu for larger screens */}
 			<nav className="hidden md:overflow-x-hidden md:block text-base text-end pr-10">
 				<ul className="flex flex-col leading-none gap-4">

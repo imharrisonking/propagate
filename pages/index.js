@@ -15,7 +15,7 @@ export default function Home() {
 						<Grid>
 							<Cell cols={13}>
 								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl">
-									Spread your knowledge, scale
+									Share your knowledge, scale
 									<span className="highlight-dark-text"> your impact.</span>
 								</h1>
 							</Cell>
@@ -26,8 +26,8 @@ export default function Home() {
 							<Cell cols={11}>
 								<h5>
 									Propagate is the growth partner for health and fitness
-									professionals, turning expertise into impactful online education
-									businesses.
+									professionals and content creators, turning expertise into
+									impactful online education businesses.
 								</h5>
 							</Cell>
 							<Cell cols={14} className="flex justify-center md:justify-start">

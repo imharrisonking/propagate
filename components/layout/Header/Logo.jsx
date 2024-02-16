@@ -1,15 +1,45 @@
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useScrollInfo } from '@faceless-ui/scroll-info';
-
 import LogoIcon from '../../graphics/LogoIcon';
 
-export default function Logo() {
+export default function Logo({ headerExpanded: propHeaderExpanded }) {
+	const [headerExpanded, setHeaderExpanded] = useState(propHeaderExpanded);
+	const [isHovered, setIsHovered] = useState(false);
+
+	useEffect(() => {
+		setHeaderExpanded(propHeaderExpanded || isHovered);
+	}, [propHeaderExpanded, isHovered]);
+
+	const handleMouseEnter = () => {
+		setIsHovered(true);
+	};
+
+	const handleMouseLeave = () => {
+		setIsHovered(false);
+	};
+
+	const transitionStyles = {
+		transition: 'transform 500ms ease 0s, opacity 500ms ease 0s',
+		transform: headerExpanded ? 'translateX(0)' : 'translateX(-100%)',
+		opacity: headerExpanded ? 1 : 0,
+	};
+
 	return (
-		<Link href="/" className="flex items-center align-top">
-			<LogoIcon className="fill-grey-500" />
-			<span className="ml-3 font-semibold tracking-[0.07em] text-2xl leading-none">
-				Propagate
-			</span>
+		<Link
+			href="/"
+			className="overflow-hidden flex items-center align-top"
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+		>
+			<LogoIcon className="fill-grey-500 relative z-10" />
+			<div className="ml-3 overflow-hidden flex items-center align-top">
+				<span
+					style={transitionStyles}
+					className="font-semibold text-2xl leading-none tracking-[0.07em]"
+				>
+					Propagate
+				</span>
+			</div>
 		</Link>
 	);
 }
