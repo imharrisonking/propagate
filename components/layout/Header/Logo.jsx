@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useScrollInfo } from '@faceless-ui/scroll-info';
+
 import LogoIcon from '../../graphics/LogoIcon';
 
 export default function Logo() {

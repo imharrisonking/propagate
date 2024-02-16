@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Modal, ModalToggler, useModal } from '@faceless-ui/modal';
+import { Modal, useModal } from '@faceless-ui/modal';
+import { useScrollInfo } from '@faceless-ui/scroll-info';
 
 import Logo from './Logo';
 import Hamburger from './Hamburger';
@@ -14,13 +15,15 @@ export default function Header() {
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
 
-	console.log('menuActive', menuActive);
+	// Get scroll position
+	const { y, yPercentage } = useScrollInfo();
+	console.log(y, yPercentage);
 
 	return (
-		<header className="flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
+		<header className="sticky top-0 md:top-12 flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
 			<Logo />
 			{/* Navigation menu for larger screens */}
-			<nav className="hidden md:block text-base text-end pr-10">
+			<nav className="hidden md:overflow-x-hidden md:block text-base text-end pr-10">
 				<ul className="flex flex-col leading-none gap-4">
 					<li>
 						<Link
@@ -95,7 +98,6 @@ export default function Header() {
 				</button>
 			</div>
 			<Modal slug={menuSlug}></Modal>
-			{/* <ModalToggler slug={menuSlug}></ModalToggler> */}
 		</header>
 	);
 }
