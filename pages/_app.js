@@ -1,15 +1,16 @@
 import '@/styles/globals.css';
-import { ModalProvider } from '@faceless-ui/modal';
+import { ModalProvider, ModalContainer } from '@faceless-ui/modal';
 import { GridProvider } from '@faceless-ui/css-grid';
 import zindexes from '@/styles/css/zindexes';
 import { WindowInfoProvider } from '@faceless-ui/window-info';
 import breakpoints from '@/styles/css/breakpoints';
 import { base } from '@/styles/css/base';
+import Header from '@/components/layout/Header/Header';
 
 export default function App({ Component, pageProps }) {
 	return (
 		<WindowInfoProvider breakpoints={breakpoints}>
-			<ModalProvider zIndex={zindexes.modal}>
+			<ModalProvider zIndex={zindexes.modal} transTime={400}>
 				<GridProvider
 					rowGap={{
 						s: base(2),
@@ -30,8 +31,10 @@ export default function App({ Component, pageProps }) {
 						xl: 14,
 					}}
 				>
+					<Header />
 					<Component {...pageProps} />
 				</GridProvider>
+				<ModalContainer />
 			</ModalProvider>
 		</WindowInfoProvider>
 	);

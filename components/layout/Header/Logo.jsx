@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import LogoIcon from './LogoIcon';
+import LogoIcon from '../../graphics/LogoIcon';
 
 export default function Logo() {
 	return (

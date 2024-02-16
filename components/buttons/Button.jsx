@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ButtonArrow from './ButtonArrow';
+import ButtonArrow from '../graphics/ButtonArrow';
 
 export default function Button({ children, theme }) {
 	let className = String;

@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Modal, ModalToggler, useModal } from '@faceless-ui/modal';
+
 import Logo from './Logo';
 import Hamburger from './Hamburger';
 
+const menuSlug = 'menu';
+
 export default function Header() {
-	const [menuOpen, setMenuOpened] = useState(false);
+	// Control the state of the mega menu modal
+	const { isModalOpen, toggleModal } = useModal();
+	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
+
+	console.log('menuActive', menuActive);
 
 	return (
 		<header className="flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
@@ -80,11 +88,14 @@ export default function Header() {
 				<button
 					className="min-w-16 min-h-20 flex items-center justify-center"
 					aria-label="Open Navigation Menu"
-					onClick={() => setMenuOpened((prevState) => !prevState)}
+					onClick={() => toggleModal('menu')}
+					type="button"
 				>
-					<Hamburger active={menuOpen} theme={'light'} />
+					<Hamburger active={menuActive} theme={'light'} />
 				</button>
 			</div>
+			<Modal slug={menuSlug}></Modal>
+			{/* <ModalToggler slug={menuSlug}></ModalToggler> */}
 		</header>
 	);
 }
