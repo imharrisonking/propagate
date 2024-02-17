@@ -8,6 +8,9 @@ import Logo from './Logo';
 import Hamburger from './Hamburger';
 import HeaderButton from '@/components/buttons/HeaderButton';
 import zindexes from '@/styles/css/zindexes';
+import pageThemes from '@/styles/css/themes';
+
+console.log(pageThemes);
 
 const menuSlug = 'menu';
 
@@ -36,8 +39,9 @@ export default function Header() {
 
 	// Function to capitalize the first letter of a string
 	const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
 	return (
-		<header className="sticky top-0 md:top-12 flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
+		<header className="sticky top-0 md:top-12 flex justify-between min-h-20 pl-5 bg-white/[0.9] backdrop-blur-md backdrop-saturate-200 md:bg-transparent md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0">
 			<Logo headerExpanded={headerExpanded} />
 
 			{/* NAVIGATION MENU LARGE SCREENS */}
@@ -54,7 +58,10 @@ export default function Header() {
 								visibility: headerExpanded ? 'hidden' : 'visible',
 							}}
 						>
-							<HeaderButton headerExpanded={headerExpanded} theme="light" />
+							<HeaderButton
+								headerExpanded={headerExpanded}
+								theme={pageThemes[pathname]}
+							/>
 						</button>
 
 						{/* Hamburger menu for larger screens */}
@@ -69,7 +76,7 @@ export default function Header() {
 							onClick={() => toggleModal('menu')}
 							type="button"
 						>
-							<Hamburger active={menuActive} theme={'light'} />
+							<Hamburger active={menuActive} theme={pageThemes[pathname]} />
 						</button>
 					</div>
 					<ul className="flex flex-col leading-none gap-4 min-w-60">
@@ -83,7 +90,6 @@ export default function Header() {
 										: 'translateY(-20px)',
 									opacity: headerExpanded ? 1 : 0,
 									visibility: headerExpanded ? 'visible' : 'hidden',
-									'z-index': headerExpanded ? expandedNav : page,
 								}}
 								key={link}
 							>
@@ -105,7 +111,7 @@ export default function Header() {
 			<nav className="md:hidden flex">
 				{/* Free demo button for small screens */}
 				<button>
-					<HeaderButton headerExpanded={headerExpanded} theme="light" />
+					<HeaderButton headerExpanded={headerExpanded} theme={pageThemes[pathname]} />
 				</button>
 
 				{/* Hamburger menu for small screens */}
@@ -115,7 +121,7 @@ export default function Header() {
 					onClick={() => toggleModal('menu')}
 					type="button"
 				>
-					<Hamburger active={menuActive} theme="light" />
+					<Hamburger active={menuActive} theme={pageThemes[pathname]} />
 				</button>
 			</nav>
 			<Modal slug={menuSlug}></Modal>

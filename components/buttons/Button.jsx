@@ -2,7 +2,7 @@ import React from 'react';
 
 import ButtonArrow from '../graphics/ButtonArrow';
 
-export default function Button({ children, theme, additionalStyles = {} }) {
+export default function Button({ children, theme, additionalClasses = '', additionalStyles = {} }) {
 	const classes =
 		'flex overflow-hidden text-xs px-4 py-3 rounded-lg md:rounded-xl md:px-6 md:py-3 md:text-base items-center';
 	const lightClasses = 'text-grey-500 bg-green-300 ';
@@ -10,7 +10,9 @@ export default function Button({ children, theme, additionalStyles = {} }) {
 
 	return (
 		<button
-			className={`${classes} ${theme === 'light' ? lightClasses : darkClasses} group`}
+			className={`${classes} ${
+				theme === 'light' ? lightClasses : darkClasses
+			} group ${additionalClasses}`}
 			style={additionalStyles}
 		>
 			{children}

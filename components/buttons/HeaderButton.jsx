@@ -8,9 +8,15 @@ export default function HeaderButton({ headerExpanded, theme }) {
 		opacity: headerExpanded ? 0 : 1,
 	};
 
+	const additionalClasses = 'py-2';
+
 	return (
 		<Link href="/demo" className="flex items-center align-top">
-			<Button additionalStyles={transitionStyles} theme={theme}>
+			<Button
+				additionalClasses={additionalClasses}
+				additionalStyles={transitionStyles}
+				theme={theme}
+			>
 				Free demo
 			</Button>
 		</Link>
