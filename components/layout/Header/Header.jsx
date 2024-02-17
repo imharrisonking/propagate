@@ -6,11 +6,14 @@ import { useScrollInfo } from '@faceless-ui/scroll-info';
 
 import Logo from './Logo';
 import Hamburger from './Hamburger';
+import HeaderButton from '@/components/buttons/HeaderButton';
+import zindexes from '@/styles/css/zindexes';
 
 const menuSlug = 'menu';
 
 export default function Header() {
 	// Control the state of the mega menu modal
+	const { expandedNav, page, modal, header } = zindexes;
 	const { isModalOpen, toggleModal } = useModal();
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
@@ -36,10 +39,40 @@ export default function Header() {
 	return (
 		<header className="sticky top-0 md:top-12 flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
 			<Logo headerExpanded={headerExpanded} />
-			{/* Navigation menu for larger screens */}
-			<nav className="hidden md:block md:overflow-x-hidden text-base text-end pr-10">
+
+			{/* NAVIGATION MENU LARGE SCREENS */}
+			<nav className="hidden md:overflow-x-hidden md:flex text-base text-end pr-10">
 				<div className="relative">
-					<ul className="flex flex-col leading-none gap-4">
+					<div className="hidden md:flex justify-center items-center absolute top-0 right-0">
+						{/* Free demo button for larger screens */}
+						<button
+							className="pr-7"
+							style={{
+								...transitionStyles,
+								transitionDelay: getTransitionDelay(pages.length),
+								opacity: headerExpanded ? 0 : 1,
+								visibility: headerExpanded ? 'hidden' : 'visible',
+							}}
+						>
+							<HeaderButton headerExpanded={headerExpanded} theme="light" />
+						</button>
+
+						{/* Hamburger menu for larger screens */}
+						<button
+							style={{
+								...transitionStyles,
+								transitionDelay: getTransitionDelay(pages.length),
+								opacity: headerExpanded ? 0 : 1,
+								visibility: headerExpanded ? 'hidden' : 'visible',
+							}}
+							aria-label="Open Navigation Menu"
+							onClick={() => toggleModal('menu')}
+							type="button"
+						>
+							<Hamburger active={menuActive} theme={'light'} />
+						</button>
+					</div>
+					<ul className="flex flex-col leading-none gap-4 min-w-60">
 						{pages.map((link, index) => (
 							<li
 								style={{
@@ -50,6 +83,7 @@ export default function Header() {
 										: 'translateY(-20px)',
 									opacity: headerExpanded ? 1 : 0,
 									visibility: headerExpanded ? 'visible' : 'hidden',
+									'z-index': headerExpanded ? expandedNav : page,
 								}}
 								key={link}
 							>
@@ -64,36 +98,16 @@ export default function Header() {
 							</li>
 						))}
 					</ul>
-					<button
-						style={{
-							...transitionStyles,
-							transitionDelay: getTransitionDelay(pages.length),
-							opacity: headerExpanded ? 0 : 1,
-							visibility: headerExpanded ? 'hidden' : 'visible',
-							position: 'absolute',
-							right: 0,
-							top: 0,
-						}}
-						className="hidden md:block flex items-center justify-center"
-						aria-label="Open Navigation Menu"
-						onClick={() => toggleModal('menu')}
-						type="button"
-					>
-						<Hamburger active={menuActive} theme={'light'} />
-					</button>
 				</div>
 			</nav>
 
-			{/* Book a call button for small screens */}
+			{/* NAVIGATION MENU SMALL SCREENS */}
 			<nav className="md:hidden flex">
+				{/* Free demo button for small screens */}
 				<button>
-					<Link
-						href="/book"
-						className="bg-green-300 text-grey-500 text-xs px-4 py-2 rounded-lg"
-					>
-						Free demo
-					</Link>
+					<HeaderButton headerExpanded={headerExpanded} theme="light" />
 				</button>
+
 				{/* Hamburger menu for small screens */}
 				<button
 					className="min-w-16 min-h-20 flex items-center justify-center"
@@ -101,7 +115,7 @@ export default function Header() {
 					onClick={() => toggleModal('menu')}
 					type="button"
 				>
-					<Hamburger active={menuActive} theme={'light'} />
+					<Hamburger active={menuActive} theme="light" />
 				</button>
 			</nav>
 			<Modal slug={menuSlug}></Modal>

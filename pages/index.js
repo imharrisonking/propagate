@@ -21,7 +21,7 @@ export default function Home() {
 							</Cell>
 						</Grid>
 					</div>
-					<div className="pt-6 pb-20">
+					<div className="pt-6 pb-96">
 						<Grid>
 							<Cell cols={11}>
 								<h5>
