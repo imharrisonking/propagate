@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Button from './Button';
 
@@ -8,7 +7,9 @@ export default function HeaderButton({ headerExpanded, theme }) {
 		opacity: headerExpanded ? 0 : 1,
 	};
 
-	const additionalClasses = 'py-2';
+	const paddingTop = 'py-2';
+
+	const additionalClasses = `${paddingTop}`;
 
 	return (
 		<Link href="/demo" className="flex items-center align-top">

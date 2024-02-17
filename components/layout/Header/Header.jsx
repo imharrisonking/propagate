@@ -7,16 +7,12 @@ import { useScrollInfo } from '@faceless-ui/scroll-info';
 import Logo from './Logo';
 import Hamburger from './Hamburger';
 import HeaderButton from '@/components/buttons/HeaderButton';
-import zindexes from '@/styles/css/zindexes';
 import pageThemes from '@/styles/css/themes';
-
-console.log(pageThemes);
 
 const menuSlug = 'menu';
 
 export default function Header() {
 	// Control the state of the mega menu modal
-	const { expandedNav, page, modal, header } = zindexes;
 	const { isModalOpen, toggleModal } = useModal();
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
@@ -41,89 +37,95 @@ export default function Header() {
 	const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 	return (
-		<header className="sticky top-0 md:top-12 flex justify-between min-h-20 pl-5 bg-white/[0.9] backdrop-blur-md backdrop-saturate-200 md:bg-transparent md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0">
-			<Logo headerExpanded={headerExpanded} />
+		<header className="sticky top-0 md:top-12 min-h-20 bg-white/[0.7] md:bg-transparent backdrop-blur-md md:backdrop-blur-none backdrop-saturate-200 md:backdrop-saturate-100">
+			<div className="flex justify-between min-h-20 pl-5 md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0">
+				<Logo headerExpanded={headerExpanded} />
 
-			{/* NAVIGATION MENU LARGE SCREENS */}
-			<nav className="hidden md:overflow-x-hidden md:flex text-base text-end pr-10">
-				<div className="relative">
-					<div className="hidden md:flex justify-center items-center absolute top-0 right-0">
-						{/* Free demo button for larger screens */}
-						<button
-							className="pr-7"
-							style={{
-								...transitionStyles,
-								transitionDelay: getTransitionDelay(pages.length),
-								opacity: headerExpanded ? 0 : 1,
-								visibility: headerExpanded ? 'hidden' : 'visible',
-							}}
-						>
-							<HeaderButton
-								headerExpanded={headerExpanded}
-								theme={pageThemes[pathname]}
-							/>
-						</button>
-
-						{/* Hamburger menu for larger screens */}
-						<button
-							style={{
-								...transitionStyles,
-								transitionDelay: getTransitionDelay(pages.length),
-								opacity: headerExpanded ? 0 : 1,
-								visibility: headerExpanded ? 'hidden' : 'visible',
-							}}
-							aria-label="Open Navigation Menu"
-							onClick={() => toggleModal('menu')}
-							type="button"
-						>
-							<Hamburger active={menuActive} theme={pageThemes[pathname]} />
-						</button>
-					</div>
-					<ul className="flex flex-col leading-none gap-4 min-w-60">
-						{pages.map((link, index) => (
-							<li
+				{/* NAVIGATION MENU LARGE SCREENS */}
+				<nav className="hidden md:overflow-x-hidden md:flex text-base text-end pr-10">
+					<div className="relative">
+						<div className="hidden md:flex justify-center items-center absolute top-0 right-0">
+							{/* Free demo button for larger screens */}
+							<button
+								className="pr-7"
 								style={{
 									...transitionStyles,
-									transitionDelay: getTransitionDelay(index),
-									transform: headerExpanded
-										? 'translateY(0)'
-										: 'translateY(-20px)',
-									opacity: headerExpanded ? 1 : 0,
-									visibility: headerExpanded ? 'visible' : 'hidden',
+									transitionDelay: getTransitionDelay(pages.length),
+									opacity: headerExpanded ? 0 : 1,
+									visibility: headerExpanded ? 'hidden' : 'visible',
 								}}
-								key={link}
 							>
-								<Link
-									href={link}
-									className={`nav-item hover:text-grey-300 ${
-										pathname === link ? 'active' : ''
-									}`}
+								<HeaderButton
+									headerExpanded={headerExpanded}
+									theme={pageThemes[pathname]}
+								/>
+							</button>
+
+							{/* Hamburger menu for larger screens */}
+							<button
+								style={{
+									...transitionStyles,
+									transitionDelay: getTransitionDelay(pages.length),
+									opacity: headerExpanded ? 0 : 1,
+									visibility: headerExpanded ? 'hidden' : 'visible',
+								}}
+								aria-label="Open Navigation Menu"
+								onClick={() => toggleModal('menu')}
+								type="button"
+							>
+								<Hamburger active={menuActive} theme={pageThemes[pathname]} />
+							</button>
+						</div>
+						<ul className="flex flex-col leading-none gap-4 min-w-60">
+							{pages.map((link, index) => (
+								<li
+									style={{
+										...transitionStyles,
+										transitionDelay: getTransitionDelay(index),
+										transform: headerExpanded
+											? 'translateY(0)'
+											: 'translateY(-20px)',
+										opacity: headerExpanded ? 1 : 0,
+										visibility: headerExpanded ? 'visible' : 'hidden',
+									}}
+									key={link}
 								>
-									{capitalizeFirstLetter(link.replace('/', ''))}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</div>
-			</nav>
+									<Link
+										href={link}
+										className={`nav-item hover:text-grey-300 ${
+											pathname === link ? 'active' : ''
+										}`}
+									>
+										{capitalizeFirstLetter(link.replace('/', ''))}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+				</nav>
 
-			{/* NAVIGATION MENU SMALL SCREENS */}
-			<nav className="md:hidden flex">
-				{/* Free demo button for small screens */}
-				<button>
-					<HeaderButton headerExpanded={headerExpanded} theme={pageThemes[pathname]} />
-				</button>
+				{/* NAVIGATION MENU SMALL SCREENS */}
+				<nav className="md:hidden flex">
+					{/* Free demo button for small screens */}
+					<button>
+						<HeaderButton
+							headerExpanded={headerExpanded}
+							theme={pageThemes[pathname]}
+						/>
+					</button>
 
-				{/* Hamburger menu for small screens */}
-				<button
-					className="min-w-16 min-h-20 flex items-center justify-center"
-					aria-label="Open Navigation Menu"
-					onClick={() => toggleModal('menu')}
-					type="button"
-				>
-					<Hamburger active={menuActive} theme={pageThemes[pathname]} />
-				</button>
-			</nav>
+					{/* Hamburger menu for small screens */}
+					<button
+						className="min-w-16 min-h-20 flex items-center justify-center"
+						aria-label="Open Navigation Menu"
+						onClick={() => toggleModal('menu')}
+						type="button"
+					>
+						<Hamburger active={menuActive} theme={pageThemes[pathname]} />
+					</button>
+				</nav>
+			</div>
+
 			<Modal slug={menuSlug}></Modal>
 		</header>
 	);

@@ -3,10 +3,15 @@ import React from 'react';
 import ButtonArrow from '../graphics/ButtonArrow';
 
 export default function Button({ children, theme, additionalClasses = '', additionalStyles = {} }) {
+	// Default padding
+	if (additionalClasses === '') {
+		additionalClasses = 'py-3';
+	}
+
 	const classes =
-		'flex overflow-hidden text-xs px-4 py-3 rounded-lg md:rounded-xl md:px-6 md:py-3 md:text-base items-center';
-	const lightClasses = 'text-grey-500 bg-green-300 ';
-	const darkClasses = 'text-grey-950 bg-green-300 ';
+		'flex overflow-hidden text-xs px-4 rounded-lg md:rounded-xl md:px-6 md:py-3 md:text-base items-center';
+	const lightClasses = 'text-grey-500 bg-green-300';
+	const darkClasses = 'text-grey-950 bg-green-300';
 
 	return (
 		<button
