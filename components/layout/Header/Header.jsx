@@ -19,67 +19,73 @@ export default function Header() {
 	const { y, yPercentage } = useScrollInfo();
 	const headerExpanded = y === 0 || yPercentage >= 100;
 
+	// Transition styles for the nav li items
+	const transitionStyles = {
+		transitionProperty: 'transform, opacity',
+		transitionDuration: '0.3s',
+		transitionTimingFunction: 'ease-out',
+	};
+
+	const pages = ['/testimonials', '/community', '/blog', '/about', '/contact'];
+
+	// Calculate transition delay based on index
+	const getTransitionDelay = (index) => `${index * 0.1}s`;
+
+	// Function to capitalize the first letter of a string
+	const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 	return (
 		<header className="sticky top-0 md:top-12 flex justify-between md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0 min-h-20 pl-5">
 			<Logo headerExpanded={headerExpanded} />
 			{/* Navigation menu for larger screens */}
-			<nav className="hidden md:overflow-x-hidden md:block text-base text-end pr-10">
-				<ul className="flex flex-col leading-none gap-4">
-					<li>
-						<Link
-							href="/testimonials"
-							className={`nav-item hover:text-grey-300 ${
-								pathname === '/testimonials' ? 'active' : ''
-							}`}
-						>
-							Testimonials
-						</Link>
-					</li>
-					<li>
-						<Link
-							href="/community"
-							className={`nav-item hover:text-grey-300 ${
-								pathname === '/community' ? 'active' : ''
-							}`}
-						>
-							Community
-						</Link>
-					</li>
-					<li>
-						<Link
-							href="/blog"
-							className={`nav-item hover:text-grey-300 ${
-								pathname === '/blog' ? 'active' : ''
-							}`}
-						>
-							Blog
-						</Link>
-					</li>
-					<li>
-						<Link
-							href="/about"
-							className={`nav-item hover:text-grey-300 ${
-								pathname === '/about' ? 'active' : ''
-							}`}
-						>
-							About
-						</Link>
-					</li>
-					<li>
-						<Link
-							href="/contact"
-							className={`nav-item hover:text-grey-300 ${
-								pathname === '/about' || pathname === '/book' ? 'active' : ''
-							}`}
-						>
-							Contact
-						</Link>
-					</li>
-				</ul>
+			<nav className="hidden md:block md:overflow-x-hidden text-base text-end pr-10">
+				<div className="relative">
+					<ul className="flex flex-col leading-none gap-4">
+						{pages.map((link, index) => (
+							<li
+								style={{
+									...transitionStyles,
+									transitionDelay: getTransitionDelay(index),
+									transform: headerExpanded
+										? 'translateY(0)'
+										: 'translateY(-20px)',
+									opacity: headerExpanded ? 1 : 0,
+									visibility: headerExpanded ? 'visible' : 'hidden',
+								}}
+								key={link}
+							>
+								<Link
+									href={link}
+									className={`nav-item hover:text-grey-300 ${
+										pathname === link ? 'active' : ''
+									}`}
+								>
+									{capitalizeFirstLetter(link.replace('/', ''))}
+								</Link>
+							</li>
+						))}
+					</ul>
+					<button
+						style={{
+							...transitionStyles,
+							transitionDelay: getTransitionDelay(pages.length),
+							opacity: headerExpanded ? 0 : 1,
+							visibility: headerExpanded ? 'hidden' : 'visible',
+							position: 'absolute',
+							right: 0,
+							top: 0,
+						}}
+						className="hidden md:block flex items-center justify-center"
+						aria-label="Open Navigation Menu"
+						onClick={() => toggleModal('menu')}
+						type="button"
+					>
+						<Hamburger active={menuActive} theme={'light'} />
+					</button>
+				</div>
 			</nav>
-			{/* Hamburger menu for small screens */}
-			<div className="md:hidden flex">
-				{/* Book a call button */}
+
+			{/* Book a call button for small screens */}
+			<nav className="md:hidden flex">
 				<button>
 					<Link
 						href="/book"
@@ -88,6 +94,7 @@ export default function Header() {
 						Free demo
 					</Link>
 				</button>
+				{/* Hamburger menu for small screens */}
 				<button
 					className="min-w-16 min-h-20 flex items-center justify-center"
 					aria-label="Open Navigation Menu"
@@ -96,7 +103,7 @@ export default function Header() {
 				>
 					<Hamburger active={menuActive} theme={'light'} />
 				</button>
-			</div>
+			</nav>
 			<Modal slug={menuSlug}></Modal>
 		</header>
 	);
