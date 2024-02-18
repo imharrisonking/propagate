@@ -18,9 +18,22 @@ const menuSlug = 'menu';
 export default function Header() {
 	// Control the state of the mega menu modal
 	const { isModalOpen, toggleModal } = useModal();
-	// const [headerExpanded, setHeaderExpanded] = useState(false);
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
+
+	// Keep state of the theme
+	const [theme, setTheme] = useState(pageThemes[pathname]);
+
+	// Update the theme when the pathname changes
+	useEffect(() => {
+		if (menuActive) {
+			// Add the dark-theme class to the body when the modal is open
+			setTheme('dark');
+		} else {
+			// Remove the dark-theme class from the body when the modal is closed
+			setTheme(pageThemes[pathname]);
+		}
+	}, [pathname, menuActive]);
 
 	// Get scroll position to determine if the header
 	const { y, yPercentage } = useScrollInfo();
@@ -46,14 +59,14 @@ export default function Header() {
 			className={`sticky top-0 md:top-12 min-h-20 bg-white/[0.7] md:bg-transparent backdrop-blur-md md:backdrop-blur-none backdrop-saturate-200 md:backdrop-saturate-100 z-${zindexes.header}`}
 		>
 			<div className="flex justify-between min-h-20 pl-5 md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0">
-				<Logo headerExpanded={headerExpanded} />
+				<Logo headerExpanded={headerExpanded} theme={theme} />
 
 				{/* NAVIGATION MENU LARGE SCREENS */}
 				<nav className="hidden md:overflow-x-hidden md:flex text-base text-end pr-10">
 					<div className="relative">
 						<div className="hidden md:flex justify-center items-center absolute top-0 right-0">
 							{/* Free demo button for larger screens */}
-							<button
+							<div
 								className="pr-7"
 								style={{
 									...transitionStyles,
@@ -62,11 +75,8 @@ export default function Header() {
 									visibility: headerExpanded ? 'hidden' : 'visible',
 								}}
 							>
-								<HeaderButton
-									headerExpanded={headerExpanded}
-									theme={pageThemes[pathname]}
-								/>
-							</button>
+								<HeaderButton headerExpanded={headerExpanded} theme={theme} />
+							</div>
 
 							{/* Hamburger menu for larger screens */}
 							<button
@@ -80,7 +90,7 @@ export default function Header() {
 								onClick={() => toggleModal('menu')}
 								type="button"
 							>
-								<Hamburger active={menuActive} theme={pageThemes[pathname]} />
+								<Hamburger active={menuActive} theme={theme} />
 							</button>
 						</div>
 						<ul className="flex flex-col leading-none gap-4 min-w-60">
@@ -114,12 +124,9 @@ export default function Header() {
 				{/* NAVIGATION MENU SMALL SCREENS */}
 				<nav className="md:hidden flex">
 					{/* Free demo button for small screens */}
-					<button>
-						<HeaderButton
-							headerExpanded={headerExpanded}
-							theme={pageThemes[pathname]}
-						/>
-					</button>
+					<div>
+						<HeaderButton headerExpanded={headerExpanded} theme={theme} />
+					</div>
 
 					{/* Hamburger menu for small screens */}
 					<button
@@ -128,12 +135,12 @@ export default function Header() {
 						onClick={() => toggleModal('menu')}
 						type="button"
 					>
-						<Hamburger active={menuActive} theme={pageThemes[pathname]} />
+						<Hamburger active={menuActive} theme={theme} />
 					</button>
 				</nav>
 			</div>
 
-			<Modal slug={menuSlug} className="w-full pt-32">
+			<Modal slug={menuSlug} className="w-full pt-52 bg-grey-950">
 				<GridContainer>
 					<Grid>
 						<Cell cols={8} htmlElement={'nav'}>
@@ -141,7 +148,7 @@ export default function Header() {
 								<h1 key={link}>
 									<Link
 										href={link}
-										className="font-medium text-9xl outline-text hover:text-white"
+										className="font-medium text-9xl outline-white-text hover:text-white"
 									>
 										{capitalizeFirstLetter(link.replace('/', ''))}
 									</Link>
@@ -150,8 +157,13 @@ export default function Header() {
 						</Cell>
 						<Cell cols={5}>
 							{Object.entries(socials).map(([name, url]) => (
-								<p key={name} className="text-4xl">
-									<a href={url} target="_blank" rel="noopener noreferrer">
+								<p key={{ url }} className="text-4xl text-white">
+									<a
+										key={name}
+										href={url}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
 										{name}
 									</a>
 								</p>

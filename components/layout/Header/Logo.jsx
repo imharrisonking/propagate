@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import LogoIcon from '../../graphics/LogoIcon';
 
-export default function Logo({ headerExpanded: propHeaderExpanded }) {
+export default function Logo({ headerExpanded: propHeaderExpanded, theme }) {
 	const [headerExpanded, setHeaderExpanded] = useState(propHeaderExpanded);
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -31,11 +31,15 @@ export default function Logo({ headerExpanded: propHeaderExpanded }) {
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>
-			<LogoIcon className="fill-grey-500 relative" />
+			<LogoIcon
+				className={`${theme === 'light' ? 'fill-grey-500' : 'fill-white'} relative`}
+			/>
 			<div className="ml-3 overflow-hidden flex items-center align-top">
 				<span
 					style={transitionStyles}
-					className="font-semibold text-2xl leading-none tracking-[0.07em]"
+					className={`${
+						theme === 'light' ? 'text-grey-500' : 'text-white'
+					} font-semibold text-2xl leading-none tracking-[0.07em]`}
 				>
 					Propagate
 				</span>
