@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Modal, useModal } from '@faceless-ui/modal';
 import { useScrollInfo } from '@faceless-ui/scroll-info';
+import { Grid, Cell } from '@faceless-ui/css-grid';
 
+import zindexes from '@/styles/css/zindexes';
+import socials from '@/styles/css/socials';
 import Logo from './Logo';
 import Hamburger from './Hamburger';
 import HeaderButton from '@/components/buttons/HeaderButton';
+import GridContainer from '../GridContainer';
 import pageThemes from '@/styles/css/themes';
 
 const menuSlug = 'menu';
@@ -14,6 +18,7 @@ const menuSlug = 'menu';
 export default function Header() {
 	// Control the state of the mega menu modal
 	const { isModalOpen, toggleModal } = useModal();
+	// const [headerExpanded, setHeaderExpanded] = useState(false);
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
 
@@ -37,7 +42,9 @@ export default function Header() {
 	const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 	return (
-		<header className="sticky top-0 md:top-12 min-h-20 bg-white/[0.7] md:bg-transparent backdrop-blur-md md:backdrop-blur-none backdrop-saturate-200 md:backdrop-saturate-100">
+		<header
+			className={`sticky top-0 md:top-12 min-h-20 bg-white/[0.7] md:bg-transparent backdrop-blur-md md:backdrop-blur-none backdrop-saturate-200 md:backdrop-saturate-100 z-${zindexes.header}`}
+		>
 			<div className="flex justify-between min-h-20 pl-5 md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0">
 				<Logo headerExpanded={headerExpanded} />
 
@@ -126,7 +133,32 @@ export default function Header() {
 				</nav>
 			</div>
 
-			<Modal slug={menuSlug}></Modal>
+			<Modal slug={menuSlug} className="w-full pt-32">
+				<GridContainer>
+					<Grid>
+						<Cell cols={8} htmlElement={'nav'}>
+							{pages.map((link, index) => (
+								<h1>
+									<Link
+										key={link}
+										href={link}
+										className="font-medium text-9xl outline-text hover:text-white"
+									>
+										{capitalizeFirstLetter(link.replace('/', ''))}
+									</Link>
+								</h1>
+							))}
+						</Cell>
+						<Cell cols={5}>
+							{Object.entries(socials).map(([name, url]) => (
+								<a key={name} href={url} target="_blank" rel="noopener noreferrer">
+									<p className="text-4xl">{name}</p>
+								</a>
+							))}
+						</Cell>
+					</Grid>
+				</GridContainer>
+			</Modal>
 		</header>
 	);
 }

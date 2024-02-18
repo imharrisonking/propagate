@@ -27,11 +27,11 @@ export default function Logo({ headerExpanded: propHeaderExpanded }) {
 	return (
 		<Link
 			href="/"
-			className="overflow-hidden flex items-center align-top"
+			className="overflow-hidden flex items-center align-top header-top"
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>
-			<LogoIcon className="fill-grey-500 relative z-10" />
+			<LogoIcon className="fill-grey-500 relative" />
 			<div className="ml-3 overflow-hidden flex items-center align-top">
 				<span
 					style={transitionStyles}
