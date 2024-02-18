@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import Template from '@/components/layout/Template';
 import Layout from '@/components/layout/Layout';
-import GridContainer from '@/components/layout/GridContainer';
+import GridContainer from '@/components/layout/containers/GridContainer';
 import Button from '@/components/buttons/Button';
 
 export default function Home() {

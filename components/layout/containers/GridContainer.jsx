@@ -1,5 +1,4 @@
 import React from 'react';
-import { gridOverflow } from '../../styles/css/structure';
 
 export default function GridContainer({ children }) {
 	return (

@@ -9,8 +9,9 @@ import zindexes from '@/styles/css/zindexes';
 import socials from '@/styles/css/socials';
 import Logo from './Logo';
 import Hamburger from './Hamburger';
+import Arrow from '@/components/graphics/Arrow';
 import HeaderButton from '@/components/buttons/HeaderButton';
-import GridContainer from '../GridContainer';
+import FullWidthGridContainer from '../containers/FullWidthGridContainer';
 import pageThemes from '@/styles/css/themes';
 
 const menuSlug = 'menu';
@@ -122,7 +123,7 @@ export default function Header() {
 				</nav>
 
 				{/* NAVIGATION MENU SMALL SCREENS */}
-				<nav className="md:hidden flex">
+				<nav className="md:hidden flex items-center">
 					{/* Free demo button for small screens */}
 					<div>
 						<HeaderButton headerExpanded={headerExpanded} theme={theme} />
@@ -140,37 +141,49 @@ export default function Header() {
 				</nav>
 			</div>
 
-			<Modal slug={menuSlug} className="w-full pt-52 bg-grey-950">
-				<GridContainer>
+			<Modal slug={menuSlug} className="w-full h-dvh md:pt-52 bg-grey-950">
+				<FullWidthGridContainer>
 					<Grid>
-						<Cell cols={8} htmlElement={'nav'}>
+						<Cell cols={11} htmlElement={'nav'} start={1} startL={2}>
 							{pages.map((link, index) => (
 								<h1 key={link}>
 									<Link
 										href={link}
-										className="font-medium text-9xl outline-white-text hover:text-white"
+										className="font-medium text-6xl sm-text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl outline-white-text hover:text-white uppercase pb-2"
 									>
-										{capitalizeFirstLetter(link.replace('/', ''))}
+										{link.replace('/', '')}
 									</Link>
 								</h1>
 							))}
 						</Cell>
-						<Cell cols={5}>
-							{Object.entries(socials).map(([name, url]) => (
-								<p key={{ url }} className="text-4xl text-white">
-									<a
-										key={name}
-										href={url}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{name}
-									</a>
+						<Cell cols={3} start={2} startL={11}>
+							<h6 className="text-grey-400 mb-3">WORK WITH US</h6>
+							<div className="flex align-middle items-center mb-6">
+								<p className="text-4xl text-white pr-4">
+									<Link href="/contact">Let&apos;s chat</Link>
 								</p>
+								<Arrow colour="white" horizontal={true} />
+							</div>
+
+							<h6 className="text-grey-400 pb-3">CONNECT WITH US</h6>
+							{Object.entries(socials).map(([name, url]) => (
+								<div key={{ url }} className="flex align-middle items-center pb-4">
+									<p className="text-4xl text-white pr-4">
+										<a
+											key={name}
+											href={url}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											{name}
+										</a>
+									</p>
+									<Arrow colour="white" horizontal={true} />
+								</div>
 							))}
 						</Cell>
 					</Grid>
-				</GridContainer>
+				</FullWidthGridContainer>
 			</Modal>
 		</header>
 	);

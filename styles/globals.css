@@ -292,7 +292,7 @@ header {
     }
 
     h6 {
-        @apply text-2xl
+        @apply text-base font-mono font-light uppercase
     }
 
     p {

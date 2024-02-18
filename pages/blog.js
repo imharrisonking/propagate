@@ -2,7 +2,7 @@ import { Grid, Cell } from '@faceless-ui/css-grid';
 
 import Template from '@/components/layout/Template';
 import Layout from '@/components/layout/Layout';
-import GridContainer from '@/components/layout/GridContainer';
+import GridContainer from '@/components/layout/containers/GridContainer';
 
 export default function Blog() {
 	return (

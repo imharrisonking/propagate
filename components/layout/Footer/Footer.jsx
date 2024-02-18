@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Cell } from '@faceless-ui/css-grid';
-import FooterGridContainer from './FooterGridContainer';
+import FooterGridContainer from '../containers/FooterGridContainer';
 import { twMerge } from 'tailwind-merge';
 
 export default function Footer({ className }) {
