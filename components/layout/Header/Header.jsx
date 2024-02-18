@@ -138,9 +138,8 @@ export default function Header() {
 					<Grid>
 						<Cell cols={8} htmlElement={'nav'}>
 							{pages.map((link, index) => (
-								<h1>
+								<h1 key={link}>
 									<Link
-										key={link}
 										href={link}
 										className="font-medium text-9xl outline-text hover:text-white"
 									>
@@ -151,9 +150,11 @@ export default function Header() {
 						</Cell>
 						<Cell cols={5}>
 							{Object.entries(socials).map(([name, url]) => (
-								<a key={name} href={url} target="_blank" rel="noopener noreferrer">
-									<p className="text-4xl">{name}</p>
-								</a>
+								<p key={name} className="text-4xl">
+									<a href={url} target="_blank" rel="noopener noreferrer">
+										{name}
+									</a>
+								</p>
 							))}
 						</Cell>
 					</Grid>
