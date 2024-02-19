@@ -1,4 +1,4 @@
-const pageThemes = {
+export const pageThemes = {
 	'/': 'light',
 	'/testimonials': 'light',
 	'/community': 'light',
@@ -7,4 +7,11 @@ const pageThemes = {
 	'/contact': 'dark',
 };
 
-export default pageThemes;
+export const pageColours = {
+	'/': 'white',
+	'/testimonials': 'white',
+	'/community': 'white',
+	'/blog': 'white',
+	'/about': 'green-700',
+	'/contact': 'grey-950',
+};

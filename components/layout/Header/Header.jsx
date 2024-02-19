@@ -12,7 +12,7 @@ import Hamburger from './Hamburger';
 import Arrow from '@/components/graphics/Arrow';
 import HeaderButton from '@/components/buttons/HeaderButton';
 import FullWidthGridContainer from '../containers/FullWidthGridContainer';
-import pageThemes from '@/styles/css/themes';
+import { pageThemes, pageColours } from '@/styles/css/themes';
 
 const menuSlug = 'menu';
 
@@ -24,15 +24,18 @@ export default function Header() {
 
 	// Keep state of the theme
 	const [theme, setTheme] = useState(pageThemes[pathname]);
+	const [backgroundColour, setBackgroundColour] = useState(pageColours[pathname]);
 
 	// Update the theme when the pathname changes
 	useEffect(() => {
 		if (menuActive) {
 			// Add the dark-theme class to the body when the modal is open
 			setTheme('dark');
+			setBackgroundColour('grey-950');
 		} else {
 			// Remove the dark-theme class from the body when the modal is closed
 			setTheme(pageThemes[pathname]);
+			setBackgroundColour(pageColours[pathname]);
 		}
 	}, [pathname, menuActive]);
 
@@ -48,6 +51,7 @@ export default function Header() {
 	};
 
 	const pages = ['/testimonials', '/community', '/blog', '/about', '/contact'];
+	console.log('backgroundColour', backgroundColour);
 
 	// Calculate transition delay based on index
 	const getTransitionDelay = (index) => `${index * 0.1}s`;
@@ -57,7 +61,7 @@ export default function Header() {
 
 	return (
 		<header
-			className={`sticky top-0 md:top-12 min-h-20 bg-white/[0.7] md:bg-transparent backdrop-blur-md md:backdrop-blur-none backdrop-saturate-200 md:backdrop-saturate-100 z-${zindexes.header}`}
+			className={`sticky top-0 md:top-12 min-h-20 bg-${backgroundColour}/[0.7] md:bg-transparent backdrop-blur-md md:backdrop-blur-none backdrop-saturate-200 md:backdrop-saturate-100 z-${zindexes.header}`}
 		>
 			<div className="flex justify-between min-h-20 pl-5 md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0">
 				<Logo headerExpanded={headerExpanded} theme={theme} />
@@ -141,25 +145,25 @@ export default function Header() {
 				</nav>
 			</div>
 
-			<Modal slug={menuSlug} className="w-full h-dvh md:pt-52 bg-grey-950">
+			<Modal slug={menuSlug} className="w-full h-dvh pt-28 md:pt-52 bg-grey-950">
 				<FullWidthGridContainer>
 					<Grid>
-						<Cell cols={11} htmlElement={'nav'} start={1} startL={2}>
+						<Cell colsS={8} colsL={9} colsXL={9} htmlElement={'nav'} start={2}>
 							{pages.map((link, index) => (
-								<h1 key={link}>
+								<h2 key={link}>
 									<Link
 										href={link}
 										className="font-medium text-6xl sm-text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl outline-white-text hover:text-white uppercase pb-2"
 									>
 										{link.replace('/', '')}
 									</Link>
-								</h1>
+								</h2>
 							))}
 						</Cell>
-						<Cell cols={3} start={2} startL={11}>
+						<Cell cols={4} startS={2} startM={2} startL={11} startXL={11}>
 							<h6 className="text-grey-400 mb-3">WORK WITH US</h6>
 							<div className="flex align-middle items-center mb-6">
-								<p className="text-4xl text-white pr-4">
+								<p className="text-2xl md:text-4xl text-white pr-4">
 									<Link href="/contact">Let&apos;s chat</Link>
 								</p>
 								<Arrow colour="white" horizontal={true} />
@@ -168,7 +172,7 @@ export default function Header() {
 							<h6 className="text-grey-400 pb-3">CONNECT WITH US</h6>
 							{Object.entries(socials).map(([name, url]) => (
 								<div key={{ url }} className="flex align-middle items-center pb-4">
-									<p className="text-4xl text-white pr-4">
+									<p className="text-2xl md:text-4xl text-white pr-4">
 										<a
 											key={name}
 											href={url}
