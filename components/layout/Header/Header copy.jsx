@@ -59,45 +59,16 @@ export default function Header() {
 	const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 	return (
-		<header className="sticky top-0 md:fixed md:top-0">
-			{/* STICKY NAVIGATION SMALL SCREENS */}
-			<div
-				id="mobile-header"
-				className={`md:hidden flex justify-between min-h-20 pl-5 bg-${backgroundColour}/[0.7] backdrop-blur-md backdrop-saturate-200 z-${zindexes.header}`}
-			>
+		<header
+			className={`sticky top-0 md:top-12 min-h-20 bg-${backgroundColour}/[0.7] md:bg-transparent backdrop-blur-md md:backdrop-blur-none backdrop-saturate-200 md:backdrop-saturate-100 z-${zindexes.header}`}
+		>
+			<div className="flex justify-between min-h-20 pl-5 md:items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0">
 				<Logo headerExpanded={headerExpanded} theme={theme} />
-				{/* NAVIGATION MENU SMALL SCREENS */}
-				<nav className="md:hidden flex items-center">
-					{/* Free demo button for small screens */}
-					<div>
-						<HeaderButton headerExpanded={headerExpanded} theme={theme} />
-					</div>
 
-					{/* Hamburger menu for small screens */}
-					<button
-						className="min-w-16 min-h-20 flex items-center justify-center"
-						aria-label="Open Navigation Menu"
-						onClick={() => toggleModal('menu')}
-						type="button"
-					>
-						<Hamburger active={menuActive} theme={theme} />
-					</button>
-				</nav>
-			</div>
-			{/* FIXED NAVIGATION LARGE SCREENS */}
-			<div
-				id="desktop-header"
-				className="hidden md:flex items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0"
-			>
-				{/* FIXED LOGO LARGE SCREENS */}
-				<div className="fixed top-[2.8571vw] left-[2.8571vw]">
-					<Logo headerExpanded={headerExpanded} theme={theme} />
-				</div>
-
-				{/* FIXED NAVIGATION MENU LARGE SCREENS */}
-				<nav className="fixed top-[2.8571vw] right-[0] md:overflow-x-hidden text-base text-end pr-10">
+				{/* NAVIGATION MENU LARGE SCREENS */}
+				<nav className="hidden md:overflow-x-hidden md:flex text-base text-end pr-10">
 					<div className="relative">
-						<div className="flex justify-center items-center absolute top-0 right-0">
+						<div className="hidden md:flex justify-center items-center absolute top-0 right-0">
 							{/* Free demo button for larger screens */}
 							<div
 								className="pr-7"
@@ -152,6 +123,24 @@ export default function Header() {
 							))}
 						</ul>
 					</div>
+				</nav>
+
+				{/* NAVIGATION MENU SMALL SCREENS */}
+				<nav className="md:hidden flex items-center">
+					{/* Free demo button for small screens */}
+					<div>
+						<HeaderButton headerExpanded={headerExpanded} theme={theme} />
+					</div>
+
+					{/* Hamburger menu for small screens */}
+					<button
+						className="min-w-16 min-h-20 flex items-center justify-center"
+						aria-label="Open Navigation Menu"
+						onClick={() => toggleModal('menu')}
+						type="button"
+					>
+						<Hamburger active={menuActive} theme={theme} />
+					</button>
 				</nav>
 			</div>
 

@@ -79,14 +79,14 @@ header {
     color: transparent;
     -webkit-text-stroke: 0.5px var(--color-white);
   }
-  @media (min-width: 640px) {
+  /* @media (min-width: 640px) {
     .outline-white-text {
         -webkit-text-stroke: 1px var(--color-white);
     }
-    }
+    } */
 @media (min-width: 768px) {
     .outline-white-text {
-        -webkit-text-stroke: 1.5px var(--color-white);
+        -webkit-text-stroke: 1px var(--color-white);
     }
 @media (min-width: 1024px) {
     .outline-white-text {
