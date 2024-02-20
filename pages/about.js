@@ -10,7 +10,7 @@ export default function About() {
 	const theme = pageThemes['/about'];
 
 	return (
-		<Template theme={theme} colour={'bg-green-700'}>
+		<Template theme={theme} colour={'green-700'}>
 			<Layout title={'About | Propagate'}>
 				<div className="text-white bg-green-700">
 					<GridContainer>

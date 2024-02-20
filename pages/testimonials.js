@@ -9,7 +9,7 @@ export default function Testimonials() {
 	const theme = pageThemes['/testimonials'];
 
 	return (
-		<Template theme={theme} colour={'bg-white'}>
+		<Template theme={theme} colour={'white'}>
 			<Layout title={'Testimonials | Propagate'}>
 				<GridContainer>
 					<div className="pt-36 md:pt-60">

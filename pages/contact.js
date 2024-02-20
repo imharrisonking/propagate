@@ -9,7 +9,7 @@ export default function Contact() {
 	const theme = pageThemes['/contact'];
 
 	return (
-		<Template theme={theme} colour={'bg-grey-950'}>
+		<Template theme={theme} colour={'grey-950'}>
 			<Layout title={'Contact | Propagate'}>
 				<div className="text-white bg-grey-950">
 					<GridContainer>

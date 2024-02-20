@@ -9,7 +9,7 @@ export default function Blog() {
 	const theme = pageThemes['/blog'];
 
 	return (
-		<Template theme={theme} colour={'bg-white'}>
+		<Template theme={theme} colour={'white'}>
 			<Layout title={'Blog | Propagate'}>
 				<GridContainer>
 					<div className="pt-36 md:pt-60">

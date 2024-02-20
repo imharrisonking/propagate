@@ -11,7 +11,7 @@ export default function Home() {
 	const theme = pageThemes['/'];
 
 	return (
-		<Template theme={theme} colour={'bg-white'}>
+		<Template theme={theme} colour={'white'}>
 			<Layout>
 				<GridContainer>
 					<div className="pt-36 md:pt-60">

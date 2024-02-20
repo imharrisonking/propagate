@@ -1,33 +1,98 @@
 import React from 'react';
+import Link from 'next/link';
 import { Grid, Cell } from '@faceless-ui/css-grid';
 import { twMerge } from 'tailwind-merge';
 
 import FooterGridContainer from '../containers/FooterGridContainer';
+import Arrow from '@/components/graphics/Arrow';
+
+import socials from '@/styles/css/socials';
 
 export default function Footer({ theme, colour }) {
+	const backgroundColour = `bg-${colour}`;
+	const arrowColour = theme === 'light' ? 'grey-500' : 'white';
+	const fontColourMapping = {
+		white: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
+		'grey-950': { mono: 'text-grey-400', sans: 'text-white', outline: 'outline-white-text' },
+		'green-700': { mono: 'text-grey-200', sans: 'text-white', outline: 'outline-white-text' },
+		blue: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
+	};
+
 	return (
-		<footer className={twMerge('h-dvh flex justify-center', colour)}>
+		<footer className={twMerge('h-dvh flex justify-center', backgroundColour)}>
 			<FooterGridContainer>
 				<Grid>
-					<Cell colsS={8} colsM={6} colsL={6} colsXL={6} startS={1} startM={2}>
-						<div
-							className={`${
-								theme === 'light' ? 'text-grey-500' : 'text-white'
-							} flex items-center`}
-						>
+					<Cell
+						colsS={8}
+						colsM={6}
+						colsL={6}
+						colsXL={6}
+						startS={1}
+						startM={2}
+						startL={2}
+						startXL={2}
+					>
+						<div className={`${fontColourMapping[colour].sans} flex items-center`}>
 							<h1
 								className={`font-medium text-[16.5333vw]/[16.5333vw] sm-text-8xl md:text-9xl lg:text-10xl xl:text-11xl 2xl:text-12xl`}
 							>
 								PROPAGATE{' '}
-								<span
-									className={`${
-										theme === 'light' ? 'outline-text' : 'outline-white-text'
-									}`}
-								>
+								<span className={`${fontColourMapping[colour].outline}`}>
 									YOUR EXPERTISE.
 								</span>
 							</h1>
 						</div>
+					</Cell>
+					<Cell
+						colsS={8}
+						colsM={5}
+						colsL={5}
+						colsXL={5}
+						startS={1}
+						startM={2}
+						startL={9}
+						startXL={9}
+					>
+						<h6 className={`${fontColourMapping[colour].mono} mb-3`}>WORK WITH US</h6>
+						<div className="flex align-middle items-center mb-10">
+							<p
+								className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} pr-4`}
+							>
+								<Link href="/contact">Let&apos;s chat</Link>
+							</p>
+							<Arrow colour={arrowColour} horizontal={true} />
+						</div>
+
+						<h6 className={`${fontColourMapping[colour].mono} mb-3`}>
+							CONNECT WITH US
+						</h6>
+						{Object.entries(socials).map(([name, url], index, array) => (
+							<div
+								key={url}
+								className={`flex align-middle items-center ${
+									index === array.length - 1 ? 'mb-10' : 'pb-4'
+								}`}
+							>
+								<p
+									className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} pr-4`}
+								>
+									<a
+										key={name}
+										href={url}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{name}
+									</a>
+								</p>
+								<Arrow colour={arrowColour} horizontal={true} />
+							</div>
+						))}
+						<p
+							className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} pr-4`}
+						>
+							&copy; 2024 Propagate Digital Limited
+						</p>
 					</Cell>
 				</Grid>
 			</FooterGridContainer>
