@@ -5,13 +5,16 @@ import Template from '@/components/layout/Template';
 import Layout from '@/components/layout/Layout';
 import GridContainer from '@/components/layout/containers/GridContainer';
 import Button from '@/components/buttons/Button';
+import { pageThemes } from '@/styles/css/themes';
 
 export default function Home() {
+	const theme = pageThemes['/'];
+
 	return (
-		<Template>
+		<Template theme={theme} colour={'bg-white'}>
 			<Layout>
 				<GridContainer>
-					<div className="pt-14 md:pt-60">
+					<div className="pt-36 md:pt-60">
 						<Grid>
 							<Cell cols={13}>
 								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl">

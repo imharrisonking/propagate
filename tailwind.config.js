@@ -58,12 +58,14 @@ module.exports = {
 				300: '#9D9D9D',
 				400: '#676769',
 				500: '#424242',
+				800: '#494949',
 				950: '#1C1C1C',
 			},
 			green: {
 				300: '#A1FFCD',
 				700: '#478978',
 			},
+			blue: '#A2C7E2',
 		},
 		typography: (theme) => ({
 			DEFAULT: {
@@ -95,4 +97,7 @@ module.exports = {
 			});
 		}),
 	],
+	options: {
+		safelist: [/^bg-/],
+	},
 };

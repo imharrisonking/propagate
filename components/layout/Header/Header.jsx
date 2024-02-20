@@ -59,11 +59,11 @@ export default function Header() {
 	const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 	return (
-		<header className="sticky top-0 md:fixed md:top-0">
-			{/* STICKY NAVIGATION SMALL SCREENS */}
+		<header className="fixed top-0 left-0 right-0 md:fixed md:top-0">
+			{/* FIXED NAVIGATION SMALL SCREENS */}
 			<div
 				id="mobile-header"
-				className={`md:hidden flex justify-between min-h-20 pl-5 bg-${backgroundColour}/[0.7] backdrop-blur-md backdrop-saturate-200 z-${zindexes.header}`}
+				className={`md:hidden w-full flex justify-between min-h-20 pl-5 bg-${backgroundColour}/[0.7] backdrop-blur-md z-${zindexes.header}`}
 			>
 				<Logo headerExpanded={headerExpanded} theme={theme} />
 				{/* NAVIGATION MENU SMALL SCREENS */}
@@ -126,7 +126,13 @@ export default function Header() {
 								<Hamburger active={menuActive} theme={theme} />
 							</button>
 						</div>
-						<ul className="flex flex-col leading-none gap-4 min-w-60">
+
+						{/* Expanded menu for larger screens */}
+						<ul
+							className={`${
+								theme === 'light' ? 'text-grey-950' : 'text-white'
+							} flex flex-col leading-none gap-4 min-w-60`}
+						>
 							{pages.map((link, index) => (
 								<li
 									style={{
@@ -142,9 +148,11 @@ export default function Header() {
 								>
 									<Link
 										href={link}
-										className={`nav-item hover:text-grey-300 ${
-											pathname === link ? 'active' : ''
-										}`}
+										className={`${
+											theme === 'light'
+												? 'nav-item hover:text-grey-400'
+												: 'nav-item-white hover:text-grey-200'
+										} ${pathname === link ? 'active' : ''}`}
 									>
 										{capitalizeFirstLetter(link.replace('/', ''))}
 									</Link>
@@ -164,6 +172,7 @@ export default function Header() {
 									<Link
 										href={link}
 										className="font-medium text-6xl sm-text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl outline-white-text hover:text-white uppercase pb-2"
+										onClick={() => toggleModal('menu')}
 									>
 										{link.replace('/', '')}
 									</Link>
