@@ -14,7 +14,7 @@ export default function About() {
 			<Layout title={'About | Propagate'}>
 				<div className="text-white bg-green-700">
 					<GridContainer>
-						<div className="pt-14 md:pt-60">
+						<div className="pt-36 md:pt-60">
 							<Grid>
 								<Cell cols={13}>
 									<h1

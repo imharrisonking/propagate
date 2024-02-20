@@ -12,7 +12,7 @@ export default function HeaderButton({ headerExpanded, theme }) {
 	const additionalClasses = `${paddingTop}`;
 
 	return (
-		<Link href="/demo" className="flex items-center align-top">
+		<Link href="/demo" className="flex items-center align-middle">
 			<Button
 				additionalClasses={additionalClasses}
 				additionalStyles={transitionStyles}

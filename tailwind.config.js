@@ -93,6 +93,9 @@ module.exports = {
 					'&::-webkit-scrollbar': {
 						display: 'none !important',
 					},
+					'.align-bottom': {
+						verticalAlign: 'bottom',
+					},
 				},
 			});
 		}),

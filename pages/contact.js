@@ -13,7 +13,7 @@ export default function Contact() {
 			<Layout title={'Contact | Propagate'}>
 				<div className="text-white bg-grey-950">
 					<GridContainer>
-						<div className="pt-14 md:pt-60">
+						<div className="pt-36 md:pt-60">
 							<Grid>
 								<Cell cols={13}>
 									<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl">

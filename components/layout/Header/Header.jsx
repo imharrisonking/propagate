@@ -12,7 +12,7 @@ import Hamburger from './Hamburger';
 import Arrow from '@/components/graphics/Arrow';
 import HeaderButton from '@/components/buttons/HeaderButton';
 import FullWidthGridContainer from '../containers/FullWidthGridContainer';
-import { pageThemes, pageColours } from '@/styles/css/themes';
+import { pageThemes, pageColours, buttonThemes } from '@/styles/css/themes';
 
 const menuSlug = 'menu';
 
@@ -25,17 +25,20 @@ export default function Header() {
 	// Keep state of the theme
 	const [theme, setTheme] = useState(pageThemes[pathname]);
 	const [backgroundColour, setBackgroundColour] = useState(pageColours[pathname]);
+	const [headerButtonTheme, setHeaderButtonTheme] = useState(buttonThemes[pathname]);
 
 	// Update the theme when the pathname changes
 	useEffect(() => {
 		if (menuActive) {
 			// Add the dark-theme class to the body when the modal is open
-			setTheme('dark');
-			setBackgroundColour('grey-950');
+			setTheme(pageThemes.menu);
+			setBackgroundColour(pageColours.menu);
+			setHeaderButtonTheme(buttonThemes.menu);
 		} else {
 			// Remove the dark-theme class from the body when the modal is closed
 			setTheme(pageThemes[pathname]);
 			setBackgroundColour(pageColours[pathname]);
+			setHeaderButtonTheme(buttonThemes[pathname]);
 		}
 	}, [pathname, menuActive]);
 
@@ -63,14 +66,14 @@ export default function Header() {
 			{/* FIXED NAVIGATION SMALL SCREENS */}
 			<div
 				id="mobile-header"
-				className={`md:hidden w-full flex justify-between min-h-20 pl-5 bg-${backgroundColour}/[0.7] backdrop-blur-md z-${zindexes.header}`}
+				className={`md:hidden w-full flex justify-between min-h-20 pl-5 bg-${backgroundColour}/[0.5] backdrop-blur-md z-${zindexes.header}`}
 			>
 				<Logo headerExpanded={headerExpanded} theme={theme} />
 				{/* NAVIGATION MENU SMALL SCREENS */}
 				<nav className="md:hidden flex items-center">
 					{/* Free demo button for small screens */}
 					<div>
-						<HeaderButton headerExpanded={headerExpanded} theme={theme} />
+						<HeaderButton headerExpanded={headerExpanded} theme={headerButtonTheme} />
 					</div>
 
 					{/* Hamburger menu for small screens */}
@@ -108,7 +111,10 @@ export default function Header() {
 									visibility: headerExpanded ? 'hidden' : 'visible',
 								}}
 							>
-								<HeaderButton headerExpanded={headerExpanded} theme={theme} />
+								<HeaderButton
+									headerExpanded={headerExpanded}
+									theme={headerButtonTheme}
+								/>
 							</div>
 
 							{/* Hamburger menu for larger screens */}
@@ -163,7 +169,7 @@ export default function Header() {
 				</nav>
 			</div>
 
-			<Modal slug={menuSlug} className="w-full h-dvh pt-28 md:pt-52 bg-grey-950">
+			<Modal slug={menuSlug} className="w-full h-dvh pt-20 md:pt-52 bg-grey-950">
 				<FullWidthGridContainer>
 					<Grid>
 						<Cell colsS={8} colsL={9} colsXL={9} htmlElement={'nav'} start={2}>

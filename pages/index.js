@@ -35,7 +35,7 @@ export default function Home() {
 							</Cell>
 							<Cell cols={14} className="flex justify-center md:justify-start">
 								<Link href="/demo">
-									<Button theme="light">Watch the demo—it&apos;s free</Button>
+									<Button theme="accent">Watch the demo—it&apos;s free</Button>
 								</Link>
 							</Cell>
 						</Grid>
