@@ -5,18 +5,14 @@ import { twMerge } from 'tailwind-merge';
 
 import FooterGridContainer from '../containers/FooterGridContainer';
 import Arrow from '@/components/graphics/Arrow';
+import ArrowLink from '@/components/type/ArrowLink';
 
 import socials from '@/styles/css/socials';
+import { fontColourMapping } from '@/styles/css/themes';
 
 export default function Footer({ theme, colour }) {
 	const backgroundColour = `bg-${colour}`;
 	const arrowColour = theme === 'light' ? 'grey-500' : 'white';
-	const fontColourMapping = {
-		white: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
-		'grey-950': { mono: 'text-grey-400', sans: 'text-white', outline: 'outline-white-text' },
-		'green-700': { mono: 'text-grey-200', sans: 'text-white', outline: 'outline-white-text' },
-		blue: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
-	};
 
 	return (
 		<footer className={twMerge('h-dvh flex justify-center', backgroundColour)}>
@@ -93,6 +89,9 @@ export default function Footer({ theme, colour }) {
 						>
 							&copy; 2024 Propagate Digital Limited
 						</p>
+						<ArrowLink colour={colour} theme={theme} type={'internal'} url={'/contact'}>
+							Let us chat
+						</ArrowLink>
 					</Cell>
 				</Grid>
 			</FooterGridContainer>

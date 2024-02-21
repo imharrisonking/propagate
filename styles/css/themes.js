@@ -27,3 +27,10 @@ export const buttonThemes = {
 	'/contact': 'accentDark',
 	menu: 'accentDark',
 };
+
+export const fontColourMapping = {
+	white: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
+	'grey-950': { mono: 'text-grey-400', sans: 'text-white', outline: 'outline-white-text' },
+	'green-700': { mono: 'text-grey-200', sans: 'text-white', outline: 'outline-white-text' },
+	blue: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
+};
