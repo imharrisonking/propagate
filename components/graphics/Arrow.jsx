@@ -1,5 +1,12 @@
 export default function Arrow({ horizontal, colour }) {
-	const svgColour = `fill-${colour} stroke-${colour}`;
+	const colours = {
+		white: 'fill-white stroke-white',
+		'grey-500': 'fill-grey-500 stroke-grey-500',
+		'grey-950': 'fill-grey-950 stroke-grey-950',
+		// Add more colours as needed
+	};
+
+	const svgColour = colours[colour];
 
 	return (
 		<svg

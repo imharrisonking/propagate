@@ -12,7 +12,7 @@ import { fontColourMapping } from '@/styles/css/themes';
 
 export default function Footer({ theme, colour }) {
 	const backgroundColour = `bg-${colour}`;
-	const arrowColour = theme === 'light' ? 'grey-500' : 'white';
+	const { mono, sans, outline } = fontColourMapping[colour];
 
 	return (
 		<footer className={twMerge('h-dvh flex justify-center', backgroundColour)}>
@@ -28,14 +28,11 @@ export default function Footer({ theme, colour }) {
 						startL={2}
 						startXL={2}
 					>
-						<div className={`${fontColourMapping[colour].sans} flex items-center`}>
+						<div className={`${sans} flex items-center`}>
 							<h1
 								className={`font-medium text-[16.5333vw]/[16.5333vw] sm-text-8xl md:text-9xl lg:text-10xl xl:text-11xl 2xl:text-12xl`}
 							>
-								PROPAGATE{' '}
-								<span className={`${fontColourMapping[colour].outline}`}>
-									YOUR EXPERTISE.
-								</span>
+								PROPAGATE <span className={`${outline}`}>YOUR EXPERTISE.</span>
 							</h1>
 						</div>
 					</Cell>
@@ -49,19 +46,18 @@ export default function Footer({ theme, colour }) {
 						startL={9}
 						startXL={9}
 					>
-						<h6 className={`${fontColourMapping[colour].mono} mb-3`}>WORK WITH US</h6>
-						<div className="flex align-middle items-center mb-10">
-							<p
-								className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} pr-4`}
-							>
-								<Link href="/contact">Let&apos;s chat</Link>
-							</p>
-							<Arrow colour={arrowColour} horizontal={true} />
-						</div>
+						<h6 className={`${mono} mb-3`}>WORK WITH US</h6>
+						<ArrowLink
+							colour={colour}
+							theme={theme}
+							type={'internal'}
+							url={'/contact'}
+							classes={'mb-10'}
+						>
+							Let&apos;s chat
+						</ArrowLink>
 
-						<h6 className={`${fontColourMapping[colour].mono} mb-3`}>
-							CONNECT WITH US
-						</h6>
+						<h6 className={`${mono} mb-3`}>CONNECT WITH US</h6>
 						{Object.entries(socials).map(([name, url], index, array) => (
 							<div
 								key={url}
@@ -69,29 +65,24 @@ export default function Footer({ theme, colour }) {
 									index === array.length - 1 ? 'mb-10' : 'pb-4'
 								}`}
 							>
-								<p
-									className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} pr-4`}
+								<ArrowLink
+									colour={colour}
+									theme={theme}
+									type={'external'}
+									url={url}
 								>
-									<a
-										key={name}
-										href={url}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{name}
-									</a>
-								</p>
-								<Arrow colour={arrowColour} horizontal={true} />
+									{name}
+								</ArrowLink>
 							</div>
 						))}
-						<p
-							className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} pr-4`}
+						{/* <p
+							className={`text-2xl lg:text-4xl ${sans} pr-4`}
 						>
 							&copy; 2024 Propagate Digital Limited
-						</p>
-						<ArrowLink colour={colour} theme={theme} type={'internal'} url={'/contact'}>
-							Let us chat
-						</ArrowLink>
+						</p> */}
+						{/* <h6 className={`${mono} mb-3 uppercase`}> */}
+						<h6 className={`${mono} mb-3`}>&copy; 2024 Propagate Digital Limited</h6>
+						<h6 className={mono}>Company Number 15442458</h6>
 					</Cell>
 				</Grid>
 			</FooterGridContainer>
