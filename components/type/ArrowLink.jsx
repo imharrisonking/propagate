@@ -9,7 +9,9 @@ export default function ArrowLink({ children, colour, theme, type, url, classes 
 	if (type === 'internal') {
 		return (
 			<div className={`flex align-middle items-center ${classes} group`}>
-				<p className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} `}>
+				<p
+					className={`text-2xl md:text-3xl lg:text-4xl ${fontColourMapping[colour].sans} `}
+				>
 					<Link href={url}>{children}</Link>
 				</p>
 				<div className="block pl-4 md:group-hover:translate-x-[4px] md:transition-transform md:duration-200">
@@ -20,7 +22,9 @@ export default function ArrowLink({ children, colour, theme, type, url, classes 
 	} else if (type === 'external')
 		return (
 			<div className={`flex align-middle items-center ${classes} group`}>
-				<p className={`text-2xl lg:text-4xl ${fontColourMapping[colour].sans} `}>
+				<p
+					className={`text-2xl md:text-3xl lg:text-4xl ${fontColourMapping[colour].sans} `}
+				>
 					<a key={url} href={url} target="_blank" rel="noopener noreferrer">
 						{children}
 					</a>

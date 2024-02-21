@@ -13,40 +13,40 @@ import { fontColourMapping } from '@/styles/css/themes';
 export default function Footer({ theme, colour }) {
 	const backgroundColour = `bg-${colour}`;
 	const { mono, sans, outline } = fontColourMapping[colour];
-	console.log(colour);
 
 	return (
-		<footer className={twMerge('h-dvh', backgroundColour)}>
+		<footer className={twMerge('h-dvh flex justify-center', backgroundColour)}>
 			<FooterGridContainer>
 				<Grid>
 					<Cell
 						colsS={8}
-						colsM={3}
-						colsL={4}
-						colsXL={4}
-						startS={1}
-						startM={2}
-						startL={5}
-						startXL={5}
-					>
-						<h6 className={twMerge('mb-3', mono)}>FIND US</h6>
-						<p className={`text-2xl md:text-3xl lg:text-4xl ${sans} `}>
-							Bow East
-							<br />
-							London, E3 <br /> United Kingdom
-						</p>
-					</Cell>
-					<Cell
-						colsS={8}
-						colsM={4}
+						colsM={6}
 						colsL={6}
 						colsXL={6}
 						startS={1}
-						startM={5}
+						startM={2}
+						startL={2}
+						startXL={2}
+					>
+						<div className={`${sans} flex items-center`}>
+							<h1
+								className={`font-medium text-[16.5333vw]/[16.5333vw] sm-text-8xl md:text-9xl lg:text-10xl xl:text-11xl 2xl:text-12xl`}
+							>
+								PROPAGATE <span className={`${outline}`}>YOUR EXPERTISE.</span>
+							</h1>
+						</div>
+					</Cell>
+					<Cell
+						colsS={8}
+						colsM={5}
+						colsL={5}
+						colsXL={5}
+						startS={1}
+						startM={2}
 						startL={9}
 						startXL={9}
 					>
-						<h6 className={twMerge('mb-3', mono)}>WORK WITH US</h6>
+						<h6 className={`${mono} mb-3`}>WORK WITH US</h6>
 						<ArrowLink
 							colour={colour}
 							theme={theme}
@@ -57,12 +57,12 @@ export default function Footer({ theme, colour }) {
 							Let&apos;s chat
 						</ArrowLink>
 
-						<h6 className={twMerge('mb-3', mono)}>CONNECT WITH US</h6>
+						<h6 className={`${mono} mb-3`}>CONNECT WITH US</h6>
 						{Object.entries(socials).map(([name, url], index, array) => (
 							<div
 								key={url}
 								className={`flex align-middle items-center ${
-									index === array.length - 1 ? 'mb-10 md:mb-[30dvh]' : 'pb-4'
+									index === array.length - 1 ? 'mb-10' : 'pb-4'
 								}`}
 							>
 								<ArrowLink
@@ -75,12 +75,14 @@ export default function Footer({ theme, colour }) {
 								</ArrowLink>
 							</div>
 						))}
-						<div className="flex flex-col justify-end">
-							<h6 className={twMerge('mb-3', mono)}>
-								&copy; 2024 Propagate Digital Limited
-							</h6>
-							<h6 className={mono}>Company Number 15442458</h6>
-						</div>
+						{/* <p
+							className={`text-2xl lg:text-4xl ${sans} pr-4`}
+						>
+							&copy; 2024 Propagate Digital Limited
+						</p> */}
+						{/* <h6 className={`${mono} mb-3 uppercase`}> */}
+						<h6 className={`${mono} mb-3`}>&copy; 2024 Propagate Digital Limited</h6>
+						<h6 className={mono}>Company Number 15442458</h6>
 					</Cell>
 				</Grid>
 			</FooterGridContainer>
