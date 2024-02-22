@@ -2,10 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { Grid, Cell } from '@faceless-ui/css-grid';
 import { twMerge } from 'tailwind-merge';
+import { CircleType } from 'circletype';
 
 import FooterGridContainer from '../containers/FooterGridContainer';
-import Arrow from '@/components/graphics/Arrow';
 import ArrowLink from '@/components/type/ArrowLink';
+import CircularText from '@/components/graphics/CircularText';
 
 import socials from '@/styles/css/socials';
 import { fontColourMapping } from '@/styles/css/themes';
@@ -13,7 +14,6 @@ import { fontColourMapping } from '@/styles/css/themes';
 export default function Footer({ theme, colour }) {
 	const backgroundColour = `bg-${colour}`;
 	const { mono, sans, outline } = fontColourMapping[colour];
-	console.log(colour);
 
 	return (
 		<footer className={twMerge('h-dvh', backgroundColour)}>
@@ -83,6 +83,13 @@ export default function Footer({ theme, colour }) {
 						</div>
 					</Cell>
 				</Grid>
+				<div className="absolute flex -bottom-[30dvh] -left-[5vw]">
+					<CircularText
+						text="FUNNEL BUILDING   MAKE SALES   OFFER CREATION   "
+						fontSize={48}
+						textColour={sans}
+					/>
+				</div>
 			</FooterGridContainer>
 		</footer>
 	);

@@ -133,6 +133,15 @@ header {
     }
   }
 
+@keyframes spin {
+from {
+    transform: rotate(0deg)
+}
+to {
+    transform: rotate(359deg)
+}
+}
+
   .highlight-dark-text {
       color: var(--color-green-700);
       position: relative;
