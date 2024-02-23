@@ -2,11 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { Grid, Cell } from '@faceless-ui/css-grid';
 import { twMerge } from 'tailwind-merge';
-import { CircleType } from 'circletype';
 
 import FooterGridContainer from '../containers/FooterGridContainer';
 import ArrowLink from '@/components/type/ArrowLink';
-import CircularText from '@/components/graphics/CircularText';
+import CircularText from '@/components/type/CircularText';
 
 import socials from '@/styles/css/socials';
 import { fontColourMapping } from '@/styles/css/themes';
@@ -62,7 +61,7 @@ export default function Footer({ theme, colour }) {
 							<div
 								key={url}
 								className={`flex align-middle items-center ${
-									index === array.length - 1 ? 'mb-10 md:mb-[30dvh]' : 'pb-4'
+									index === array.length - 1 ? 'mb-10 sm:mb-[30dvh]' : 'pb-4'
 								}`}
 							>
 								<ArrowLink
@@ -83,7 +82,7 @@ export default function Footer({ theme, colour }) {
 						</div>
 					</Cell>
 				</Grid>
-				<div className="absolute flex -bottom-[30dvh] -left-[5vw]">
+				<div className="hidden md:block absolute flex -bottom-[30dvh] -left-[5vw]">
 					<CircularText
 						text="FUNNEL BUILDING   MAKE SALES   OFFER CREATION   "
 						fontSize={48}
