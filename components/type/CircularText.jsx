@@ -1,30 +1,49 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
+import { useMediaQuery } from 'react-responsive';
 
 import LongArrow from '../graphics/LongArrow';
 
-export default function CircularText({ text, fontSize, textColour }) {
+export default function CircularText({ text, textColour }) {
 	const [isHovered, setIsHovered] = useState(false);
+
+	const isSmallScreen = useMediaQuery({ query: '(max-width: 640px)' });
+	const isMediumScreen = useMediaQuery({ query: '(min-width: 641px) and (max-width: 1024px)' });
+	const isLargeScreen = useMediaQuery({ query: '(min-width: 1025px) and (max-width: 2559px' });
+	const isExtraLargeScreen = useMediaQuery({ query: '(min-width: 2560px)' });
+
+	let fontSize;
+	let arrowSize;
+	if (isSmallScreen) {
+		fontSize = 30;
+		arrowSize = 40;
+	} else if (isMediumScreen) {
+		fontSize = 44;
+		arrowSize = 55;
+	} else if (isLargeScreen) {
+		fontSize = 48;
+		arrowSize = 70;
+	} else if (isExtraLargeScreen) {
+		fontSize = 60;
+		arrowSize = 120;
+	}
 
 	const characters = text.split('');
 	const degree = 360 / characters.length;
 	const rotation = 90 + degree / 2;
 
-	// Conver font size to number
-	const fontSizeNum = parseFloat(fontSize);
-
 	// Set radius based on font size and text length
-	const radius = (text.length * fontSizeNum) / (2 * Math.PI);
+	const radius = (text.length * fontSize) / (2 * Math.PI);
 	const viewBoxSize = radius * 2;
 
 	return (
 		<Link href="/demo" className="flex items-center align-middle">
 			<div className="flex items-center align-middle">
-				<div className="flex justify-center items-center relative h-[88dvh] w-[88dvh]">
+				<div className="flex justify-center items-center relative md:h-[80vw] md:w-[80vw] lg:h-[55vw] lg:w-[55vw]">
 					<h1
 						className={twMerge(
-							'text-9xl items-center justify-center absolute whitespace-nowrap',
+							'md:text-[6.67vw] lg:text-[6.67vw] items-center justify-center absolute whitespace-nowrap',
 							textColour
 						)}
 						style={{
@@ -39,6 +58,7 @@ export default function CircularText({ text, fontSize, textColour }) {
 					</h1>
 					<LongArrow
 						className={'items-center justify-center absolute top-1/3'}
+						arrowSize={arrowSize}
 						textColour={textColour}
 						isHovered={isHovered}
 					/>

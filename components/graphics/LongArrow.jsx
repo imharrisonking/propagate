@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 
-export default function LongArrow({ className, textColour, isHovered }) {
+export default function LongArrow({ className, arrowSize, textColour, isHovered }) {
 	const colours = {
 		'text-white': 'fill-white stroke-white',
 		'text-grey-500': 'fill-grey-500 stroke-grey-500',
@@ -11,10 +11,10 @@ export default function LongArrow({ className, textColour, isHovered }) {
 
 	return (
 		<svg
-			viewBox="0 0 70 69"
+			viewBox="0 0 69 70"
 			fill="none"
-			height="70"
-			width="70"
+			height={arrowSize}
+			width={arrowSize}
 			xmlns="http://www.w3.org/2000/svg"
 			className={twMerge(svgColour, className, 'stroke-[0.5px]')}
 			style={{

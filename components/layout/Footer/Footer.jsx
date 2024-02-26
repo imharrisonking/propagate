@@ -61,7 +61,7 @@ export default function Footer({ theme, colour }) {
 							<div
 								key={url}
 								className={`flex align-middle items-center ${
-									index === array.length - 1 ? 'mb-10 sm:mb-[30dvh]' : 'pb-4'
+									index === array.length - 1 ? 'mb-10' : 'pb-4'
 								}`}
 							>
 								<ArrowLink
@@ -82,10 +82,9 @@ export default function Footer({ theme, colour }) {
 						</div>
 					</Cell>
 				</Grid>
-				<div className="hidden md:block absolute flex -bottom-[30dvh] -left-[5vw]">
+				<div className="hidden lg:block absolute flex md:-bottom-[20dvh] md:-left-[5vw] xl:-bottom-[18.75vw] xl:-left-[5vw]">
 					<CircularText
 						text="FUNNEL BUILDING   MAKE SALES   OFFER CREATION   "
-						fontSize={48}
 						textColour={sans}
 					/>
 				</div>
