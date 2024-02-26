@@ -93,9 +93,15 @@ export default function Header() {
 				className="hidden md:flex items-start md:mt-12 md:ml-10 md:p-0 md:min-h-0"
 			>
 				{/* FIXED LOGO LARGE SCREENS */}
-				<div className="fixed top-[2.8571vw] left-[2.8571vw]">
-					<Logo headerExpanded={headerExpanded} theme={theme} />
-				</div>
+				<button
+					onClick={() => {
+						if (menuActive) toggleModal('menu');
+					}}
+				>
+					<div className="fixed top-[2.8571vw] left-[2.8571vw]">
+						<Logo headerExpanded={headerExpanded} theme={theme} />
+					</div>
+				</button>
 
 				{/* FIXED NAVIGATION MENU LARGE SCREENS */}
 				<nav className="fixed top-[2.8571vw] right-[0] md:overflow-x-hidden text-base text-end pr-10">
@@ -172,20 +178,31 @@ export default function Header() {
 			<Modal slug={menuSlug} className="w-full h-dvh pt-20 md:pt-52 bg-grey-950">
 				<FullWidthGridContainer>
 					<Grid>
-						<Cell colsS={8} colsL={9} colsXL={9} htmlElement={'nav'} start={2}>
+						<Cell
+							className="pt-10 md:pt-0"
+							colsS={8}
+							colsL={9}
+							colsXL={9}
+							htmlElement={'nav'}
+							start={2}
+							startS={1}
+							startM={2}
+							startL={2}
+							startXL={2}
+						>
 							{pages.map((link, index) => (
-								<h2 key={link}>
+								<p key={link} className="pb-2">
 									<Link
 										href={link}
-										className="font-medium text-6xl sm-text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl outline-white-text hover:text-white uppercase pb-2"
+										className="font-medium text-6xl sm-text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl outline-white-text hover:text-white uppercase"
 										onClick={() => toggleModal('menu')}
 									>
 										{link.replace('/', '')}
 									</Link>
-								</h2>
+								</p>
 							))}
 						</Cell>
-						<Cell cols={4} startS={2} startM={2} startL={11} startXL={11}>
+						<Cell cols={4} startS={1} startM={2} startL={11} startXL={11}>
 							<h6 className="text-grey-400 mb-3">WORK WITH US</h6>
 							<div className="flex align-middle items-center mb-6">
 								<p className="text-2xl lg:text-4xl text-white pr-4">
