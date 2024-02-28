@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Modal, useModal } from '@faceless-ui/modal';
@@ -22,6 +22,7 @@ export default function Header() {
 	const { isModalOpen, toggleModal } = useModal();
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
+	const dummyInputRef = useRef();
 
 	// Keep state of the theme
 	const [theme, setTheme] = useState(pageThemes[pathname]);
@@ -35,6 +36,7 @@ export default function Header() {
 			setTheme(pageThemes.menu);
 			setBackgroundColour(pageColours.menu);
 			setHeaderButtonTheme(buttonThemes.menu);
+			dummyInputRef.current.focus();
 		} else {
 			// Remove the dark-theme class from the body when the modal is closed
 			setTheme(pageThemes[pathname]);
@@ -180,6 +182,7 @@ export default function Header() {
 				<FullWidthGridContainer>
 					{/* This dummy input is hidden but focusable */}
 					<input
+						ref={dummyInputRef}
 						style={{ position: 'absolute', opacity: 0, height: 0, width: 0 }}
 						tabIndex="-1"
 					/>
