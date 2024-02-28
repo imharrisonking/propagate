@@ -9,11 +9,10 @@ import zindexes from '@/styles/css/zindexes';
 import socials from '@/styles/css/socials';
 import Logo from './Logo';
 import Hamburger from './Hamburger';
-import Arrow from '@/components/graphics/Arrow';
 import ArrowLink from '@/components/type/ArrowLink';
 import HeaderButton from '@/components/buttons/HeaderButton';
 import FullWidthGridContainer from '../containers/FullWidthGridContainer';
-import { pageThemes, pageColours, buttonThemes } from '@/styles/css/themes';
+import { pages, pageThemes, pageColours, buttonThemes } from '@/styles/css/themes';
 
 const menuSlug = 'menu';
 
@@ -22,7 +21,7 @@ export default function Header() {
 	const { isModalOpen, toggleModal } = useModal();
 	const menuActive = isModalOpen(menuSlug);
 	const pathname = usePathname();
-	const dummyInputRef = useRef();
+	const dummyElementRef = useRef();
 
 	// Keep state of the theme
 	const [theme, setTheme] = useState(pageThemes[pathname]);
@@ -36,7 +35,7 @@ export default function Header() {
 			setTheme(pageThemes.menu);
 			setBackgroundColour(pageColours.menu);
 			setHeaderButtonTheme(buttonThemes.menu);
-			dummyInputRef.current.focus();
+			dummyElementRef.current.focus();
 		} else {
 			// Remove the dark-theme class from the body when the modal is closed
 			setTheme(pageThemes[pathname]);
@@ -56,8 +55,7 @@ export default function Header() {
 		transitionTimingFunction: 'ease-out',
 	};
 
-	const pages = ['/testimonials', '/community', '/blog', '/about', '/contact'];
-
+	// HELPER FUNCTIONS
 	// Calculate transition delay based on index
 	const getTransitionDelay = (index) => `${index * 0.1}s`;
 
@@ -181,8 +179,8 @@ export default function Header() {
 			<Modal slug={menuSlug} className="w-full h-dvh pt-20 md:pt-52 bg-grey-950">
 				<FullWidthGridContainer>
 					{/* This dummy input is hidden but focusable */}
-					<input
-						ref={dummyInputRef}
+					<div
+						ref={dummyElementRef}
 						style={{ position: 'absolute', opacity: 0, height: 0, width: 0 }}
 						tabIndex="-1"
 					/>

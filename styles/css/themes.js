@@ -1,3 +1,5 @@
+export const pages = ['/testimonials', '/community', '/blog', '/about', '/contact'];
+
 export const pageThemes = {
 	'/': 'light',
 	'/testimonials': 'light',
