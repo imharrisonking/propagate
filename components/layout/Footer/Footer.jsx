@@ -51,7 +51,8 @@ export default function Footer({ theme, colour }) {
 							theme={theme}
 							type={'internal'}
 							url={'/contact'}
-							classes={'mb-10'}
+							textClasses={'text-2xl md:text-3xl lg:text-4xl'}
+							positionClasses={'mb-10'}
 						>
 							Let&apos;s chat
 						</ArrowLink>
@@ -69,6 +70,7 @@ export default function Footer({ theme, colour }) {
 									theme={theme}
 									type={'external'}
 									url={url}
+									textClasses={'text-2xl md:text-3xl lg:text-4xl'}
 								>
 									{name}
 								</ArrowLink>

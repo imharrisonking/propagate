@@ -307,7 +307,7 @@ to {
     }
 
     html, body {
-        @apply font-sans text-grey-500 m-0 w-full
+        @apply font-sans text-grey-500 m-0 w-full ring-offset-0 ring-0 ring-transparent
     }
 
     body {

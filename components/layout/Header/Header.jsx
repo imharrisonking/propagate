@@ -10,6 +10,7 @@ import socials from '@/styles/css/socials';
 import Logo from './Logo';
 import Hamburger from './Hamburger';
 import Arrow from '@/components/graphics/Arrow';
+import ArrowLink from '@/components/type/ArrowLink';
 import HeaderButton from '@/components/buttons/HeaderButton';
 import FullWidthGridContainer from '../containers/FullWidthGridContainer';
 import { pageThemes, pageColours, buttonThemes } from '@/styles/css/themes';
@@ -204,27 +205,29 @@ export default function Header() {
 						</Cell>
 						<Cell cols={4} startS={1} startM={2} startL={11} startXL={11}>
 							<h6 className="text-grey-400 mb-3">WORK WITH US</h6>
-							<div className="flex align-middle items-center mb-6">
-								<p className="text-2xl lg:text-4xl text-white pr-4">
-									<Link href="/contact">Let&apos;s chat</Link>
-								</p>
-								<Arrow colour="white" horizontal={true} />
-							</div>
+							<ArrowLink
+								colour={backgroundColour}
+								theme={theme}
+								type={'internal'}
+								url={'/contact'}
+								textClasses={'text-2xl md:text-2xl lg:text-4xl'}
+								positionClasses={'mb-6'}
+							>
+								Let&apos;s chat
+							</ArrowLink>
 
 							<h6 className="text-grey-400 pb-3">CONNECT WITH US</h6>
 							{Object.entries(socials).map(([name, url]) => (
 								<div key={{ url }} className="flex align-middle items-center pb-4">
-									<p className="text-2xl lg:text-4xl text-white pr-4">
-										<a
-											key={name}
-											href={url}
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											{name}
-										</a>
-									</p>
-									<Arrow colour="white" horizontal={true} />
+									<ArrowLink
+										colour={backgroundColour}
+										theme={theme}
+										type={'external'}
+										url={url}
+										textClasses={'text-2xl lg:text-4xl'}
+									>
+										{name}
+									</ArrowLink>
 								</div>
 							))}
 						</Cell>
