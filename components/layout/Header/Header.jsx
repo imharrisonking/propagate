@@ -178,6 +178,11 @@ export default function Header() {
 
 			<Modal slug={menuSlug} className="w-full h-dvh pt-20 md:pt-52 bg-grey-950">
 				<FullWidthGridContainer>
+					{/* This dummy input is hidden but focusable */}
+					<input
+						style={{ position: 'absolute', opacity: 0, height: 0, width: 0 }}
+						tabIndex="-1"
+					/>
 					<Grid>
 						<Cell
 							className="pt-10 md:pt-0"
