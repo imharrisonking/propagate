@@ -55,7 +55,6 @@ export default function Footer({ theme, colour }) {
 						>
 							Let&apos;s chat
 						</ArrowLink>
-						<p className={mono}>Text</p>
 
 						<h6 className={twMerge('mb-3', mono)}>CONNECT WITH US</h6>
 						{Object.entries(socials).map(([name, url], index, array) => (
