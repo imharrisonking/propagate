@@ -13,8 +13,9 @@ export default function CircularText({ text, textColour }) {
 	const isLargeScreen = useMediaQuery({ query: '(min-width: 1025px) and (max-width: 2559px' });
 	const isExtraLargeScreen = useMediaQuery({ query: '(min-width: 2560px)' });
 
-	let fontSize;
-	let arrowSize;
+	let fontSize = 30;
+	let arrowSize = 40;
+
 	if (isSmallScreen) {
 		fontSize = 30;
 		arrowSize = 40;

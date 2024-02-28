@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { Grid, Cell } from '@faceless-ui/css-grid';
 import { twMerge } from 'tailwind-merge';
@@ -55,6 +55,7 @@ export default function Footer({ theme, colour }) {
 						>
 							Let&apos;s chat
 						</ArrowLink>
+						<p className={mono}>Text</p>
 
 						<h6 className={twMerge('mb-3', mono)}>CONNECT WITH US</h6>
 						{Object.entries(socials).map(([name, url], index, array) => (
@@ -74,7 +75,7 @@ export default function Footer({ theme, colour }) {
 								</ArrowLink>
 							</div>
 						))}
-						<div className="flex flex-col justify-end">
+						<div className={twMerge('flex flex-col justify-end', mono)}>
 							<h6 className={twMerge('mb-3', mono)}>
 								&copy; 2024 Propagate Digital Limited
 							</h6>

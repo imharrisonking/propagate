@@ -102,6 +102,7 @@ module.exports = {
 		}),
 	],
 	options: {
-		safelist: [/^bg-/],
+		safelist: [/^bg-/, /^text-/, 'text-grey-200'],
+		whitelistPatterns: [/^text-/],
 	},
 };

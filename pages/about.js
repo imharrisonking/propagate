@@ -22,6 +22,7 @@ export default function About() {
 									>
 										About
 									</h1>
+									<h6 className="mb-3 text-grey-200">WORK WITH US</h6>
 								</Cell>
 							</Grid>
 						</div>
