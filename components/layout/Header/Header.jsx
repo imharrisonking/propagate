@@ -69,7 +69,14 @@ export default function Header() {
 				id="mobile-header"
 				className={`md:hidden w-full flex justify-between min-h-20 pl-5 bg-${backgroundColour}/[0.5] backdrop-blur-md z-${zindexes.header}`}
 			>
-				<Logo headerExpanded={headerExpanded} theme={theme} />
+				<button
+					onClick={() => {
+						if (menuActive) toggleModal('menu');
+					}}
+				>
+					<Logo headerExpanded={headerExpanded} theme={theme} />
+				</button>
+
 				{/* NAVIGATION MENU SMALL SCREENS */}
 				<nav className="md:hidden flex items-center">
 					{/* Free demo button for small screens */}
