@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 import { Grid, Cell } from '@faceless-ui/css-grid';
 import { twMerge } from 'tailwind-merge';
+import Marquee from 'react-fast-marquee';
 
 import FooterGridContainer from '../containers/FooterGridContainer';
 import ArrowLink from '@/components/type/ArrowLink';
 import CircularText from '@/components/type/CircularText';
+import FreeDemoMarquee from '@/components/type/FreeDemoMarquee';
 
 import socials from '@/styles/css/socials';
 import { fontColourMapping } from '@/styles/css/themes';
 
 export default function Footer({ theme, colour }) {
+	const [isMarqueeHovered, setIsMarqueeHovered] = useState(false);
+
 	const backgroundColour = `bg-${colour}`;
 	const { mono, sans, outline } = fontColourMapping[colour];
 
@@ -89,6 +92,20 @@ export default function Footer({ theme, colour }) {
 						text="FUNNEL BUILDING   MAKE SALES   OFFER CREATION   "
 						textColour={sans}
 					/>
+				</div>
+
+				<div
+					className="flex mt-12 md:mt-28 lg:hidden h-32"
+					onMouseEnter={() => setIsMarqueeHovered(true)}
+					onMouseLeave={() => setIsMarqueeHovered(false)}
+				>
+					<Marquee className="" autoFill={true}>
+						<FreeDemoMarquee
+							className={'flex items-center'}
+							textColour={sans}
+							isHovered={isMarqueeHovered}
+						/>
+					</Marquee>
 				</div>
 			</FooterGridContainer>
 		</footer>

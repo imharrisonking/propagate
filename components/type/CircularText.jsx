@@ -44,7 +44,7 @@ export default function CircularText({ text, textColour }) {
 				<div className="flex justify-center items-center relative md:h-[80vw] md:w-[80vw] lg:h-[55vw] lg:w-[55vw]">
 					<h1
 						className={twMerge(
-							'md:text-[6.67vw] lg:text-[6.67vw] items-center justify-center absolute whitespace-nowrap',
+							'md:text-[6.67vw] lg:text-[6.67vw] font-light items-center justify-center absolute whitespace-nowrap',
 							textColour
 						)}
 						style={{
