@@ -19,8 +19,8 @@ export default function App({ Component, pageProps }) {
 						rowGap={{
 							s: base(2),
 							m: base(2),
-							l: base(2),
-							xl: base(2),
+							l: base(1),
+							xl: base(1),
 						}}
 						colGap={{
 							s: 'calc(100% * ( 1 / (8 * 2)))',

@@ -5,6 +5,7 @@
 :root {
     --color-white: #FFFFFF;
     --color-black: #000000;
+    --color-grey-100: #EBEBEB;
     --color-grey-200: #CFCFCE;
     --color-grey-300: #7e7e7e;
     --color-grey-400: #676769;
@@ -160,6 +161,42 @@ to {
       z-index: var(--highlight-z-index);
       animation: heightAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards; /* animate the height */
   }
+
+  .steps {
+    position: relative;
+    display: inline-block;
+  }
+
+  .steps::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: -40px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background-color: var(--color-grey-500);
+        transform: translateY(-50%);
+    }
+
+
+    .steps-line {
+        position: relative;
+        display: inline-block;
+    }
+
+    .steps-line::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: -35px;
+        background-color: var(--color-grey-500);
+    }
 
 @layer base {
     /* Maison Neue Light */
@@ -327,15 +364,15 @@ to {
     }
 
     h3 {
-        @apply text-7xl text-center md:text-left
+        @apply text-7xl
     }
 
     h4 {
-        @apply text-6xl text-center md:text-left
+        @apply text-4xl md:text-6xl text-center md:text-left
     }
 
     h5 {
-        @apply 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-lg text-center md:text-left
+        @apply 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-xl text-center md:text-left
     }
 
     h6 {

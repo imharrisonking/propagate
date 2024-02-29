@@ -9,7 +9,7 @@ export default function Button({ children, theme, additionalClasses = '', additi
 	}
 
 	const baseClasses =
-		'flex overflow-hidden text-xs px-4 rounded-lg md:rounded-xl md:px-6 md:py-3 md:text-base items-center';
+		'flex overflow-hidden text-base px-4 py-4 rounded-xl md:rounded-xl md:px-6 md:py-3 md:text-base items-center';
 
 	// Button themes
 	const buttonThemes = {

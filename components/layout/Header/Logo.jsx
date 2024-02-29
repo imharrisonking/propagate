@@ -33,14 +33,16 @@ export default function Logo({ headerExpanded: propHeaderExpanded, theme }) {
 			onMouseLeave={handleMouseLeave}
 		>
 			<LogoIcon
-				className={`${theme === 'light' ? 'fill-grey-500' : 'fill-white'} relative`}
+				className={`${
+					theme === 'light' ? 'fill-grey-500' : 'fill-white'
+				} relative mix-blend-difference`}
 			/>
 			<div className="ml-3 overflow-hidden flex items-center align-top">
 				<span
 					style={transitionStyles}
 					className={`${
 						theme === 'light' ? 'text-grey-500' : 'text-white'
-					} font-semibold text-2xl leading-none tracking-[0.07em]`}
+					} font-semibold text-2xl leading-none tracking-[0.07em] mix-blend-difference`}
 				>
 					Propagate
 				</span>

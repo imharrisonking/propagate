@@ -183,7 +183,7 @@ export default function Header() {
 				</nav>
 			</div>
 
-			<Modal slug={menuSlug} className="w-full h-dvh pt-20 md:pt-52 bg-grey-950">
+			<Modal slug={menuSlug} className="w-full h-dvh pt-20 md:pt-44 bg-grey-950">
 				<FullWidthGridContainer>
 					{/* This dummy input is hidden but focusable */}
 					<div
