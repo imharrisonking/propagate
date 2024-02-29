@@ -7,6 +7,7 @@ export const pageThemes = {
 	'/blog': 'light',
 	'/about': 'dark',
 	'/contact': 'dark',
+	'/demo': 'dark',
 	menu: 'dark',
 };
 
@@ -17,6 +18,7 @@ export const pageColours = {
 	'/blog': 'white',
 	'/about': 'green-700',
 	'/contact': 'grey-950',
+	'/demo': 'grey-950',
 	menu: 'grey-950',
 };
 
@@ -27,6 +29,7 @@ export const buttonThemes = {
 	'/blog': 'accent',
 	'/about': 'transparentWhite',
 	'/contact': 'accentDark',
+	'/demo': 'accentDark',
 	menu: 'accentDark',
 };
 
