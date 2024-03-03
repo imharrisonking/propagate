@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Grid, Cell } from '@faceless-ui/css-grid';
 import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
+import Image from 'next/image';
 
 import Template from '@/components/layout/Template';
 import Layout from '@/components/layout/Layout';
@@ -17,24 +18,33 @@ export default function Home() {
 	return (
 		<Template theme={theme} colour={'white'}>
 			<Layout>
+				<Image
+					className="hidden md:block absolute top-32 right-12"
+					src="/iphone-propagate-skool-angled.png"
+					alt="Propagate Creators Community"
+					width={640}
+					height={640}
+				/>
+
 				<GridContainer>
-					<div className="pt-40 md:pt-48">
+					<div className="mt-40 md:mt-60">
 						<Grid>
-							<Cell cols={13}>
-								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl">
-									Share your knowledge, scale
+							<Cell cols={8}>
+								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-10xl">
+									Infrastructure to scale{' '}
 									<span className="highlight-dark-text"> your impact.</span>
 								</h1>
 							</Cell>
 						</Grid>
 					</div>
-					<div className="pt-10 mb-16 md:mb-24">
+					<div className="pt-10 mb-16 md:mb-28">
 						<Grid>
-							<Cell cols={11}>
-								<h5>
+							<Cell cols={8}>
+								<p className="text-lg">
 									We are the growth partner for health and fitness content
-									creators — turn your audience into a profitable online business.
-								</h5>
+									creators that want to build their audience and launch a
+									profitable online business.
+								</p>
 							</Cell>
 							<Cell cols={14} className="flex justify-center md:justify-start">
 								<Link href="/demo">
@@ -43,7 +53,12 @@ export default function Home() {
 							</Cell>
 						</Grid>
 					</div>
+					<p className="text-lg text-center mb-4">
+						Our team integrates the latest technologies to build your business on
+						systems that scale.
+					</p>
 				</GridContainer>
+
 				<Marquee autoFill={true} speed={50}>
 					<h1 className="font-light text-10xl md:text-13xl overflow-hidden mb-12 md:mb-24 mix-blend-difference">
 						Develop—Manage—Scale—
