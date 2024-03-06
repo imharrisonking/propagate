@@ -215,7 +215,6 @@ to {
             display: grid;
             grid: auto/132px 1fr;
             gap: 24px;
-            width: 975px;
             padding: 24px 0 24px 24px;
             border-radius: 8px;
             background: linear-gradient(hsla(0, 0%, 100%, .4), hsla(0, 0%, 100%, .3) 25%, rgba(246, 249, 252, .3) 50%, #f6f9fc 60%);

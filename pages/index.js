@@ -9,7 +9,9 @@ import Layout from '@/components/layout/Layout';
 import GridContainer from '@/components/layout/containers/GridContainer';
 import FullWidthGridContainer from '@/components/layout/containers/FullWidthGridContainer';
 import Button from '@/components/buttons/Button';
+import { BackgroundGradientAnimation } from '@/components/ui/BackgroundGradientAnimation';
 import { pageThemes } from '@/styles/css/themes';
+import logos from '../images/logos';
 
 export default function Home() {
 	const theme = pageThemes['/'];
@@ -18,30 +20,36 @@ export default function Home() {
 	return (
 		<Template theme={theme} colour={'white'}>
 			<Layout>
-				{/* <div className="w-[250px] h-[541.03px] hidden md:block absolute top-48 right-36">
-					<Image
-						src="/skool-propagate-screenshot.png"
-						alt="Propagate Creators Community"
-						width={250}
-						height={400}
-					/>
-				</div> */}
 				<GridContainer>
-					<div className="mt-40 md:mt-56">
+					<div className="mt-36 lg:mt-56">
 						<Grid>
 							<Cell cols={8}>
-								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
+								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
 									Launching <br className="hidden 2xl:block" />
 									your business has never{' '}
 									<span className="highlight-dark-text"> been easier.</span>
 								</h1>
-							</Cell>{' '}
-							<Cell cols={6}>
-								<div className="hidden lg:block relative">
-									{' '}
-									<div className="lg:absolute -top-12 left-[25%] w-96 h-96 landingPageGraphic">
+							</Cell>
+							<Cell cols={6} className="hidden lg:block">
+								<div className="relative">
+									<div className="lg:absolute relative -top-12 left-[25%] w-[975px] h-[525px] rounded-[8px]">
+										<BackgroundGradientAnimation
+											containerClassName="rounded-[8px]"
+											gradientBackgroundStart="#a1ffcd"
+											gradientBackgroundEnd="#a1ffcd"
+											firstColor="255, 205, 161"
+											secondColor="205, 161, 255"
+											thirdColor="255, 161, 211"
+											fourthColor="162, 199, 226"
+											fifthColor="#62, 199, 226"
+											pointerColor="255, 205, 161"
+											size="100%"
+										/>
+									</div>
+									<div className="lg:absolute -top-12 left-[25%] w-[975px] h-[525px] landingPageGraphic">
 										<div className="landingPageGraphic__creator"></div>
 									</div>
+
 									<div className="lg:absolute top-0 left-[5%] w-[250px] h-[541.03px]">
 										<Image
 											className="phone"
@@ -55,7 +63,7 @@ export default function Home() {
 							</Cell>
 						</Grid>
 					</div>
-					<div className="pt-7 mb-24 md:mb-56">
+					<div className="pt-7 mb-24 md:mb-24">
 						<Grid>
 							<Cell cols={6}>
 								<p className="text-lg">
@@ -73,36 +81,44 @@ export default function Home() {
 							</Cell>
 						</Grid>
 					</div>
-					<p className="text-lg text-center mb-4">
-						Our team integrates the latest technologies to build your business on
-						systems that scale.
-					</p>
 				</GridContainer>
-				<Marquee autoFill={true} speed={50}>
-					<h1 className="font-light text-10xl md:text-13xl overflow-hidden mb-12 md:mb-24 mix-blend-difference">
-						Develop—Manage—Scale—
-					</h1>
-				</Marquee>
-				<GridContainer className="mb-12 md:mb-32">
+				<GridContainer className="mt-32 py-20">
+					<p className="text-lg text-center">
+						We develop using the latest technologies to build your business on systems
+						that scale.
+					</p>{' '}
+					<Marquee
+						autoFill={true}
+						speed={30}
+						gradient={true}
+						gradientWidth={100}
+						className="overflow-y-hidden py-12"
+					>
+						{logos.map((logo, index) => (
+							<div
+								key={index}
+								className="pl-12 flex align-middle items-center h-[50px]"
+							>
+								<Image
+									src={logo.src}
+									alt={logo.alt}
+									height={50}
+									width={150}
+									objectFit="contain"
+								/>
+							</div>
+						))}
+					</Marquee>
+				</GridContainer>
+
+				<GridContainer className="mb-12 md:mb-32 overflow-hidden">
 					<Grid>
 						<Cell cols={8}>
-							<h4>
+							<h4 className="mb-6">
 								Propagate{' '}
-								<span className="highlight-dark-text">works with you</span> to
-								develop manage and scale your online offering.
+								<span className="highlight-dark-text">builds the systems</span> so
+								you can focus on creating content and delivering value.
 							</h4>
-						</Cell>
-						<Cell
-							startS={1}
-							colsS={8}
-							startM={1}
-							colsM={8}
-							startL={9}
-							colsL={6}
-							startXL={9}
-							colsXL={6}
-							className="flex justify-center md:justify-start"
-						>
 							<p className="text-lg text-center md:text-left">
 								We partner with you and build the systems needed to monetise your
 								audience, so you can focus on delivering value through your content.
@@ -112,6 +128,9 @@ export default function Home() {
 								manage all the backend services and sales funnel for you to gain
 								members predictably.
 							</p>
+						</Cell>
+						<Cell cols={6}>
+							<div className="h-[550px] w-[550px] bg-green-300"></div>
 						</Cell>
 						<Cell cols={8}>
 							<h1 className="text-6xl text-center md:text-left sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl">
