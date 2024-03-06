@@ -10,7 +10,7 @@ export default function Layout({ title, keywords, description, children }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main>{children}</main>
+			<main className="overflow-hidden">{children}</main>
 		</>
 	);
 }

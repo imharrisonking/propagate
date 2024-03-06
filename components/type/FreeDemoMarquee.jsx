@@ -21,7 +21,7 @@ export default function FreeDemoMarquee({ textColour, isHovered }) {
 		<Link href="/demo">
 			<div className="inline-flex justify-items-start items-center pr-10 md:pl-10">
 				<h1
-					className={twMerge(textColour, 'font-light text-8xl md:text-9xl pr-5')}
+					className={twMerge(textColour, 'font-light text-8xl md:text-10xl pr-5')}
 					style={{
 						opacity: isHovered ? 1 : 0.125,
 						transition: 'opacity 200ms linear',

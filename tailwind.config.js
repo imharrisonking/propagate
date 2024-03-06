@@ -27,7 +27,7 @@ module.exports = {
 				'6xl': [base(2.4), { lineHeight: base(2.4) }], // 48px, 48px
 				'7xl': [base(3), { lineHeight: base(3) }], // 60px, 60px
 				'8xl': [base(3.5), { lineHeight: base(3.5) }], // 70px, 70px
-				'9xl': [base(4.8), { lineHeight: base(4.8) }], // 96px, 96px
+				'9xl': [base(4.5), { lineHeight: base(4.5) }], // 90px, 90px
 				'10xl': [base(5), { lineHeight: base(5) }], // 100px, 100px
 				'11xl': [base(6), { lineHeight: base(6) }], // 120px, 120px
 				'12xl': [base(6.5), { lineHeight: base(6.5) }], // 130px, 130px
@@ -46,6 +46,48 @@ module.exports = {
 				'footer-lg': '830px',
 				'footer-xl': '1200px',
 				'footer-2xl': '1280px',
+			},
+			animation: {
+				first: 'moveVertical 30s ease infinite',
+				second: 'moveInCircle 20s reverse infinite',
+				third: 'moveInCircle 40s linear infinite',
+				fourth: 'moveHorizontal 40s ease infinite',
+				fifth: 'moveInCircle 20s ease infinite',
+			},
+			keyframes: {
+				moveHorizontal: {
+					'0%': {
+						transform: 'translateX(-50%) translateY(-10%)',
+					},
+					'50%': {
+						transform: 'translateX(50%) translateY(10%)',
+					},
+					'100%': {
+						transform: 'translateX(-50%) translateY(-10%)',
+					},
+				},
+				moveInCircle: {
+					'0%': {
+						transform: 'rotate(0deg)',
+					},
+					'50%': {
+						transform: 'rotate(180deg)',
+					},
+					'100%': {
+						transform: 'rotate(360deg)',
+					},
+				},
+				moveVertical: {
+					'0%': {
+						transform: 'translateY(-50%)',
+					},
+					'50%': {
+						transform: 'translateY(50%)',
+					},
+					'100%': {
+						transform: 'translateY(-50%)',
+					},
+				},
 			},
 		},
 		colors: {

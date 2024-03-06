@@ -18,34 +18,54 @@ export default function Home() {
 	return (
 		<Template theme={theme} colour={'white'}>
 			<Layout>
-				<Image
-					className="hidden md:block absolute top-32 right-12"
-					src="/iphone-propagate-skool-angled.png"
-					alt="Propagate Creators Community"
-					width={640}
-					height={640}
-				/>
-
+				{/* <div className="w-[250px] h-[541.03px] hidden md:block absolute top-48 right-36">
+					<Image
+						src="/skool-propagate-screenshot.png"
+						alt="Propagate Creators Community"
+						width={250}
+						height={400}
+					/>
+				</div> */}
 				<GridContainer>
-					<div className="mt-40 md:mt-60">
+					<div className="mt-40 md:mt-56">
 						<Grid>
 							<Cell cols={8}>
-								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-10xl">
-									Infrastructure to scale{' '}
-									<span className="highlight-dark-text"> your impact.</span>
+								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
+									Launching <br className="hidden 2xl:block" />
+									your business has never{' '}
+									<span className="highlight-dark-text"> been easier.</span>
 								</h1>
+							</Cell>{' '}
+							<Cell cols={6}>
+								<div className="hidden lg:block relative">
+									{' '}
+									<div className="lg:absolute -top-12 left-[25%] w-96 h-96 landingPageGraphic">
+										<div className="landingPageGraphic__creator"></div>
+									</div>
+									<div className="lg:absolute top-0 left-[5%] w-[250px] h-[541.03px]">
+										<Image
+											className="phone"
+											src="/skool-propagate-screenshot.png"
+											alt="Propagate
+										Creators Community"
+											fill
+										/>
+									</div>
+								</div>
 							</Cell>
 						</Grid>
 					</div>
-					<div className="pt-10 mb-16 md:mb-28">
+					<div className="pt-7 mb-24 md:mb-56">
 						<Grid>
-							<Cell cols={8}>
+							<Cell cols={6}>
 								<p className="text-lg">
-									We are the growth partner for health and fitness content
-									creators that want to build their audience and launch a
-									profitable online business.
+									We partner with video creators wanting to launch a profitable
+									online business delivering a cross-platform premium membership
+									with video content, an engaged community and subscription
+									revenue.
 								</p>
 							</Cell>
+
 							<Cell cols={14} className="flex justify-center md:justify-start">
 								<Link href="/demo">
 									<Button theme="accent">Watch the demo—it&apos;s free</Button>
@@ -58,7 +78,6 @@ export default function Home() {
 						systems that scale.
 					</p>
 				</GridContainer>
-
 				<Marquee autoFill={true} speed={50}>
 					<h1 className="font-light text-10xl md:text-13xl overflow-hidden mb-12 md:mb-24 mix-blend-difference">
 						Develop—Manage—Scale—
@@ -89,10 +108,16 @@ export default function Home() {
 								audience, so you can focus on delivering value through your content.
 								<br />
 								<br />
-								We create your offer then launch your community and course, manage
-								all the backend services for you, and transform your sales funnel to
-								get sales and members predictably.
+								We craft your offer then launch your community platform and course,
+								manage all the backend services and sales funnel for you to gain
+								members predictably.
 							</p>
+						</Cell>
+						<Cell cols={8}>
+							<h1 className="text-6xl text-center md:text-left sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl">
+								Infrastructure to scale{' '}
+								<span className="highlight-dark-text"> your impact.</span>
+							</h1>
 						</Cell>
 					</Grid>
 				</GridContainer>

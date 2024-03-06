@@ -1,4 +1,4 @@
-export const pages = ['/testimonials', '/community', '/blog', '/about', '/contact'];
+export const pages = ['/community', '/about', '/contact'];
 
 export const pageThemes = {
 	'/': 'light',

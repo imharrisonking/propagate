@@ -208,7 +208,7 @@ export default function Header() {
 								<p key={link} className="pb-2">
 									<Link
 										href={link}
-										className="font-medium text-6xl sm-text-8xl md:text-8xl lg:text-9xl xl:text-11xl 2xl:text-12xl outline-white-text hover:text-white uppercase"
+										className="font-medium text-6xl sm-text-8xl md:text-8xl lg:text-10xl xl:text-11xl 2xl:text-12xl outline-white-text hover:text-white uppercase"
 										onClick={() => toggleModal('menu')}
 									>
 										{link.replace('/', '')}
