@@ -17,12 +17,12 @@ module.exports = {
 			fontSize: {
 				xs: [base(0.6), { lineHeight: base(0.6) }], // 12px, 12px
 				sm: [base(0.7), { lineHeight: base(0.7) }], // 14px, 14px
-				base: [base(0.8), { lineHeight: base(0.8) }], // 16px, 16px
-				lg: [base(0.9), { lineHeight: base(0.9) }], // 18px, 18px
+				base: [base(0.8), { lineHeight: base(1) }], // 16px, 25px
+				lg: [base(0.9), { lineHeight: base(1.25) }], // 18px, 18px
 				xl: [base(1), { lineHeight: base(1) }], // 20px, 20px
 				'2xl': [base(1.25), { lineHeight: base(1.25) }], // 25px, 25px
 				'3xl': [base(1.5), { lineHeight: base(1.5) }], // 30px, 30px
-				'4xl': [base(1.6), { lineHeight: base(1.6) }], // 32px, 32px
+				'4xl': [base(1.7), { lineHeight: base(1.7) }], // 32px, 32px
 				'5xl': [base(2.1), { lineHeight: base(2.1) }], // 42px, 42px
 				'6xl': [base(2.4), { lineHeight: base(2.4) }], // 48px, 48px
 				'7xl': [base(3), { lineHeight: base(3) }], // 60px, 60px
@@ -105,6 +105,7 @@ module.exports = {
 				950: '#1C1C1C',
 			},
 			green: {
+				100: '#E8F9F0',
 				300: '#A1FFCD',
 				700: '#478978',
 				950: '#24332B',

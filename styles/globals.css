@@ -12,6 +12,7 @@
     --color-grey-500: #424242;
     --color-grey-800: #494949;
     --color-grey-950: #1C1C1C;
+    --color-green-100: #E8F9F0;
     --color-green-300: #A1FFCD;
     --color-green-700: #478978;
     --highlight-z-index: -10;
@@ -22,11 +23,11 @@
 
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 @media (min-width: 768px) {
     html {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 @media (min-width: 640px) {
@@ -143,10 +144,21 @@ to {
 }
 }
 
+.placeholder {
+    border: 1px solid var(--color-grey-300);
+
+    background-image: repeating-linear-gradient(45deg,
+    var(--color-grey-200) 10px,
+    var(--color-grey-200) 12px,
+    transparent 12px,
+    transparent 20px);
+}
+
   .highlight-dark-text {
       color: var(--color-green-700);
       position: relative;
       display: inline-block; /* or inline-flex */
+      z-index: var(--page-z-index);
   }
 
   .highlight-dark-text::before {
@@ -161,6 +173,26 @@ to {
       z-index: var(--highlight-z-index);
       animation: heightAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards; /* animate the height */
   }
+
+  .highlight-white-text {
+    color: var(--color-green-300);
+    position: relative;
+    display: inline-block; /* or inline-flex */
+    z-index: var(--page-z-index);
+}
+
+.highlight-white-text::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 100%; /* cover the full width of the parent */
+    height: 0; /* start from 0 height */
+    bottom: 0;
+    left: 0; /* start from the left edge of the parent */
+    background: var(--color-green-700);
+    z-index: var(--highlight-z-index);
+    animation: heightAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards; /* animate the height */
+}
 
   .steps {
     position: relative;
@@ -199,6 +231,7 @@ to {
     }
 
     .phone {
+        box-sizing: border-box;
         --phoneBorderRadius: 36px;
         --phoneScreenBorderRadius: 29px;
         --phoneGraphicShadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0 -2px 6px 0 rgba(10, 37, 64, 0.35);
@@ -238,6 +271,11 @@ to {
         color: var(--color-grey-500);
         letter-spacing: .8px;
         text-transform: uppercase;
+    }
+
+    .logoGrayscale {
+        filter: grayscale(100%);
+        --webkit-filter: grayscale(100%);
     }
 
 @layer base {
@@ -394,7 +432,7 @@ to {
     }
 
     h1 {
-        @apply text-9xl text-center md:text-left
+        @apply text-9xl
     }
 
     footer h1 {
@@ -406,15 +444,15 @@ to {
     }
 
     h3 {
-        @apply text-7xl
+        @apply text-5xl md:text-7xl
     }
 
     h4 {
-        @apply text-4xl md:text-6xl text-center md:text-left
+        @apply text-4xl md:text-6xl
     }
 
     h5 {
-        @apply 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-xl text-center md:text-left
+        @apply 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-xl
     }
 
     h6 {

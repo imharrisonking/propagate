@@ -15,7 +15,6 @@ import logos from '../images/logos';
 
 export default function Home() {
 	const theme = pageThemes['/'];
-	const [isHovered, setIsHovered] = useState(false);
 
 	return (
 		<Template theme={theme} colour={'white'}>
@@ -24,35 +23,41 @@ export default function Home() {
 					<div className="mt-36 lg:mt-56">
 						<Grid>
 							<Cell cols={8}>
-								<h1 className="text-6xl text-center md:text-left sm:text-8xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
+								<h1 className="text-[54px]/[54px] sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
 									Launching <br className="hidden 2xl:block" />
 									your business has never{' '}
 									<span className="highlight-dark-text"> been easier.</span>
 								</h1>
 							</Cell>
-							<Cell cols={6} className="hidden lg:block">
+							<Cell
+								colsS={8}
+								colsM={8}
+								colsL={6}
+								colsXL={6}
+								className="hidden lg:block"
+							>
 								<div className="relative">
 									<div className="lg:absolute relative -top-12 left-[25%] w-[975px] h-[525px] rounded-[8px]">
 										<BackgroundGradientAnimation
 											containerClassName="rounded-[8px]"
 											gradientBackgroundStart="#a1ffcd"
-											gradientBackgroundEnd="#a1ffcd"
-											firstColor="255, 205, 161"
-											secondColor="205, 161, 255"
-											thirdColor="255, 161, 211"
-											fourthColor="162, 199, 226"
-											fifthColor="#62, 199, 226"
-											pointerColor="255, 205, 161"
+											gradientBackgroundEnd="#90E5B8"
+											firstColor="226, 255, 240"
+											secondColor="208, 255, 230"
+											thirdColor="161, 255, 205"
+											fourthColor="208, 255, 230"
+											fifthColor="208, 255, 230"
+											pointerColor="161, 255, 205"
 											size="100%"
 										/>
 									</div>
-									<div className="lg:absolute -top-12 left-[25%] w-[975px] h-[525px] landingPageGraphic">
+									<div className="md:absolute -top-12 left-[25%] w-[975px] h-[525px] landingPageGraphic">
 										<div className="landingPageGraphic__creator"></div>
 									</div>
 
-									<div className="lg:absolute top-0 left-[5%] w-[250px] h-[541.03px]">
+									<div className="lg:absolute top-0 left-[5%] w-[258px] h-[541.03px] box-border">
 										<Image
-											className="phone"
+											className="phone border-box object-contain"
 											src="/skool-propagate-screenshot.png"
 											alt="Propagate
 										Creators Community"
@@ -63,41 +68,77 @@ export default function Home() {
 							</Cell>
 						</Grid>
 					</div>
-					<div className="pt-7 mb-24 md:mb-24">
+					<div className="pt-7 mb-18 md:mb-24">
 						<Grid>
-							<Cell cols={6}>
-								<p className="text-lg">
-									We partner with video creators wanting to launch a profitable
-									online business delivering a cross-platform premium membership
-									with video content, an engaged community and subscription
-									revenue.
+							<Cell colsS={8} colsM={7} colsL={7} colsXL={7} className="mb-20">
+								<p className="text-lg mb-5">
+									We help video creators launch and scale their business by
+									delivering a cross-platform premium membership with video
+									content, an engaged community and subscription revenue.
 								</p>
+								<div className="flex justify-start">
+									<Link href="/demo">
+										<Button theme="accent">
+											Watch the demo—it&apos;s free
+										</Button>
+									</Link>
+								</div>
 							</Cell>
+							<Cell
+								colsS={8}
+								colsM={8}
+								colsL={6}
+								colsXL={6}
+								className="mt-24 hidden md:block lg:hidden"
+							>
+								<div className="relative max-w-[258px] max-h-[541.03px]">
+									<div className="lg:absolute relative -top-12 left-[25%] w-[975px] h-[525px] rounded-[8px]">
+										<BackgroundGradientAnimation
+											containerClassName="rounded-[8px]"
+											gradientBackgroundStart="#a1ffcd"
+											gradientBackgroundEnd="#90E5B8"
+											firstColor="226, 255, 240"
+											secondColor="208, 255, 230"
+											thirdColor="161, 255, 205"
+											fourthColor="208, 255, 230"
+											fifthColor="208, 255, 230"
+											pointerColor="161, 255, 205"
+											size="100%"
+										/>
+									</div>
+									<div className="md:absolute -top-12 left-[25%] w-[975px] h-[525px] landingPageGraphic">
+										<div className="landingPageGraphic__creator"></div>
+									</div>
 
-							<Cell cols={14} className="flex justify-center md:justify-start">
-								<Link href="/demo">
-									<Button theme="accent">Watch the demo—it&apos;s free</Button>
-								</Link>
+									<div className="lg:absolute top-0 left-[5%] w-[258px] h-[541.03px] box-border">
+										<Image
+											className="phone border-box object-contain"
+											src="/skool-propagate-screenshot.png"
+											alt="Propagate
+										Creators Community"
+											fill
+										/>
+									</div>
+								</div>
 							</Cell>
 						</Grid>
 					</div>
 				</GridContainer>
-				<GridContainer className="mt-32 py-20">
+				<GridContainer className="py-16">
 					<p className="text-lg text-center">
-						We develop using the latest technologies to build your business on systems
-						that scale.
-					</p>{' '}
+						We develop your business using technologies that scale as you grow.
+					</p>
 					<Marquee
 						autoFill={true}
-						speed={30}
+						speed={25}
 						gradient={true}
 						gradientWidth={100}
-						className="overflow-y-hidden py-12"
+						className="overflow-y-hidden py-12 logoGrayscale"
 					>
 						{logos.map((logo, index) => (
 							<div
 								key={index}
-								className="pl-12 flex align-middle items-center h-[50px]"
+								className="pl-12 flex align-middle items-center h-[50px] opacity-50"
 							>
 								<Image
 									src={logo.src}
@@ -110,152 +151,83 @@ export default function Home() {
 						))}
 					</Marquee>
 				</GridContainer>
+				<section className="bg-green-100 py-36">
+					<GridContainer className="overflow-hidden">
+						<Grid>
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+								<h3 className="mb-10">
+									Everything managed for you so you can focus on delivering{' '}
+									<span className="highlight-dark-text">valuable content.</span>
+								</h3>
+								{/* <p className="text-lg">
+									All the systems needed to monetise your audience, all you have
+									to do is create the content. We analyse your audience to craft
+									your offer and brand kit, launch your community platform and
+									course, develop your landing and checkout pages with payment
+									infrastructure built-in, and optimise your sales funnel with
+									organic and paid marketing to gain members predictably.
+								</p> */}
 
-				<GridContainer className="mb-12 md:mb-32 overflow-hidden">
-					<Grid>
-						<Cell cols={8}>
-							<h4 className="mb-6">
-								Propagate{' '}
-								<span className="highlight-dark-text">builds the systems</span> so
-								you can focus on creating content and delivering value.
-							</h4>
-							<p className="text-lg text-center md:text-left">
-								We partner with you and build the systems needed to monetise your
-								audience, so you can focus on delivering value through your content.
-								<br />
-								<br />
-								We craft your offer then launch your community platform and course,
-								manage all the backend services and sales funnel for you to gain
-								members predictably.
-							</p>
-						</Cell>
-						<Cell cols={6}>
-							<div className="h-[550px] w-[550px] bg-green-300"></div>
-						</Cell>
-						<Cell cols={8}>
-							<h1 className="text-6xl text-center md:text-left sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl">
-								Infrastructure to scale{' '}
-								<span className="highlight-dark-text"> your impact.</span>
-							</h1>
-						</Cell>
-					</Grid>
-				</GridContainer>
-				<FullWidthGridContainer>
-					<Grid>
-						<Cell
-							startS={1}
-							startM={2}
-							startL={3}
-							startXL={3}
-							colsS={8}
-							colsM={6}
-							colsL={7}
-							colsXL={7}
-						>
-							<h6 className="steps mb-5">Step 01</h6>
-							<div className="steps-line pb-32">
-								<h3 className="mb-12">Craft the offer.</h3>
 								<p className="text-lg">
-									We carry out research and interviews and collaboratively help
-									you to craft an offer that brings value to your audience.
-									<br />
-									<br />
-									Providing guidance and consultation on course structuring,
-									audience targeting and the overall vision and direction of your
-									paid community and course.
+									Get the systems needed to monetise your audience, all you do is
+									create the content. We handle audience analysis, offer creation,
+									branding, community platform and course launch, landing and
+									checkout page web development, sales funnel optimisation and
+									advertising campaigns.
 								</p>
-							</div>
-						</Cell>
-						<Cell
-							startS={1}
-							startM={2}
-							startL={3}
-							startXL={3}
-							colsS={8}
-							colsM={6}
-							colsL={7}
-							colsXL={7}
-						>
-							<h6 className="steps mb-5">Step 02</h6>
-							<div className="steps-line pb-32">
-								<h3 className="mb-12">Development and production.</h3>
-								<Grid>
-									<Cell cols={10}>
-										<p className="text-lg">
-											Work with you to develop a high quality course that
-											enhances the strength of your paid community offer.{' '}
-											<br />
-											<br />
-											We help you produce the course curriculum and lesson
-											material, providing templates, feedback and strategic
-											advice to develop the programme.
-											<br />
-											<br />
-											Guidance through the recording and production process,
-											offering recommendations on tools, techniques, and best
-											practices.
-										</p>
-									</Cell>
-								</Grid>
-							</div>
-						</Cell>
-						<Cell
-							startS={1}
-							startM={2}
-							startL={3}
-							startXL={3}
-							colsS={8}
-							colsM={8}
-							colsL={14}
-							colsXL={14}
-						>
-							<h6 className="steps mb-5">Step 03</h6>
-							<div className="steps-line pb-32">
-								<h3 className="mb-12">Backend management.</h3>
-								<Grid>
-									<Cell cols={7}>
-										<p className="text-lg">
-											We develop and manage the course, community hosting
-											platform and all of the backend systems for you so you
-											can focus on doing what you do best — delivering results
-											for your clients.
-										</p>
-									</Cell>
-								</Grid>
-								<Grid>
-									<Cell cols={14}>
-										<div
-											className="flex text-grey-500 mt-11"
-											onMouseEnter={() => setIsHovered(true)}
-											onMouseLeave={() => setIsHovered(false)}
-											style={{
-												opacity: isHovered ? 1 : 0.5,
-												transition: 'opacity 200ms linear',
-											}}
-										>
-											<h6 className="w-[68px] text-center py-10">01</h6>
-											<div className="flex border-y-[0.5px] border-grey-200 py-10 ml-4">
-												<Grid className="items-center">
-													<Cell cols={6}>
-														<h4 className="text-left">Landing page</h4>
-													</Cell>
-													<Cell startL={7} cols={6}>
-														<p>
-															Get a custom landing page and an
-															automated sales funnel that converts
-															members without sales calls and endless
-															DMs.
-														</p>
-													</Cell>
-												</Grid>
-											</div>
-										</div>
-									</Cell>
-								</Grid>
-							</div>
-						</Cell>
-					</Grid>
-				</FullWidthGridContainer>
+							</Cell>
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+								<div className="flex justify-center items-center h-[500px]">
+									<div className="h-[500px] w-[350px] md:w-[500px] placeholder"></div>
+								</div>
+							</Cell>
+							{/* Offer creation */}
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
+								<h6 className="mb-4 font-medium">OFFER CREATION</h6>
+								<h4 className="mb-6">
+									An offer that{' '}
+									<span className="highlight-dark-text">resonates</span> with your
+									audience.
+								</h4>
+								<p className="text-lg mb-6">
+									Support monthly and annual recurring payment plans that minimise
+									membership churn through a custom checkout page developed with
+									Stripe payment infrastructure.
+								</p>
+								<Link href="/demo">
+									<Button theme="accent">Learn more</Button>
+								</Link>
+							</Cell>
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+								<div className="flex justify-center items-center h-[500px]">
+									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
+								</div>
+							</Cell>
+
+							{/* Payment Infrastructure */}
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
+								<h6 className="mb-4 font-medium">PAYMENT INFRASTRUCTURE</h6>
+								<h4 className="mb-6">
+									Unlock{' '}
+									<span className="highlight-dark-text"> recurring revenue.</span>
+								</h4>
+								<p className="text-lg mb-6">
+									Support monthly and annual recurring payment plans that minimise
+									membership churn through a custom checkout page developed with
+									Stripe payment infrastructure.
+								</p>
+								<Link href="/demo">
+									<Button theme="accent">Learn more</Button>
+								</Link>
+							</Cell>
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+								<div className="flex justify-center items-center h-[500px]">
+									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
+								</div>
+							</Cell>
+						</Grid>
+					</GridContainer>
+				</section>
 			</Layout>
 		</Template>
 	);

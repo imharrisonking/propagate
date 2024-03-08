@@ -7,7 +7,7 @@ export default function HeaderButton({ headerExpanded, theme }) {
 		opacity: headerExpanded ? 0 : 1,
 	};
 
-	const paddingTop = 'py-2';
+	const paddingTop = 'py-2 md:py-3';
 
 	const additionalClasses = `${paddingTop}`;
 

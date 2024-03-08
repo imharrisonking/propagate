@@ -16,9 +16,9 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-	title: 'Propagate | Digital Growth Agency',
+	title: 'Propagate | Build Engaging Subscriptions Powered by Community',
 	keywords:
-		'propagate, propagate digital, propagate digital agency, agency, digital, growth, marketing, seo, social media, social media marketing, info products, ipga, digital products, digital marketing, digital agency, digital growth agency, digital growth',
+		'propagate, propagate digital, propagate digital agency, agency, creator, content creator, video creator, info product, marketing, seo, social media, social media marketing, info products, ipga, digital products, digital marketing, digital agency, digital growth agency, digital growth',
 	description:
-		'Propagate is a digital growth agency specialising in helping experts build, launch and scale educational online businesses and products.',
+		'We help video creators scale their business by delivering a cross-platform premium membership with video content, an engaged community and subscription revenue.',
 };
