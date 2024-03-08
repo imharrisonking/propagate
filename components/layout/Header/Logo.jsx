@@ -35,14 +35,14 @@ export default function Logo({ headerExpanded: propHeaderExpanded, theme }) {
 			<LogoIcon
 				className={`${
 					theme === 'light' ? 'fill-grey-500' : 'fill-white'
-				} relative mix-blend-difference`}
+				} relative mix-blend-difference h-[22px]`}
 			/>
-			<div className="ml-3 overflow-hidden flex items-center align-top">
+			<div className="ml-[10.5px] md:ml-3 overflow-hidden flex items-center align-top">
 				<span
 					style={transitionStyles}
 					className={`${
 						theme === 'light' ? 'text-grey-500' : 'text-white'
-					} font-semibold text-2xl leading-none tracking-[0.07em] mix-blend-difference`}
+					} font-semibold text-[22px] md:text-2xl leading-none tracking-[0.07em] mix-blend-difference`}
 				>
 					Propagate
 				</span>

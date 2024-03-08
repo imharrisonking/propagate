@@ -5,11 +5,10 @@ import Arrow from '../graphics/Arrow';
 export default function Button({ children, theme, additionalClasses = '', additionalStyles = {} }) {
 	// Default padding
 	if (additionalClasses === '') {
-		additionalClasses = 'py-3';
+		additionalClasses = 'py-3 text-base rounded-xl md:rounded-xl';
 	}
 
-	const baseClasses =
-		'flex overflow-hidden text-base px-4 rounded-xl md:rounded-xl md:px-6 md:text-base items-center';
+	const baseClasses = 'flex overflow-hidden px-4 md:px-6 items-center';
 
 	// Button themes
 	const buttonThemes = {

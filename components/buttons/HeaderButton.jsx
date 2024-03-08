@@ -7,9 +7,9 @@ export default function HeaderButton({ headerExpanded, theme }) {
 		opacity: headerExpanded ? 0 : 1,
 	};
 
-	const paddingTop = 'py-2 md:py-3';
+	const paddingTextStyles = 'text-xs md:text-base py-2 md:py-3 rounded-lg md:rounded-xl';
 
-	const additionalClasses = `${paddingTop}`;
+	const additionalClasses = `${paddingTextStyles}`;
 
 	return (
 		<Link href="/demo" className="flex items-center align-middle">
