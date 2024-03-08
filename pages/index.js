@@ -151,7 +151,7 @@ export default function Home() {
 						))}
 					</Marquee>
 				</GridContainer>
-				<section className="bg-green-100 py-36">
+				<section className="bg-green-100 py-20 md:py-36">
 					<GridContainer className="overflow-hidden">
 						<Grid>
 							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
@@ -177,51 +177,74 @@ export default function Home() {
 								</p>
 							</Cell>
 							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
-								<div className="flex justify-center items-center h-[500px]">
+								<div className="flex justify-center items-start md:items-center h-[500px]">
 									<div className="h-[500px] w-[350px] md:w-[500px] placeholder"></div>
 								</div>
 							</Cell>
 							{/* Offer creation */}
 							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
-								<h6 className="mb-4 font-medium">OFFER CREATION</h6>
+								<h6 className="mb-4">OFFER CREATION</h6>
 								<h4 className="mb-6">
 									An offer that{' '}
 									<span className="highlight-dark-text">resonates</span> with your
 									audience.
 								</h4>
 								<p className="text-lg mb-6">
-									Support monthly and annual recurring payment plans that minimise
-									membership churn through a custom checkout page developed with
-									Stripe payment infrastructure.
+									We research and interview your audience, collaboratively helping
+									you to craft an offer that your audience will love.
 								</p>
 								<Link href="/demo">
 									<Button theme="accent">Learn more</Button>
 								</Link>
 							</Cell>
 							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
-								<div className="flex justify-center items-center h-[500px]">
+								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
 									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
 								</div>
 							</Cell>
 
 							{/* Payment Infrastructure */}
 							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
-								<h6 className="mb-4 font-medium">PAYMENT INFRASTRUCTURE</h6>
+								<h6 className="mb-4">PAYMENT INFRASTRUCTURE</h6>
 								<h4 className="mb-6">
 									Unlock{' '}
 									<span className="highlight-dark-text"> recurring revenue.</span>
 								</h4>
 								<p className="text-lg mb-6">
-									Support monthly and annual recurring payment plans that minimise
-									membership churn through a custom checkout page developed with
-									Stripe payment infrastructure.
+									End the revenue rollercoaster and minimise membership churn with
+									monthly and annual recurring payments built in to a custom
+									checkout page developed with Stripe&apos;s payment
+									infrastructure.
 								</p>
 								<Link href="/demo">
 									<Button theme="accent">Learn more</Button>
 								</Link>
 							</Cell>
 							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
-								<div className="flex justify-center items-center h-[500px]">
+								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
+									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
+								</div>
+							</Cell>
+
+							{/* Platform Launch */}
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
+								<h6 className="mb-4">PLATFORM LAUNCH</h6>
+								<h4 className="mb-6">
+									A platform where content and{' '}
+									<span className="highlight-dark-text">community unite.</span>
+								</h4>
+								<p className="text-lg mb-6">
+									Our tiered community system is proven to retain and grow your
+									audience. Reward community engagement with Leaderboards and
+									unlockable content, schedule weekly live events in the Calendar
+									and showcase your course in the Classroom.
+								</p>
+								<Link href="/demo">
+									<Button theme="accent">Learn more</Button>
+								</Link>
+							</Cell>
+							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
 									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
 								</div>
 							</Cell>

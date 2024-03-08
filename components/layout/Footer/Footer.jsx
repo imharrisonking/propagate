@@ -84,7 +84,9 @@ export default function Footer({ theme, colour }) {
 								<h6 className={twMerge('mb-3', mono)}>
 									&copy; 2024 Propagate Digital Limited
 								</h6>
-								<h6 className={mono}>Company Number 15442458</h6>
+								<h6 className={twMerge('not-telephone', mono)}>
+									Company Number 15442458
+								</h6>
 							</div>
 						</Cell>
 					</Grid>
@@ -96,7 +98,7 @@ export default function Footer({ theme, colour }) {
 					/>
 				</div>
 				<div
-					className="flex mt-12 md:mt-28 lg:hidden h-32"
+					className="flex mt-5 md:mt-28 lg:hidden h-32"
 					onMouseEnter={() => setIsMarqueeHovered(true)}
 					onMouseLeave={() => setIsMarqueeHovered(false)}
 				>
