@@ -244,10 +244,6 @@ to {
         user-select: none;
     }
 
-    .phone__screen {
-        border-radius: 36px;
-    }
-
     .landingPageGraphic {
             display: grid;
             grid: auto/132px 1fr;
