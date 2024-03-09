@@ -28,7 +28,7 @@ export const ContainerScrollAnimation = () => {
         ref={containerRef}
     >
       <div
-        className="absolute top-0"
+        className="absolute -top-10"
         style={{
           perspective: "1000px",
         }}
@@ -58,11 +58,11 @@ export const Card = ({
       style={{
         rotateX: rotate, // rotate in X-axis
         scale}}
-      className="phone"
+      className="phone overflow-hidden"
     >
-      <div className="overflow-hidden">
+      <div className="overflow-hidden rounded-[36px]">
           <motion.div
-            className="bg-white rounded-md cursor-pointer relative"
+            className="bg-white rounded-lg cursor-pointer relative"
             style={{ translateY: translate }}
         >
             <div className="md:hidden w-[350px] h-[757.44px]">
