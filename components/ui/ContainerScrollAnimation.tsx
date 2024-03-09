@@ -43,38 +43,38 @@ export const ContainerScrollAnimation = () => {
   );
 };
 
-
 export const Card = ({
-  rotate,
-  scale,
-  translate,
-}: {
-  rotate: any;
-  scale: any;
-  translate: any;
-}) => {
-  return (
-    <motion.div
-      style={{
-        rotateX: rotate, // rotate in X-axis
-        scale}}
-      className="phone overflow-hidden h-[681.69px] "
-    >
-      <div className="overflow-hidden rounded-[36px] h-[681.69px]">
+    rotate,
+    scale,
+    translate,
+  }: {
+    rotate: any;
+    scale: any;
+    translate: any;
+  }) => {
+    return (
+      <motion.div
+        style={{
+          rotateX: rotate, // rotate in X-axis
+          scale}}
+        className="phone overflow-hidden h-[681.69px] relative"
+      >
+        <div className="overflow-hidden rounded-[36px] h-full relative">
           <motion.div
             className="rounded-lg relative"
             style={{ translateY: translate }}
-        >
+          >
             <div className="md:hidden w-[350px] h-[757.44px]">
-                <Image
-                    className="object-contain rounded-[36px]"
-                    src="/skool-propagate-screenshot.png"
-                    alt="Propagate Creators Community"
-                    fill
-                />
+              <Image
+                className="object-contain rounded-[36px]"
+                src="/assets/mockups/skool-example-screenshot-no-homebar.png"
+                alt="Propagate Creators Community"
+                fill
+              />
             </div>
           </motion.div>
-      </div>
-    </motion.div>
-  );
-};
+          <div className="absolute bottom-3.5 left-0 right-0 h-[4px] w-[125px] bg-black mx-auto rounded-full" /> {/* Home bar */}
+        </div>
+      </motion.div>
+    );
+  };

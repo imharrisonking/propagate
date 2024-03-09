@@ -63,7 +63,7 @@ export default function Home() {
 									<div className="lg:absolute top-0 left-[5%] w-[258px] h-[541.03px] box-border">
 										<Image
 											className="phone border-box object-contain"
-											src="/skool-propagate-screenshot.png"
+											src="/assets/mockups/skool-example-screenshot.png"
 											alt="Propagate
 										Creators Community"
 											fill
@@ -120,7 +120,7 @@ export default function Home() {
 									<div className="lg:absolute top-0 left-[5%] w-[258px] h-[541.03px] box-border">
 										<Image
 											className="phone border-box object-contain"
-											src="/skool-propagate-screenshot.png"
+											src="/assets/mockups/skool-example-screenshot.png"
 											alt="Propagate
 										Creators Community"
 											fill
