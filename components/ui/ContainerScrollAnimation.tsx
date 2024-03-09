@@ -7,7 +7,7 @@ export const ContainerScrollAnimation = () => {
   const containerRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end end"],
+    offset: ["0.3 end", "end end"],
   });
 
   console.log(scrollYProgress);
@@ -58,16 +58,16 @@ export const Card = ({
       style={{
         rotateX: rotate, // rotate in X-axis
         scale}}
-      className="phone overflow-hidden"
+      className="phone overflow-hidden h-[681.69px] "
     >
-      <div className="overflow-hidden rounded-[36px]">
+      <div className="overflow-hidden rounded-[36px] h-[681.69px]">
           <motion.div
-            className="bg-white rounded-lg cursor-pointer relative"
+            className="rounded-lg relative"
             style={{ translateY: translate }}
         >
             <div className="md:hidden w-[350px] h-[757.44px]">
                 <Image
-                    className="object-cover"
+                    className="object-contain rounded-[36px]"
                     src="/skool-propagate-screenshot.png"
                     alt="Propagate Creators Community"
                     fill
