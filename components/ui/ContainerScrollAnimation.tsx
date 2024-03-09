@@ -24,11 +24,11 @@ export const ContainerScrollAnimation = () => {
 
   return (
     <div
-        className="h-[800px] flex items-center justify-center relative"
+        className="h-[900px] flex items-center justify-center relative"
         ref={containerRef}
     >
       <div
-        className="relative"
+        className="absolute top-0"
         style={{
           perspective: "1000px",
         }}
@@ -57,10 +57,7 @@ export const Card = ({
     <motion.div
       style={{
         rotateX: rotate, // rotate in X-axis
-        scale,
-        boxShadow:
-          "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
-      }}
+        scale}}
       className="phone"
     >
       <div className="h-full w-full rounded-2xl overflow-hidden">

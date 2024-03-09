@@ -23,10 +23,15 @@ export default function Home() {
 					<div className="mt-32 lg:mt-56">
 						<Grid>
 							<Cell cols={8}>
-								<h1 className="text-[54px]/[54px] sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
+								{/* <h1 className="text-[54px]/[54px] sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
 									Launching <br className="hidden 2xl:block" />
 									your business has never{' '}
 									<span className="highlight-dark-text"> been easier.</span>
+								</h1> */}
+								<h1 className="text-[54px]/[54px] sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
+									Launch your business{' '}
+									{/* <br className="hidden 2xl:block" />{' '} */}
+									<span className="highlight-dark-text">effortlessly.</span>
 								</h1>
 							</Cell>
 							<Cell
