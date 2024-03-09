@@ -10,6 +10,7 @@ import GridContainer from '@/components/layout/containers/GridContainer';
 import FullWidthGridContainer from '@/components/layout/containers/FullWidthGridContainer';
 import Button from '@/components/buttons/Button';
 import { BackgroundGradientAnimation } from '@/components/ui/BackgroundGradientAnimation';
+import { ContainerScrollAnimation } from '@/components/ui/ContainerScrollAnimation';
 import { pageThemes } from '@/styles/css/themes';
 import logos from '../images/logos';
 
@@ -20,7 +21,7 @@ export default function Home() {
 		<Template theme={theme} colour={'white'}>
 			<Layout>
 				<GridContainer>
-					<div className="mt-36 lg:mt-56">
+					<div className="mt-32 lg:mt-56">
 						<Grid>
 							<Cell cols={8}>
 								<h1 className="text-[54px]/[54px] sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
@@ -70,18 +71,20 @@ export default function Home() {
 					</div>
 					<div className="pt-7 mb-18 md:mb-24">
 						<Grid>
-							<Cell colsS={8} colsM={7} colsL={7} colsXL={7} className="mb-20">
-								<p className="text-lg mb-5">
-									We help video creators launch and scale their business by
-									delivering a cross-platform premium membership with video
-									content, an engaged community and subscription revenue.
-								</p>
-								<div className="flex justify-start">
-									<Link href="/demo">
-										<Button theme="accent">
-											Watch the demo—it&apos;s free
-										</Button>
-									</Link>
+							<Cell colsS={8} colsM={7} colsL={7} colsXL={7}>
+								<div className="md:mb-20">
+									<p className="text-lg mb-5">
+										We help video creators launch and scale their business by
+										delivering a cross-platform premium membership with video
+										content, an engaged community and subscription revenue.
+									</p>
+									<div className="flex justify-start">
+										<Link href="/demo">
+											<Button theme="accent">
+												Watch the demo—it&apos;s free
+											</Button>
+										</Link>
+									</div>
 								</div>
 							</Cell>
 							<Cell
@@ -122,9 +125,14 @@ export default function Home() {
 								</div>
 							</Cell>
 						</Grid>
+						<div className="flex justify-center">
+							<div className="relative max-w-[350px] max-h-[757.44px]">
+								<ContainerScrollAnimation />
+							</div>
+						</div>
 					</div>
 				</GridContainer>
-				<GridContainer className="py-16">
+				<GridContainer className="md:py-16">
 					<p className="text-lg text-center">
 						We develop your business using technologies that scale as you grow.
 					</p>
