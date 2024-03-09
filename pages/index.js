@@ -126,9 +126,7 @@ export default function Home() {
 							</Cell>
 						</Grid>
 						<div className="flex justify-center">
-							<div className="relative max-w-[350px] max-h-[757.44px]">
-								<ContainerScrollAnimation />
-							</div>
+							<ContainerScrollAnimation />
 						</div>
 					</div>
 				</GridContainer>
