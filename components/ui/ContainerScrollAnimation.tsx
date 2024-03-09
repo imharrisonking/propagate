@@ -7,12 +7,15 @@ export const ContainerScrollAnimation = () => {
   const containerRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
+    offset: ["start end", "end end"],
   });
 
+  console.log(scrollYProgress);
+
 //   True values
-  const rotate = useTransform(scrollYProgress, [0, 0.5], [20, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 0.9]);
-  const translate = useTransform(scrollYProgress, [0, 0.5], [0, -100]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 0.9]);
+  const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
 //   Reverse values
 //   const rotate = useTransform(scrollYProgress, [0, 1], [0, 20]);
@@ -21,11 +24,11 @@ export const ContainerScrollAnimation = () => {
 
   return (
     <div
-        className="h-[900px] flex justify-center relative"
+        className="h-[800px] flex items-center justify-center relative"
         ref={containerRef}
     >
       <div
-        className="absolute -top-20"
+        className="relative"
         style={{
           perspective: "1000px",
         }}

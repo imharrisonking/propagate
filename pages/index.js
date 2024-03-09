@@ -7,7 +7,6 @@ import Image from 'next/image';
 import Template from '@/components/layout/Template';
 import Layout from '@/components/layout/Layout';
 import GridContainer from '@/components/layout/containers/GridContainer';
-import FullWidthGridContainer from '@/components/layout/containers/FullWidthGridContainer';
 import Button from '@/components/buttons/Button';
 import { BackgroundGradientAnimation } from '@/components/ui/BackgroundGradientAnimation';
 import { ContainerScrollAnimation } from '@/components/ui/ContainerScrollAnimation';
