@@ -60,18 +60,14 @@ export const Card = ({
         scale}}
       className="phone"
     >
-      <div className="h-full w-full rounded-2xl overflow-hidden">
+      <div className="overflow-hidden">
           <motion.div
             className="bg-white rounded-md cursor-pointer relative"
             style={{ translateY: translate }}
-            whileHover={{
-              boxShadow:
-                "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-            }}
         >
             <div className="md:hidden w-[350px] h-[757.44px]">
                 <Image
-                    className="border-box object-contain"
+                    className="object-cover"
                     src="/skool-propagate-screenshot.png"
                     alt="Propagate Creators Community"
                     fill

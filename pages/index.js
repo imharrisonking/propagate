@@ -129,7 +129,7 @@ export default function Home() {
 								</div>
 							</Cell>
 						</Grid>
-						<div className="flex justify-center">
+						<div className="md:hidden flex justify-center">
 							<ContainerScrollAnimation />
 						</div>
 					</div>
