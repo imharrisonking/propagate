@@ -4,23 +4,17 @@ import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 export const ContainerScrollAnimation = () => {
-  const containerRef = useRef<any>(null);
-  const { scrollYProgress } = useScroll({
+    // Ref for the container to track scroll position across container
+    const containerRef = useRef<any>(null);
+    const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["0.3 end", "end end"],
-  });
+    });
 
-  console.log(scrollYProgress);
-
-//   True values
-  const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 0.9]);
-  const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
-
-//   Reverse values
-//   const rotate = useTransform(scrollYProgress, [0, 1], [0, 20]);
-//   const scale = useTransform(scrollYProgress, [0, 1], [0.9, 0.8]);
-//   const translate = useTransform(scrollYProgress, [0, 1], [-100, 0]);
+    // Transformation mapping to scoll position
+    const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.8, 0.9]);
+    const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
     <div
@@ -33,7 +27,7 @@ export const ContainerScrollAnimation = () => {
           perspective: "1000px",
         }}
       >
-        <Card
+        <Content
           rotate={rotate}
           translate={translate}
           scale={scale}
@@ -43,7 +37,7 @@ export const ContainerScrollAnimation = () => {
   );
 };
 
-export const Card = ({
+export const Content = ({
     rotate,
     scale,
     translate,
@@ -64,12 +58,13 @@ export const Card = ({
             className="rounded-lg relative"
             style={{ translateY: translate }}
           >
-            <div className="md:hidden w-[350px] h-[757.44px]">
+            <div className="relative md:hidden w-[350px] h-[757.44px]">
               <Image
                 className="object-contain rounded-[36px]"
                 src="/assets/mockups/skool-example-screenshot-no-homebar.png"
                 alt="Propagate Creators Community"
                 fill
+                priority={true}
               />
             </div>
           </motion.div>

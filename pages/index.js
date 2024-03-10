@@ -12,6 +12,7 @@ import { BackgroundGradientAnimation } from '@/components/ui/BackgroundGradientA
 import { ContainerScrollAnimation } from '@/components/ui/ContainerScrollAnimation';
 import { pageThemes } from '@/styles/css/themes';
 import logos from '../images/logos';
+import BrandLogo from '../components/graphics/BrandLogo';
 
 export default function Home() {
 	const theme = pageThemes['/'];
@@ -143,20 +144,17 @@ export default function Home() {
 						speed={25}
 						gradient={true}
 						gradientWidth={100}
-						className="overflow-y-hidden py-12 logoGrayscale"
+						className="overflow-y-hidden py-12 opacity-100"
 					>
 						{logos.map((logo, index) => (
-							<div
-								key={index}
-								className="pl-12 flex align-middle items-center h-[50px] opacity-50"
-							>
-								<Image
-									src={logo.src}
-									alt={logo.alt}
-									height={50}
-									width={150}
-									objectFit="contain"
-								/>
+							<div key={index} className="pl-12">
+								<div className="h-[30px] md:h-[50px]">
+									<BrandLogo
+										src={logo.src}
+										alt={logo.alt}
+										className="fill-grey-500 h-full w-auto"
+									/>
+								</div>
 							</div>
 						))}
 					</Marquee>
