@@ -42,7 +42,7 @@ export default function Logo({ headerExpanded: propHeaderExpanded, theme }) {
 					style={transitionStyles}
 					className={`${
 						theme === 'light' ? 'text-grey-500' : 'text-white'
-					} font-semibold text-[22px] md:text-2xl leading-none tracking-[0.07em] mix-blend-difference`}
+					} font-semibold text-[22px] md:text-2xl leading-none tracking-[0.07em] py-[1px]`}
 				>
 					Propagate
 				</span>

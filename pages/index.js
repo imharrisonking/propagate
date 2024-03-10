@@ -4,15 +4,17 @@ import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 
+import { pageThemes } from '@/styles/css/themes';
 import Template from '@/components/layout/Template';
 import Layout from '@/components/layout/Layout';
 import GridContainer from '@/components/layout/containers/GridContainer';
 import Button from '@/components/buttons/Button';
+import BrandLogo from '@/components/graphics/BrandLogo';
 import { BackgroundGradientAnimation } from '@/components/ui/BackgroundGradientAnimation';
 import { ContainerScrollAnimation } from '@/components/ui/ContainerScrollAnimation';
-import { pageThemes } from '@/styles/css/themes';
+import { SystemsAnimation } from '@/components/ui/SystemsAnimation';
+
 import logos from '../images/logos';
-import BrandLogo from '../components/graphics/BrandLogo';
 
 export default function Home() {
 	const theme = pageThemes['/'];
@@ -24,14 +26,8 @@ export default function Home() {
 					<div className="mt-32 lg:mt-56">
 						<Grid>
 							<Cell cols={8}>
-								{/* <h1 className="text-[54px]/[54px] sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
-									Launching <br className="hidden 2xl:block" />
-									your business has never{' '}
-									<span className="highlight-dark-text"> been easier.</span>
-								</h1> */}
 								<h1 className="text-[54px]/[54px] sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl 2xl:text-10xl">
 									Launch your business{' '}
-									{/* <br className="hidden 2xl:block" />{' '} */}
 									<span className="highlight-dark-text">effortlessly.</span>
 								</h1>
 							</Cell>
@@ -167,15 +163,6 @@ export default function Home() {
 									Everything managed for you so you can focus on delivering{' '}
 									<span className="highlight-dark-text">valuable content.</span>
 								</h3>
-								{/* <p className="text-lg">
-									All the systems needed to monetise your audience, all you have
-									to do is create the content. We analyse your audience to craft
-									your offer and brand kit, launch your community platform and
-									course, develop your landing and checkout pages with payment
-									infrastructure built-in, and optimise your sales funnel with
-									organic and paid marketing to gain members predictably.
-								</p> */}
-
 								<p className="text-lg">
 									Get the systems needed to monetise your audience, all you do is
 									create the content. We handle audience analysis, offer creation,
@@ -185,8 +172,8 @@ export default function Home() {
 								</p>
 							</Cell>
 							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
-								<div className="flex justify-center items-start md:items-center h-[500px]">
-									<div className="h-[500px] w-[350px] md:w-[500px] placeholder"></div>
+								<div className="flex justify-center items-start md:items-center">
+									<SystemsAnimation />
 								</div>
 							</Cell>
 							{/* Offer creation */}
