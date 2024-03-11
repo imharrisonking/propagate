@@ -158,7 +158,7 @@ export default function Home() {
 				<section className="bg-green-100 py-20 md:py-36">
 					<GridContainer className="overflow-hidden">
 						<Grid>
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7}>
 								<h3 className="mb-10">
 									Everything managed for you so you can focus on delivering{' '}
 									<span className="highlight-dark-text">valuable content.</span>
@@ -171,13 +171,13 @@ export default function Home() {
 									advertising campaigns.
 								</p>
 							</Cell>
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7}>
 								<div className="flex justify-center items-start md:items-center">
 									<SystemsAnimation />
 								</div>
 							</Cell>
 							{/* Offer creation */}
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7} className="mt-12">
 								<h6 className="mb-4">OFFER CREATION</h6>
 								<h4 className="mb-6">
 									An offer that{' '}
@@ -192,14 +192,14 @@ export default function Home() {
 									<Button theme="accent">Learn more</Button>
 								</Link>
 							</Cell>
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7}>
 								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
 									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
 								</div>
 							</Cell>
 
 							{/* Payment Infrastructure */}
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7} className="mt-12">
 								<h6 className="mb-4">PAYMENT INFRASTRUCTURE</h6>
 								<h4 className="mb-6">
 									Unlock{' '}
@@ -215,14 +215,14 @@ export default function Home() {
 									<Button theme="accent">Learn more</Button>
 								</Link>
 							</Cell>
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7}>
 								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
 									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
 								</div>
 							</Cell>
 
 							{/* Platform Launch */}
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7} className="mt-12">
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7} className="mt-12">
 								<h6 className="mb-4">PLATFORM LAUNCH</h6>
 								<h4 className="mb-6">
 									A platform where content and{' '}
@@ -238,7 +238,7 @@ export default function Home() {
 									<Button theme="accent">Learn more</Button>
 								</Link>
 							</Cell>
-							<Cell colsS={8} colsM={8} colL={7} colsXL={7}>
+							<Cell colsS={8} colsM={8} colsL={7} colsXL={7}>
 								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
 									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
 								</div>

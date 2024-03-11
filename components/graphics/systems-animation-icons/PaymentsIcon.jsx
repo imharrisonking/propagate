@@ -1,7 +1,7 @@
 export default function PaymentsIcon() {
 	return (
 		<div
-			class="
+			className="
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productCapital
     HomepageFrontdoorIcon--iconSizeLarge
@@ -9,18 +9,18 @@ export default function PaymentsIcon() {
   "
 		>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.outlineLogo"
 				>
 					<svg
-						class="HomepageFrontdoorIconOutline "
+						className="HomepageFrontdoorIconOutline "
 						width="42"
 						height="42"
 						viewBox="0 0 42 42"
@@ -39,18 +39,18 @@ export default function PaymentsIcon() {
 				</div>
 			</div>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						class="ProductIcon ProductIcon--Capital "
+						className="ProductIcon ProductIcon--Capital "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -78,8 +78,8 @@ export default function PaymentsIcon() {
 								y2="18.21"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#00D0E1"></stop>
-								<stop offset="1" stop-color="#00F5E7"></stop>
+								<stop stopColor="#00D0E1"></stop>
+								<stop offset="1" stopColor="#00F5E7"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-capital-Sticky-b"
@@ -88,8 +88,8 @@ export default function PaymentsIcon() {
 								y2="40"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#00D924"></stop>
-								<stop offset="1" stop-color="#00D924"></stop>
+								<stop stopColor="#00D924"></stop>
+								<stop offset="1" stopColor="#00D924"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-capital-Sticky-c"
@@ -99,14 +99,14 @@ export default function PaymentsIcon() {
 								y2="14"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#00D722"></stop>
-								<stop offset=".85" stop-color="#00BD01"></stop>
+								<stop stopColor="#00D722"></stop>
+								<stop offset=".85" stopColor="#00BD01"></stop>
 							</linearGradient>
 						</defs>
 					</svg>
 				</div>
 				<span
-					class="HomepageFrontdoorIcon__label"
+					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
 					Capital

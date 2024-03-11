@@ -1,7 +1,7 @@
 export default function ScalingIcon() {
 	return (
 		<div
-			class="
+			className="
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productSigma
     HomepageFrontdoorIcon--iconSizeLarge
@@ -9,18 +9,18 @@ export default function ScalingIcon() {
   "
 		>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.outlineLogo"
 				>
 					<svg
-						class="HomepageFrontdoorIconOutline "
+						className="HomepageFrontdoorIconOutline "
 						width="42"
 						height="42"
 						viewBox="0 0 42 42"
@@ -43,18 +43,18 @@ export default function ScalingIcon() {
 				</div>
 			</div>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						class="ProductIcon ProductIcon--Sigma "
+						className="ProductIcon ProductIcon--Sigma "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -82,8 +82,8 @@ export default function ScalingIcon() {
 								y2="12.99"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#9860FE"></stop>
-								<stop offset="1" stop-color="#6E00F5"></stop>
+								<stop stopColor="#9860FE"></stop>
+								<stop offset="1" stopColor="#6E00F5"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-sigma-Sticky-b"
@@ -93,14 +93,14 @@ export default function ScalingIcon() {
 								y2="19.47"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#FF5091"></stop>
-								<stop offset="1" stop-color="#E03071"></stop>
+								<stop stopColor="#FF5091"></stop>
+								<stop offset="1" stopColor="#E03071"></stop>
 							</linearGradient>
 						</defs>
 					</svg>
 				</div>
 				<span
-					class="HomepageFrontdoorIcon__label"
+					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
 					Sigma

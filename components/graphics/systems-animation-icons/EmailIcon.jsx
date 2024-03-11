@@ -1,7 +1,7 @@
 export default function EmailIcon() {
 	return (
 		<div
-			class="
+			className="
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productAtlas
     HomepageFrontdoorIcon--iconSizeLarge
@@ -9,18 +9,18 @@ export default function EmailIcon() {
   "
 		>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.outlineLogo"
 				>
 					<svg
-						class="HomepageFrontdoorIconOutline "
+						className="HomepageFrontdoorIconOutline "
 						width="42"
 						height="42"
 						viewBox="0 0 42 42"
@@ -39,25 +39,25 @@ export default function EmailIcon() {
 				</div>
 			</div>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						class="ProductIcon ProductIcon--Atlas "
+						className="ProductIcon ProductIcon--Atlas "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 					>
-						<g clip-path="url(#product-icon-atlas-Sticky-a)">
+						<g clipPath="url(#product-icon-atlas-Sticky-a)">
 							<path
 								d="M20.51.3c1 0 1.92.57 2.36 1.47l8.22 16.42 8.65 17.31a2.64 2.64 0 0 1-1.65 3.73l-.17.04c-.12.03-.24.04-.36.05h-.18L20.5 35.99 9.94 18.19l8.2-16.42A2.64 2.64 0 0 1 20.52.3z"
 								fill="#FB0"
@@ -80,9 +80,9 @@ export default function EmailIcon() {
 								y2="39.33"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#FFD748"></stop>
-								<stop offset=".54" stop-color="#FFCD48"></stop>
-								<stop offset="1" stop-color="#FFCB48"></stop>
+								<stop stopColor="#FFD748"></stop>
+								<stop offset=".54" stopColor="#FFCD48"></stop>
+								<stop offset="1" stopColor="#FFCB48"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-atlas-Sticky-c"
@@ -92,8 +92,8 @@ export default function EmailIcon() {
 								y2="15.01"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#FFAD00"></stop>
-								<stop offset="1" stop-color="#FF7600"></stop>
+								<stop stopColor="#FFAD00"></stop>
+								<stop offset="1" stopColor="#FF7600"></stop>
 							</linearGradient>
 							<clipPath id="product-icon-atlas-Sticky-a">
 								<path fill="#fff" d="M0 0h40v40H0z"></path>
@@ -102,7 +102,7 @@ export default function EmailIcon() {
 					</svg>
 				</div>
 				<span
-					class="HomepageFrontdoorIcon__label"
+					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
 					Atlas

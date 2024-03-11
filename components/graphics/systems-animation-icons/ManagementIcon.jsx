@@ -1,7 +1,7 @@
 export default function ManagementIcon() {
 	return (
 		<div
-			class="
+			className="
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productCheckout
     HomepageFrontdoorIcon--iconSizeLarge
@@ -9,18 +9,18 @@ export default function ManagementIcon() {
   "
 		>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.outlineLogo"
 				>
 					<svg
-						class="HomepageFrontdoorIconOutline "
+						className="HomepageFrontdoorIconOutline "
 						width="42"
 						height="42"
 						viewBox="0 0 42 42"
@@ -39,18 +39,18 @@ export default function ManagementIcon() {
 				</div>
 			</div>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						class="ProductIcon "
+						className="ProductIcon "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -78,11 +78,11 @@ export default function ManagementIcon() {
 								y2="21.16"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#21CFE0"></stop>
-								<stop offset=".17" stop-color="#20D1E0"></stop>
-								<stop offset=".38" stop-color="#18E2E2"></stop>
-								<stop offset=".61" stop-color="#13ECE3"></stop>
-								<stop offset="1" stop-color="#11EFE3"></stop>
+								<stop stopColor="#21CFE0"></stop>
+								<stop offset=".17" stopColor="#20D1E0"></stop>
+								<stop offset=".38" stopColor="#18E2E2"></stop>
+								<stop offset=".61" stopColor="#13ECE3"></stop>
+								<stop offset="1" stopColor="#11EFE3"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-checkout-Sticky-b"
@@ -92,14 +92,14 @@ export default function ManagementIcon() {
 								y2="14.5"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#0048E5"></stop>
-								<stop offset="1" stop-color="#9B66FF"></stop>
+								<stop stopColor="#0048E5"></stop>
+								<stop offset="1" stopColor="#9B66FF"></stop>
 							</linearGradient>
 						</defs>
 					</svg>
 				</div>
 				<span
-					class="HomepageFrontdoorIcon__label"
+					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
 					Checkout

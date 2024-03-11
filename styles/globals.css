@@ -20,11 +20,15 @@
     --modal-z-index: 30;
     --header-z-index: 40;
 
+    /* Systems Animation */
     --systemsGraphicIconSize: 78px;
     --rowColumnGap: 12px;
     --willChange: initial;
     --aspectRatio: 100%;
-    --systemsAnimationGraphicWidth: 540px;
+    --maxWidth: 540px;
+    --maxWidthDesktop: 540px;
+    --domGraphicHeight: 540px;
+    --domGraphicWidth: 540px;
     --domGraphicHeight: 540px;
     --scale: 1;
 }
@@ -286,8 +290,75 @@ to {
         --webkit-filter: grayscale(100%);
     }
 
+    .DomGraphic {
+        --maxWidth: 100%;
+        --willChange: initial;
+        position: relative;
+        width: 100%;
+        height: var(--domGraphicHeight);
+    }
+
+    :root {
+        --domGraphicWidth: var(--maxWidthPhone, var(--maxWidth));
+      }
+
+      @media (min-width: 900px) {
+        :root {
+          --domGraphicWidth: var(--maxWidthDesktop, var(--maxWidth));
+        }
+
+        .DomGraphic {
+          max-width: var(--maxWidthDesktop, var(--maxWidth));
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 899px) {
+        :root {
+          --domGraphicWidth: var(--maxWidthTablet, var(--maxWidth));
+        }
+
+        .DomGraphic {
+          max-width: var(--maxWidthTablet, var(--maxWidth));
+        }
+      }
+
+      @media (max-width: 599px) {
+        .DomGraphic {
+          max-width: var(--maxWidthPhone, var(--maxWidth));
+        }
+      }
+
+    .DomGraphic__heightContainer {
+        height: 100%;
+        width: 100%;
+        max-width: var(--domGraphicWidth);
+        padding-bottom: var(--aspectRatio);
+    }
+
+    .DomGraphic__scaleContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: top left;
+        will-change: var(--willChange);
+    }
+
+    .HomepageFrontdoorSubanimation {
+        display: grid;
+        justify-items: center;
+        position: relative;
+        align-items: center;
+        width: var(--domGraphicWidth, 540px);
+        height: var(--domGraphicHeight, 540px);
+    }
+
+    .HomepageFrontdoorSuiteAnimation.HomepageFrontdoorSubanimation {
+        justify-content: flex-start;
+    }
+
     .HomepageFrontdoorSuiteAnimation__grid {
     position: relative;
+    margin: 0 auto;
     max-width: var(--systemsAnimationGraphicWidth);
     display: grid;
     grid: auto/minmax(0,1fr);
@@ -302,6 +373,15 @@ to {
     "Branding Development . Website";
     gap: var(--rowColumnGap);
     }
+
+    @media (max-width: 599px) {
+        .HomepageFrontdoorIcon--productAtlas,
+        .HomepageFrontdoorIcon--productCheckout,
+        .HomepageFrontdoorIcon--productSigma,
+        .HomepageFrontdoorIcon--productElements {
+          display: none;
+        }
+      }
 
     @media (min-width: 600px) {
     .HomepageFrontdoorSuiteAnimation__grid {
@@ -377,6 +457,7 @@ to {
     /* .HomepageFrontdoorSuiteAnimation .HomepageFrontdoorIcon {
         opacity: 0;
     } */
+
     .HomepageFrontdoorIcon--productTax {
         grid-area: Analysis;
     }

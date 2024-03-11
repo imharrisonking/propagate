@@ -1,7 +1,7 @@
 export default function CourseIcon() {
 	return (
 		<div
-			class="
+			className="
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productInvoicing
     HomepageFrontdoorIcon--iconSizeLarge
@@ -9,18 +9,18 @@ export default function CourseIcon() {
   "
 		>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.outlineLogo"
 				>
 					<svg
-						class="HomepageFrontdoorIconOutline "
+						className="HomepageFrontdoorIconOutline "
 						width="42"
 						height="42"
 						viewBox="0 0 42 42"
@@ -39,18 +39,18 @@ export default function CourseIcon() {
 				</div>
 			</div>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						class="ProductIcon ProductIcon--Invoicing "
+						className="ProductIcon ProductIcon--Invoicing "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -78,8 +78,8 @@ export default function CourseIcon() {
 								y2="38"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#FFD748"></stop>
-								<stop offset="1" stop-color="#FFC148"></stop>
+								<stop stopColor="#FFD748"></stop>
+								<stop offset="1" stopColor="#FFC148"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-invoicing-Sticky-b"
@@ -89,14 +89,14 @@ export default function CourseIcon() {
 								y2="38.6633"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#00A600"></stop>
-								<stop offset="1" stop-color="#00D924"></stop>
+								<stop stopColor="#00A600"></stop>
+								<stop offset="1" stopColor="#00D924"></stop>
 							</linearGradient>
 						</defs>
 					</svg>
 				</div>
 				<span
-					class="HomepageFrontdoorIcon__label"
+					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
 					Invoicing

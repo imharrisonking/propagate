@@ -1,7 +1,7 @@
 export default function ContentIcon() {
 	return (
 		<div
-			class="
+			className="
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productClimate
     HomepageFrontdoorIcon--iconSizeLarge
@@ -9,18 +9,18 @@ export default function ContentIcon() {
   "
 		>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.outlineLogo"
 				>
 					<svg
-						class="HomepageFrontdoorIconOutline "
+						className="HomepageFrontdoorIconOutline "
 						width="42"
 						height="42"
 						viewBox="0 0 42 42"
@@ -39,18 +39,18 @@ export default function ContentIcon() {
 				</div>
 			</div>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						class="ProductIcon ProductIcon--Climate "
+						className="ProductIcon ProductIcon--Climate "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -78,12 +78,12 @@ export default function ContentIcon() {
 								y2="9.57"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#FFD748"></stop>
-								<stop offset=".21" stop-color="#FFD644"></stop>
-								<stop offset=".33" stop-color="#FFD438"></stop>
-								<stop offset=".45" stop-color="#FFD024"></stop>
-								<stop offset=".57" stop-color="#FFCB09"></stop>
-								<stop offset="1" stop-color="#FFC900"></stop>
+								<stop stopColor="#FFD748"></stop>
+								<stop offset=".21" stopColor="#FFD644"></stop>
+								<stop offset=".33" stopColor="#FFD438"></stop>
+								<stop offset=".45" stopColor="#FFD024"></stop>
+								<stop offset=".57" stopColor="#FFCB09"></stop>
+								<stop offset="1" stopColor="#FFC900"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-climate-Sticky-b"
@@ -93,8 +93,8 @@ export default function ContentIcon() {
 								y2="21.9"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#009C00"></stop>
-								<stop offset="1" stop-color="#00BA18"></stop>
+								<stop stopColor="#009C00"></stop>
+								<stop offset="1" stopColor="#00BA18"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-climate-Sticky-c"
@@ -104,14 +104,14 @@ export default function ContentIcon() {
 								y2="15.28"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop offset=".13" stop-color="#00CB1B"></stop>
-								<stop offset="1" stop-color="#00D924"></stop>
+								<stop offset=".13" stopColor="#00CB1B"></stop>
+								<stop offset="1" stopColor="#00D924"></stop>
 							</linearGradient>
 						</defs>
 					</svg>
 				</div>
 				<span
-					class="HomepageFrontdoorIcon__label"
+					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
 					Climate

@@ -1,7 +1,7 @@
 export default function AutomationsIcon() {
 	return (
 		<div
-			class="
+			className="
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productElements
     HomepageFrontdoorIcon--iconSizeLarge
@@ -9,18 +9,18 @@ export default function AutomationsIcon() {
   "
 		>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.outlineLogo"
 				>
 					<svg
-						class="HomepageFrontdoorIconOutline "
+						className="HomepageFrontdoorIconOutline "
 						width="42"
 						height="42"
 						viewBox="0 0 42 42"
@@ -39,18 +39,18 @@ export default function AutomationsIcon() {
 				</div>
 			</div>
 			<div
-				class="
+				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
 			>
 				<div
-					class="HomepageFrontdoorIcon__iconLogo"
+					className="HomepageFrontdoorIcon__iconLogo"
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						class="ProductIcon "
+						className="ProductIcon "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -58,20 +58,20 @@ export default function AutomationsIcon() {
 						xmlns="http://www.w3.org/2000/svg"
 					>
 						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
+							fillRule="evenodd"
+							clipRule="evenodd"
 							d="M2 10.02c0-.95.5-1.83 1.33-2.3L16.08.36a2.66 2.66 0 0 1 2.66 0l12.75 7.36a2.66 2.66 0 0 1 1.33 2.3v6l-5-2.89a2.66 2.66 0 0 0-2.66 0l-9.51 5.48a2.66 2.66 0 0 0-1.34 2.3v10.95c0 .9.45 1.72 1.19 2.21L3.33 27.05A2.66 2.66 0 0 1 2 24.75V10.02z"
 							fill="url(#product-icon-elements-Sticky-a)"
 						></path>
 						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
+							fillRule="evenodd"
+							clipRule="evenodd"
 							d="M15.5 34.07l.58.34c.82.48 1.84.48 2.66 0l12.75-7.36a2.66 2.66 0 0 0 1.33-2.3v-8.72l4.47 2.58a2.66 2.66 0 0 1 1.33 2.3v10.95c0 .95-.5 1.83-1.33 2.3l-9.48 5.48c-.82.48-1.83.48-2.65 0l-9.51-5.47-.15-.1z"
 							fill="#96F"
 						></path>
 						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
+							fillRule="evenodd"
+							clipRule="evenodd"
 							d="M32.82 16.03l-5-2.9a2.66 2.66 0 0 0-2.66 0l-9.51 5.48a2.66 2.66 0 0 0-1.34 2.3v10.95c0 .9.45 1.72 1.19 2.21l.58.34c.82.48 1.84.48 2.66 0l12.75-7.36a2.66 2.66 0 0 0 1.33-2.3v-8.72z"
 							fill="url(#product-icon-elements-Sticky-b)"
 						></path>
@@ -84,10 +84,10 @@ export default function AutomationsIcon() {
 								y2="32.18"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#11EFE3"></stop>
-								<stop offset=".33" stop-color="#15E8E2"></stop>
-								<stop offset=".74" stop-color="#1FD3E0"></stop>
-								<stop offset="1" stop-color="#21CFE0"></stop>
+								<stop stopColor="#11EFE3"></stop>
+								<stop offset=".33" stopColor="#15E8E2"></stop>
+								<stop offset=".74" stopColor="#1FD3E0"></stop>
+								<stop offset="1" stopColor="#21CFE0"></stop>
 							</linearGradient>
 							<linearGradient
 								id="product-icon-elements-Sticky-b"
@@ -97,15 +97,15 @@ export default function AutomationsIcon() {
 								y2="9.56"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#0048E5"></stop>
-								<stop offset=".64" stop-color="#625AF5"></stop>
-								<stop offset="1" stop-color="#8A62FC"></stop>
+								<stop stopColor="#0048E5"></stop>
+								<stop offset=".64" stopColor="#625AF5"></stop>
+								<stop offset="1" stopColor="#8A62FC"></stop>
 							</linearGradient>
 						</defs>
 					</svg>
 				</div>
 				<span
-					class="HomepageFrontdoorIcon__label"
+					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
 					Elements
