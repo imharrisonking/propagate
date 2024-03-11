@@ -312,7 +312,7 @@ to {
         ". Email Offer Content . Website"
         "Sales . . Marketing . ."
         ". . Funnel Management Development ."
-        ". Branding . . VSL Automations";
+        ". Branding . . Scaling Automations";
     }
     }
 
@@ -377,21 +377,68 @@ to {
     /* .HomepageFrontdoorSuiteAnimation .HomepageFrontdoorIcon {
         opacity: 0;
     } */
+    .HomepageFrontdoorIcon--productTax {
+        grid-area: Analysis;
+    }
 
     .HomepageFrontdoorIcon--productBilling {
         grid-area: Community;
     }
 
-    .HomepageFrontdoorIcon--productAtlas {
-        grid-area: Email;
+    .HomepageFrontdoorIcon--productInvoicing {
+        grid-area: Course;
     }
 
     .HomepageFrontdoorIcon--productCapital {
         grid-area: Payments;
     }
 
-    .HomepageFrontdoorIcon--productTax {
-        grid-area: Analysis;
+    .HomepageFrontdoorIcon--productAtlas {
+        grid-area: Email;
+    }
+
+    .HomepageFrontdoorIcon--productPayments {
+        grid-area: Offer;
+    }
+
+    .HomepageFrontdoorIcon--productClimate {
+        grid-area: Content;
+    }
+
+    .HomepageFrontdoorIcon--productTreasury {
+        grid-area: Website;
+    }
+
+    .HomepageFrontdoorIcon--productConnect {
+        grid-area: Sales;
+    }
+
+    .HomepageFrontdoorIcon--productRadar {
+        grid-area: Marketing;
+    }
+
+    .HomepageFrontdoorIcon--productTerminal {
+        grid-area: Funnel;
+    }
+
+    .HomepageFrontdoorIcon--productCheckout {
+        grid-area: Management;
+    }
+
+    .HomepageFrontdoorIcon--productIssuing {
+        grid-area: Development;
+    }
+
+    .HomepageFrontdoorIcon--productIdentity {
+        grid-area: Branding;
+    }
+
+    .HomepageFrontdoorIcon--productSigma {
+        grid-area: Scaling;
+    }
+
+    .HomepageFrontdoorIcon--productElements {
+        grid-area: Automations;
     }
 
 @layer base {
