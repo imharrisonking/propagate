@@ -99,7 +99,7 @@ export default function CommunityIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Billing
+					Community
 				</span>
 			</div>
 		</div>

@@ -99,7 +99,7 @@ export default function CourseIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Invoicing
+					Course
 				</span>
 			</div>
 		</div>
