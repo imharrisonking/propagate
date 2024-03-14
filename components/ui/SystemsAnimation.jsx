@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useScrollInfo } from '@faceless-ui/scroll-info';
 
 import AnalysisIcon from '../graphics/systems-animation-icons/AnalysisIcon';
 
@@ -75,7 +76,7 @@ export const SystemsAnimation = () => {
 					}}
 				>
 					<div
-						class="HomepageFrontdoorSuiteAnimation HomepageFrontdoorSubanimation"
+						className="HomepageFrontdoorSuiteAnimation HomepageFrontdoorSubanimation"
 						data-js-controller="HomepageFrontdoorSuiteAnimation"
 						data-js-context="Sticky"
 					>
@@ -83,10 +84,10 @@ export const SystemsAnimation = () => {
 							className="HomepageFrontdoorSuiteAnimation__grid"
 							data-js-target="HomepageFrontdoorSuiteAnimation.grid"
 						>
-							<AnalysisIcon />
+							{/* <AnalysisIcon /> */}
 							<CommunityIcon />
 							<CourseIcon />
-							<PaymentsIcon />
+							{/* <PaymentsIcon />
 							<EmailIcon />
 							<OfferIcon />
 							<ContentIcon />
@@ -98,7 +99,7 @@ export const SystemsAnimation = () => {
 							<DevelopmentIcon />
 							<BrandingIcon />
 							<ScalingIcon />
-							<AutomationsIcon />
+							<AutomationsIcon /> */}
 						</div>
 					</div>
 				</div>

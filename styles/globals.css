@@ -352,6 +352,13 @@ to {
         height: var(--domGraphicHeight, 540px);
     }
 
+    @media (max-width: 599px) {
+        .HomepageFrontdoorSubanimation {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
     .HomepageFrontdoorSuiteAnimation.HomepageFrontdoorSubanimation {
         justify-content: flex-start;
     }
@@ -359,10 +366,12 @@ to {
     .HomepageFrontdoorSuiteAnimation__grid {
     position: relative;
     margin: 0 auto;
+    place-items: center;
     max-width: var(--systemsAnimationGraphicWidth);
     display: grid;
     grid: auto/minmax(0,1fr);
     row-gap: 12px;
+    column-gap: var(--rowColumnGap);
     grid-template-columns: repeat(4, var(--systemsGraphicIconSize));
     grid-template-areas:
     ". Analysis . ."
@@ -371,7 +380,6 @@ to {
     "Sales . Marketing ."
     ". Funnel Payments ."
     "Branding Development . Website";
-    gap: var(--rowColumnGap);
     }
 
     @media (max-width: 599px) {
@@ -407,6 +415,13 @@ to {
         transform-box: fill-box;
     }
 
+    @media (max-width: 599px) {
+        .HomepageFrontdoorIcon {
+          --inactiveSize: 68;
+          --activeSize: 78;
+        }
+      }
+
     .HomepageFrontdoorIcon__icon {
         display: flex;
         justify-content: center;
@@ -423,7 +438,7 @@ to {
     }
 
     .HomepageFrontdoorIcon__icon--outline {
-        border: calc(1px/var(--iconScale)) solid #c4ccd8;
+        border: calc(1px/var(--iconScale)) solid var(--color-grey-200);
         background: var(--color-green-100);
     }
 
@@ -448,15 +463,63 @@ to {
         width: 100%;
         left: 0;
         text-align: center;
-        font: 600 12px/15px;
+        font-size: 12px;
+        font-weight: 600;
         letter-spacing: .2px;
         color: var(--color-grey-500);
         opacity: 0;
     }
 
-    /* .HomepageFrontdoorSuiteAnimation .HomepageFrontdoorIcon {
-        opacity: 0;
-    } */
+    @keyframes iconFadeInOut {
+        0%, 60% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+        65%, 90% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+        95%, 100% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+      }
+
+      @keyframes iconFadeInOutInverse {
+        0%, 60% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+        65%, 90% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+        }
+        95%, 100% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+      }
+
+      .HomepageFrontdoorIcon__icon--outline {
+        animation: iconFadeInOut 10s infinite;
+      }
+
+      .HomepageFrontdoorIcon__icon--solid {
+        animation: iconFadeInOutInverse 10s infinite;
+      }
+
+      .HomepageFrontdoorIcon__label {
+        animation: iconFadeInOutInverse 10s infinite;
+      }
+
+    /* Add delays for each icon and transform of size */
+    .HomepageFrontdoorIcon__icon--outline,
+    .HomepageFrontdoorIcon__icon--solid,
+    .HomepageFrontdoorIcon__label {
+        animation-delay: var(--icon-delay);
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 
     .HomepageFrontdoorIcon--productTax {
         grid-area: Analysis;
@@ -468,6 +531,7 @@ to {
 
     .HomepageFrontdoorIcon--productInvoicing {
         grid-area: Course;
+        --icon-delay: 1s;
     }
 
     .HomepageFrontdoorIcon--productCapital {

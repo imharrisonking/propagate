@@ -5,7 +5,6 @@ export default function AnalysisIcon() {
     HomepageFrontdoorIcon
     HomepageFrontdoorIcon--productTax
     HomepageFrontdoorIcon--iconSizeLarge
-
   "
 		>
 			<div
@@ -14,6 +13,7 @@ export default function AnalysisIcon() {
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
+				// style={{ animationDelay: '0s' }}
 			>
 				<div
 					className="HomepageFrontdoorIcon__iconLogo"
@@ -29,11 +29,11 @@ export default function AnalysisIcon() {
 					>
 						<path
 							d="M20.05 1.00996C23.4351 1.32577 26.7377 2.28014 29.7804 3.83046C32.823 5.38077 35.5364 7.49169 37.7816 10.0447C38.6958 11.0842 38.4392 12.6609 37.3192 13.4746L21.5269 24.9483C19.87 26.1522 17.5469 24.9685 17.5469 22.9204V3.40011C17.5469 2.01572 18.6716 0.881361 20.05 1.00996Z"
-							stroke="#C4CCD8"
+							stroke="#CFCFCE"
 						></path>
 						<path
 							d="M34.3332 25.3334C34.3332 16.681 27.319 9.6668 18.6666 9.6668C10.0142 9.6668 3 16.681 3 25.3334C3 33.9858 10.0142 41 18.6666 41C27.319 41 34.3332 33.9858 34.3332 25.3334Z"
-							stroke="#C4CCD8"
+							stroke="#CFCFCE"
 						></path>
 					</svg>
 				</div>
@@ -44,6 +44,7 @@ export default function AnalysisIcon() {
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
+				// style={{ animationDelay: '1s' }}
 			>
 				<div
 					className="HomepageFrontdoorIcon__iconLogo"
