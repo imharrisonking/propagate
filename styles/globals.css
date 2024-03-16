@@ -500,6 +500,28 @@ to {
         }
       }
 
+      @keyframes svgScale {
+        0%, 60%, 95%, 100% {
+          /* counter scale the SVG to keep it at a fixed size */
+          transform: scale(1);
+        }
+        65%, 90% {
+          /* Scale the SVG size down and move it slightly upwards */
+          transform: scale(0.75) translateY(-20%);
+        }
+      }
+
+      @keyframes labelTranslate {
+        0%, 60%, 95%, 100% {
+          /* Move the label slightly upwards */
+          transform: translateY(-20%);
+        }
+        65%, 90% {
+          /* Move the label slightly upwards */
+          transform: translateY(0%);
+        }
+      }
+
       .HomepageFrontdoorIcon__icon--outline {
         animation: iconFadeInOut 10s infinite;
       }
@@ -509,16 +531,25 @@ to {
       }
 
       .HomepageFrontdoorIcon__label {
-        animation: iconFadeInOutInverse 10s infinite;
+        animation: iconFadeInOutInverse 10s infinite, labelTranslate 10s infinite;
       }
 
     /* Add delays for each icon and transform of size */
     .HomepageFrontdoorIcon__icon--outline,
-    .HomepageFrontdoorIcon__icon--solid,
-    .HomepageFrontdoorIcon__label {
+    .HomepageFrontdoorIcon__icon--solid {
         animation-delay: var(--icon-delay);
         transform-origin: center;
         transform-box: fill-box;
+    }
+
+    .HomepageFrontdoorIcon__label {
+        animation-delay: var(--icon-delay);
+    }
+
+    .HomepageFrontdoorIcon__icon--solid svg,
+    .HomepageFrontdoorIcon__icon--outline svg{
+      animation-delay: var(--icon-delay);
+      animation: svgScale 10s infinite;
     }
 
     .HomepageFrontdoorIcon--productTax {
