@@ -3,7 +3,7 @@ export default function WebsiteIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productTreasury
+    HomepageFrontdoorIcon--productWebsite
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,7 +50,7 @@ export default function WebsiteIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Banking "
+						className="ProductIcon ProductIcon--Website "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -58,7 +58,7 @@ export default function WebsiteIcon() {
 					>
 						<path
 							d="M29 14.5c0-.36-.07-.71-.22-1.04l-3.92-8.94A2.52 2.52 0 0 0 22.56 3H2.52A2.54 2.54 0 0 0 0 5.56v17.88A2.54 2.54 0 0 0 2.52 26h20.04c1 0 1.9-.6 2.3-1.52l3.92-8.94c.15-.33.22-.68.22-1.04z"
-							fill="url(#product-icon-banking-Sticky-a)"
+							fill="url(#product-icon-website-Sticky-a)"
 						></path>
 						<path
 							d="M11 25.5c0 .36.07.71.22 1.04l3.92 8.94c.4.93 1.3 1.52 2.3 1.52h20.04c1.4 0 2.52-1.14 2.52-2.56V16.56A2.54 2.54 0 0 0 37.48 14H17.44c-1 0-1.9.6-2.3 1.52l-3.92 8.94c-.15.33-.22.68-.22 1.04z"
@@ -66,11 +66,11 @@ export default function WebsiteIcon() {
 						></path>
 						<path
 							d="M28.95 14a2.59 2.59 0 0 1-.17 1.54l-3.92 8.94c-.4.93-1.3 1.52-2.3 1.52H11.05a2.59 2.59 0 0 1 .17-1.54l3.92-8.94c.4-.93 1.3-1.52 2.3-1.52h11.51z"
-							fill="url(#product-icon-banking-Sticky-b)"
+							fill="url(#product-icon-website-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-banking-Sticky-a"
+								id="product-icon-website-Sticky-a"
 								x1="14.5"
 								y1="6.13"
 								x2="14.5"
@@ -83,7 +83,7 @@ export default function WebsiteIcon() {
 								<stop offset="1" stopColor="#21CFE0"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-banking-Sticky-b"
+								id="product-icon-website-Sticky-b"
 								x1="25.31"
 								y1="29.5"
 								x2="25.31"
@@ -100,7 +100,7 @@ export default function WebsiteIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Treasury
+					Website
 				</span>
 			</div>
 		</div>

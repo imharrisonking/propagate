@@ -3,7 +3,7 @@ export default function FunnelIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productTerminal
+    HomepageFrontdoorIcon--productFunnel
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,7 +50,7 @@ export default function FunnelIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Terminal "
+						className="ProductIcon ProductIcon--Funnel "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -63,15 +63,15 @@ export default function FunnelIcon() {
 						></path>
 						<path
 							d="M28.59 0H11.58A2.54 2.54 0 0 0 9 2.5v25c0 1.38 1.15 2.5 2.58 2.5h16.84A2.54 2.54 0 0 0 31 27.5v-25A2.5 2.5 0 0 0 28.59 0z"
-							fill="url(#product-icon-terminal-Sticky-a)"
+							fill="url(#product-icon-funnel-Sticky-a)"
 						></path>
 						<path
 							d="M31 15.34V27.5c0 1.38-1.15 2.5-2.58 2.5H11.58A2.54 2.54 0 0 1 9 27.5v-7.43l.33-.07 21.34-4.59.33-.07z"
-							fill="url(#product-icon-terminal-Sticky-b)"
+							fill="url(#product-icon-funnel-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-terminal-Sticky-a"
+								id="product-icon-funnel-Sticky-a"
 								x1="20"
 								y1="1.97"
 								x2="20"
@@ -84,7 +84,7 @@ export default function FunnelIcon() {
 								<stop offset="1" stopColor="#21CFE0"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-terminal-Sticky-b"
+								id="product-icon-funnel-Sticky-b"
 								x1="31"
 								y1="22.67"
 								x2="5.34"
@@ -102,7 +102,7 @@ export default function FunnelIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Terminal
+					Funnel
 				</span>
 			</div>
 		</div>

@@ -3,7 +3,7 @@ export default function ManagementIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productCheckout
+    HomepageFrontdoorIcon--productManagement
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -63,15 +63,15 @@ export default function ManagementIcon() {
 						></path>
 						<path
 							d="M7.23 36a2.3 2.3 0 0 1-.98-.22h.04a2.43 2.43 0 0 1-1.23-1.23L.22 23.53a2.54 2.54 0 0 1 .17-2.38A2.45 2.45 0 0 1 2.46 20h19.5c.97 0 1.84.57 2.23 1.46l4.8 10.85.68 1.53c.1.22.23.42.38.6.49.64 1.2 1.3 1.98 1.51-.11.03-.3.05-.55.05H7.22z"
-							fill="url(#product-icon-checkout-Sticky-a)"
+							fill="url(#product-icon-management-Sticky-a)"
 						></path>
 						<path
 							d="M21.97 20c.9 0 1.72.5 2.14 1.3l.08.16 4.8 10.85.68 1.53a4.43 4.43 0 0 0 2.3 2.01l.18.07c-.2.05-.4.08-.61.08H8L14.67 21c.15-.32.22-.66.22-1.01h7.08z"
-							fill="url(#product-icon-checkout-Sticky-b)"
+							fill="url(#product-icon-management-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-checkout-Sticky-a"
+								id="product-icon-management-Sticky-a"
 								x1="16.01"
 								y1="35.59"
 								x2="16.01"
@@ -85,7 +85,7 @@ export default function ManagementIcon() {
 								<stop offset="1" stopColor="#11EFE3"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-checkout-Sticky-b"
+								id="product-icon-management-Sticky-b"
 								x1="21.07"
 								y1="43"
 								x2="21.07"
@@ -102,7 +102,7 @@ export default function ManagementIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Checkout
+					Management
 				</span>
 			</div>
 		</div>

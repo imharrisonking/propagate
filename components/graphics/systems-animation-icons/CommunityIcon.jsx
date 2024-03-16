@@ -3,7 +3,7 @@ export default function CommunityIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productBilling
+    HomepageFrontdoorIcon--productCommunity
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,7 +50,7 @@ export default function CommunityIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Billing "
+						className="ProductIcon ProductIcon--Community "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -59,7 +59,7 @@ export default function CommunityIcon() {
 					>
 						<path
 							d="M26 2.46C26 1.1 24.9 0 23.53 0H2.47A2.47 2.47 0 0 0 0 2.46v30.08a2.46 2.46 0 0 0 3.47 2.25l10.2-4.53 10.86-4.83c.9-.4 1.47-1.27 1.47-2.25V2.46z"
-							fill="url(#product-icon-billing-Sticky-a)"
+							fill="url(#product-icon-community-Sticky-a)"
 						></path>
 						<path
 							d="M26.5 39a13.5 13.5 0 1 0 0-27 13.5 13.5 0 0 0 0 27z"
@@ -67,11 +67,11 @@ export default function CommunityIcon() {
 						></path>
 						<path
 							d="M26 12v11.18c0 .98-.57 1.86-1.47 2.25l-10.7 4.76A13.5 13.5 0 0 1 26 12z"
-							fill="url(#product-icon-billing-Sticky-b)"
+							fill="url(#product-icon-community-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-billing-Sticky-a"
+								id="product-icon-community-Sticky-a"
 								x1="13"
 								y1="6.35"
 								x2="13"
@@ -82,7 +82,7 @@ export default function CommunityIcon() {
 								<stop offset="1" stopColor="#FFC148"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-billing-Sticky-b"
+								id="product-icon-community-Sticky-b"
 								x1="19.5"
 								y1="12.01"
 								x2="19.5"

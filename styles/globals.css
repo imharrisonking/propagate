@@ -383,7 +383,7 @@ to {
     }
 
     @media (max-width: 599px) {
-        .HomepageFrontdoorIcon--productAtlas,
+        .HomepageFrontdoorIcon--productEmail,
         .HomepageFrontdoorIcon--productCheckout,
         .HomepageFrontdoorIcon--productSigma,
         .HomepageFrontdoorIcon--productElements {
@@ -514,11 +514,11 @@ to {
       @keyframes labelTranslate {
         0%, 60%, 95%, 100% {
           /* Move the label slightly upwards */
-          transform: translateY(-20%);
+          transform: translateY(0%);
         }
         65%, 90% {
           /* Move the label slightly upwards */
-          transform: translateY(0%);
+          transform: translateY(-20%);
         }
       }
 
@@ -531,7 +531,7 @@ to {
       }
 
       .HomepageFrontdoorIcon__label {
-        animation: iconFadeInOutInverse 10s infinite, labelTranslate 10s infinite;
+        animation: iconFadeInOutInverse 10s var(--icon-delay) infinite, labelTranslate 10s calc(var(--icon-delay) + 0.15s) infinite;
       }
 
     /* Add delays for each icon and transform of size */
@@ -542,74 +542,75 @@ to {
         transform-box: fill-box;
     }
 
-    .HomepageFrontdoorIcon__label {
-        animation-delay: var(--icon-delay);
-    }
+    /* .HomepageFrontdoorIcon__label {
+        animation-delay: var(--icon-delay), calc(var(--icon-delay) + 0.15s);
+    } */
 
     .HomepageFrontdoorIcon__icon--solid svg,
-    .HomepageFrontdoorIcon__icon--outline svg{
-      animation-delay: var(--icon-delay);
-      animation: svgScale 10s infinite;
+    .HomepageFrontdoorIcon__icon--outline svg {
+      /* animation-delay: var(--icon-delay); */
+      animation: svgScale 10s var(--icon-delay) infinite;
     }
 
-    .HomepageFrontdoorIcon--productTax {
+    .HomepageFrontdoorIcon--productAnalysis {
         grid-area: Analysis;
     }
 
-    .HomepageFrontdoorIcon--productBilling {
+    .HomepageFrontdoorIcon--productCommunity {
         grid-area: Community;
+        --icon-delay: 0s;
     }
 
-    .HomepageFrontdoorIcon--productInvoicing {
+    .HomepageFrontdoorIcon--productCourse {
         grid-area: Course;
         --icon-delay: 1s;
     }
 
-    .HomepageFrontdoorIcon--productCapital {
+    .HomepageFrontdoorIcon--productPayments {
         grid-area: Payments;
     }
 
-    .HomepageFrontdoorIcon--productAtlas {
+    .HomepageFrontdoorIcon--productEmail {
         grid-area: Email;
     }
 
-    .HomepageFrontdoorIcon--productPayments {
+    .HomepageFrontdoorIcon--productOffer {
         grid-area: Offer;
     }
 
-    .HomepageFrontdoorIcon--productClimate {
+    .HomepageFrontdoorIcon--productContent {
         grid-area: Content;
     }
 
-    .HomepageFrontdoorIcon--productTreasury {
+    .HomepageFrontdoorIcon--productWebsite {
         grid-area: Website;
     }
 
-    .HomepageFrontdoorIcon--productConnect {
+    .HomepageFrontdoorIcon--productSales {
         grid-area: Sales;
     }
 
-    .HomepageFrontdoorIcon--productRadar {
+    .HomepageFrontdoorIcon--productMarketing {
         grid-area: Marketing;
     }
 
-    .HomepageFrontdoorIcon--productTerminal {
+    .HomepageFrontdoorIcon--productFunnel {
         grid-area: Funnel;
     }
 
-    .HomepageFrontdoorIcon--productCheckout {
+    .HomepageFrontdoorIcon--productManagement {
         grid-area: Management;
     }
 
-    .HomepageFrontdoorIcon--productIssuing {
+    .HomepageFrontdoorIcon--productDevelopment {
         grid-area: Development;
     }
 
-    .HomepageFrontdoorIcon--productIdentity {
+    .HomepageFrontdoorIcon--productBranding {
         grid-area: Branding;
     }
 
-    .HomepageFrontdoorIcon--productSigma {
+    .HomepageFrontdoorIcon--productScaling {
         grid-area: Scaling;
     }
 

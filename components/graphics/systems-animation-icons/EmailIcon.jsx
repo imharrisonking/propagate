@@ -3,7 +3,7 @@ export default function EmailIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productAtlas
+    HomepageFrontdoorIcon--productEmail
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,30 +50,30 @@ export default function EmailIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Atlas "
+						className="ProductIcon ProductIcon--Email "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 					>
-						<g clipPath="url(#product-icon-atlas-Sticky-a)">
+						<g clipPath="url(#product-icon-email-Sticky-a)">
 							<path
 								d="M20.51.3c1 0 1.92.57 2.36 1.47l8.22 16.42 8.65 17.31a2.64 2.64 0 0 1-1.65 3.73l-.17.04c-.12.03-.24.04-.36.05h-.18L20.5 35.99 9.94 18.19l8.2-16.42A2.64 2.64 0 0 1 20.52.3z"
 								fill="#FB0"
 							></path>
 							<path
 								d="M20.51.3c1 0 1.92.57 2.36 1.47l8.22 16.42L20.5 35.98 3.65 39.33a2.64 2.64 0 0 1-2.37-3.83l8.66-17.3 8.2-16.43A2.64 2.64 0 0 1 20.52.3z"
-								fill="url(#product-icon-atlas-Sticky-b)"
+								fill="url(#product-icon-email-Sticky-b)"
 							></path>
 							<path
 								d="M20.51.3c1 0 1.92.57 2.36 1.47l8.22 16.42L20.5 35.98 9.94 18.19l8.2-16.42A2.64 2.64 0 0 1 20.34.3h.18z"
-								fill="url(#product-icon-atlas-Sticky-c)"
+								fill="url(#product-icon-email-Sticky-c)"
 							></path>
 						</g>
 						<defs>
 							<linearGradient
-								id="product-icon-atlas-Sticky-b"
+								id="product-icon-email-Sticky-b"
 								x1="16.03"
 								y1="18.01"
 								x2="15.94"
@@ -85,7 +85,7 @@ export default function EmailIcon() {
 								<stop offset="1" stopColor="#FFCB48"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-atlas-Sticky-c"
+								id="product-icon-email-Sticky-c"
 								x1="20.51"
 								y1="34.72"
 								x2="20.51"
@@ -95,7 +95,7 @@ export default function EmailIcon() {
 								<stop stopColor="#FFAD00"></stop>
 								<stop offset="1" stopColor="#FF7600"></stop>
 							</linearGradient>
-							<clipPath id="product-icon-atlas-Sticky-a">
+							<clipPath id="product-icon-email-Sticky-a">
 								<path fill="#fff" d="M0 0h40v40H0z"></path>
 							</clipPath>
 						</defs>
@@ -105,7 +105,7 @@ export default function EmailIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Atlas
+					Email
 				</span>
 			</div>
 		</div>

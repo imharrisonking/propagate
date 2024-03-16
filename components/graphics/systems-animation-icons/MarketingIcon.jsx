@@ -3,7 +3,7 @@ export default function MarketingIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productRadar
+    HomepageFrontdoorIcon--productMarketing
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,7 +50,7 @@ export default function MarketingIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Radar "
+						className="ProductIcon ProductIcon--Marketing "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -63,15 +63,15 @@ export default function MarketingIcon() {
 						></path>
 						<path
 							d="M27.8 21.98A33.82 33.82 0 0 0 5.95 4.28a1.29 1.29 0 0 0-1.56.98L.1 25.4a2.54 2.54 0 0 0 1.4 2.88 9.48 9.48 0 0 1 2.72 1.87l.17.17c.35.36.67.74.96 1.15l.1.13a9.15 9.15 0 0 1 .8 1.43l20.94-9.31a1.29 1.29 0 0 0 .62-1.74z"
-							fill="url(#product-icon-radar-Sticky-a)"
+							fill="url(#product-icon-marketing-Sticky-a)"
 						></path>
 						<path
 							d="M18.46 10.48l.47.38a33.82 33.82 0 0 1 8.87 11.12 1.29 1.29 0 0 1-.62 1.74L6.25 33.03a9.15 9.15 0 0 0-.8-1.43l-.1-.13-.23-.3c-.23-.3-.47-.58-.74-.85a9.7 9.7 0 0 0-.95-.86l15.03-18.98z"
-							fill="url(#product-icon-radar-Sticky-b)"
+							fill="url(#product-icon-marketing-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-radar-Sticky-a"
+								id="product-icon-marketing-Sticky-a"
 								x1="13.98"
 								y1="4.24"
 								x2="13.98"
@@ -82,7 +82,7 @@ export default function MarketingIcon() {
 								<stop offset=".91" stopColor="#E03071"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-radar-Sticky-b"
+								id="product-icon-marketing-Sticky-b"
 								x1="15.68"
 								y1="10.48"
 								x2="15.68"
@@ -99,7 +99,7 @@ export default function MarketingIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Radar
+					Marketing
 				</span>
 			</div>
 		</div>

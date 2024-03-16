@@ -3,7 +3,7 @@ export default function AnalysisIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productTax
+    HomepageFrontdoorIcon--productAnalysis
     HomepageFrontdoorIcon--iconSizeLarge
   "
 		>
@@ -51,7 +51,7 @@ export default function AnalysisIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Tax "
+						className="ProductIcon ProductIcon--Analysis"
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -60,7 +60,7 @@ export default function AnalysisIcon() {
 					>
 						<path
 							d="M19.049.00995851C22.4341.325767 25.7367 1.28014 28.7794 2.83046c3.0426 1.55031 5.756 3.66123 8.0012 6.2142.9142 1.03954.6576 2.61624-.4624 3.42994L20.5259 23.9483c-1.6569 1.2039-3.98.0202-3.98-2.0279V2.40011c0-1.38439 1.1247-2.518749 2.5031-2.39015149z"
-							fill="url(#product-icon-tax-Sticky-a)"
+							fill="url(#product-icon-analysis-Sticky-a)"
 						></path>
 						<circle
 							cx="17.6666"
@@ -71,11 +71,11 @@ export default function AnalysisIcon() {
 						></circle>
 						<path
 							d="M31.099 16.2665l-10.5731 7.6818c-1.6569 1.2038-3.98.0201-3.98-2.028V8.70618c.37-.02614.7436-.03943 1.1202-.03943 5.7019 0 10.6924 3.04605 13.4329 7.59975z"
-							fill="url(#product-icon-tax-Sticky-b)"
+							fill="url(#product-icon-analysis-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-tax-Sticky-a"
+								id="product-icon-analysis-Sticky-a"
 								x1="27.6927"
 								y1="-.106484"
 								x2="27.6927"
@@ -86,7 +86,7 @@ export default function AnalysisIcon() {
 								<stop offset="1" stopColor="#E03071"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-tax-Sticky-b"
+								id="product-icon-analysis-Sticky-b"
 								x1="23.3061"
 								y1="24.96"
 								x2="18.8407"
@@ -103,7 +103,7 @@ export default function AnalysisIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Tax
+					Analysis{' '}
 				</span>
 			</div>
 		</div>

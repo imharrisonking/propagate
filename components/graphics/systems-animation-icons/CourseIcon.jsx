@@ -3,7 +3,7 @@ export default function CourseIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productInvoicing
+    HomepageFrontdoorIcon--productCourse
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,7 +50,7 @@ export default function CourseIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Invoicing "
+						className="ProductIcon ProductIcon--Course "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -63,15 +63,15 @@ export default function CourseIcon() {
 						></path>
 						<path
 							d="M1.25338 24.5476C0.0575759 25.238 -0.352092 26.7668 0.338338 27.9626L5.81522 37.449C6.38097 38.4289 7.53438 38.9067 8.62734 38.6138L34.7744 31.6076L24.5869 13.9626C23.8969 12.7668 22.3676 12.3571 21.1718 13.0476L1.25338 24.5476Z"
-							fill="url(#product-icon-invoicing-Sticky-a)"
+							fill="url(#product-icon-course-Sticky-a)"
 						></path>
 						<path
 							d="M8.40173 38.6633C8.4771 38.6504 8.55237 38.6339 8.62737 38.6138L34.7744 31.6076L24.5869 13.9626C23.897 12.7668 22.3677 12.3571 21.1719 13.0476L10.0002 19.4976V36.3314C10.0002 37.3728 9.35638 38.2947 8.40173 38.6633Z"
-							fill="url(#product-icon-invoicing-Sticky-b)"
+							fill="url(#product-icon-course-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-invoicing-Sticky-a"
+								id="product-icon-course-Sticky-a"
 								x1="17.3897"
 								y1="20.25"
 								x2="17.3893"
@@ -82,7 +82,7 @@ export default function CourseIcon() {
 								<stop offset="1" stopColor="#FFC148"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-invoicing-Sticky-b"
+								id="product-icon-course-Sticky-b"
 								x1="21.5889"
 								y1="12.7122"
 								x2="21.5881"

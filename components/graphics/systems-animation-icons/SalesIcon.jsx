@@ -3,7 +3,7 @@ export default function SalesIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productConnect
+    HomepageFrontdoorIcon--productSales
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,7 +50,7 @@ export default function SalesIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Connect "
+						className="ProductIcon ProductIcon--Sales "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -59,7 +59,7 @@ export default function SalesIcon() {
 					>
 						<path
 							d="M12.47.01a13.01 13.01 0 0 0 .5 25.99h10.55c1.37 0 2.48-1.1 2.48-2.48V13.01a12.99 12.99 0 0 0-13.53-13z"
-							fill="url(#product-icon-connect-Sticky-a)"
+							fill="url(#product-icon-sales-Sticky-a)"
 						></path>
 						<path
 							d="M27.53 39.99a13.01 13.01 0 0 0-.5-25.99H16.48A2.48 2.48 0 0 0 14 16.48v10.51a12.99 12.99 0 0 0 13.53 13z"
@@ -67,11 +67,11 @@ export default function SalesIcon() {
 						></path>
 						<path
 							d="M26 14v9.52A2.48 2.48 0 0 1 23.52 26H14v-9.52A2.48 2.48 0 0 1 16.32 14l.16-.01H26z"
-							fill="url(#product-icon-connect-Sticky-b)"
+							fill="url(#product-icon-sales-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-connect-Sticky-a"
+								id="product-icon-sales-Sticky-a"
 								x1="13"
 								y1="1.71"
 								x2="13"
@@ -84,7 +84,7 @@ export default function SalesIcon() {
 								<stop offset="1" stopColor="#21CFE0"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-connect-Sticky-b"
+								id="product-icon-sales-Sticky-b"
 								x1="20"
 								y1="15.72"
 								x2="20"
@@ -101,7 +101,7 @@ export default function SalesIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Connect
+					Sales
 				</span>
 			</div>
 		</div>

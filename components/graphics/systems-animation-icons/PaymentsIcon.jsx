@@ -3,7 +3,7 @@ export default function PaymentsIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productCapital
+    HomepageFrontdoorIcon--productPayments
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -50,7 +50,7 @@ export default function PaymentsIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Capital "
+						className="ProductIcon ProductIcon--Payments"
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -59,19 +59,19 @@ export default function PaymentsIcon() {
 					>
 						<path
 							d="M23.95 14.05l-9.74 2.12-12.18 2.52A2.59 2.59 0 0 0 0 21.22v16.26A2.5 2.5 0 0 0 2.54 40H27V16.57a2.55 2.55 0 0 0-3.05-2.52z"
-							fill="url(#product-icon-capital-Sticky-a)"
+							fill="url(#product-icon-payments-Sticky-a)"
 						></path>
 						<path
 							d="M36.85.05l-21.82 4.6A2.57 2.57 0 0 0 13 7.15V40h24.46c1.42-.2 2.54-1.3 2.54-2.7V2.55c0-1.6-1.52-2.8-3.15-2.5z"
-							fill="url(#product-icon-capital-Sticky-b)"
+							fill="url(#product-icon-payments-Sticky-b)"
 						></path>
 						<path
 							d="M23.95 14.05c1.63-.3 3.05.9 3.05 2.52V40H13V16.42l1.21-.25 9.74-2.12z"
-							fill="url(#product-icon-capital-Sticky-c)"
+							fill="url(#product-icon-payments-Sticky-c)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-capital-Sticky-a"
+								id="product-icon-payments-Sticky-a"
 								x1="13.52"
 								y1="36.35"
 								x2="13.52"
@@ -82,7 +82,7 @@ export default function PaymentsIcon() {
 								<stop offset="1" stopColor="#00F5E7"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-capital-Sticky-b"
+								id="product-icon-payments-Sticky-b"
 								x1="26.46"
 								x2="26.46"
 								y2="40"
@@ -92,7 +92,7 @@ export default function PaymentsIcon() {
 								<stop offset="1" stopColor="#00D924"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-capital-Sticky-c"
+								id="product-icon-payments-Sticky-c"
 								x1="19.93"
 								y1="40"
 								x2="19.93"
@@ -109,7 +109,7 @@ export default function PaymentsIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Capital
+					Payments
 				</span>
 			</div>
 		</div>

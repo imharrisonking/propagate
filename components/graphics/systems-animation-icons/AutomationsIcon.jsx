@@ -3,7 +3,7 @@ export default function AutomationsIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productElements
+    HomepageFrontdoorIcon--productAutomations
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -61,7 +61,7 @@ export default function AutomationsIcon() {
 							fillRule="evenodd"
 							clipRule="evenodd"
 							d="M2 10.02c0-.95.5-1.83 1.33-2.3L16.08.36a2.66 2.66 0 0 1 2.66 0l12.75 7.36a2.66 2.66 0 0 1 1.33 2.3v6l-5-2.89a2.66 2.66 0 0 0-2.66 0l-9.51 5.48a2.66 2.66 0 0 0-1.34 2.3v10.95c0 .9.45 1.72 1.19 2.21L3.33 27.05A2.66 2.66 0 0 1 2 24.75V10.02z"
-							fill="url(#product-icon-elements-Sticky-a)"
+							fill="url(#product-icon-automations-Sticky-a)"
 						></path>
 						<path
 							fillRule="evenodd"
@@ -73,11 +73,11 @@ export default function AutomationsIcon() {
 							fillRule="evenodd"
 							clipRule="evenodd"
 							d="M32.82 16.03l-5-2.9a2.66 2.66 0 0 0-2.66 0l-9.51 5.48a2.66 2.66 0 0 0-1.34 2.3v10.95c0 .9.45 1.72 1.19 2.21l.58.34c.82.48 1.84.48 2.66 0l12.75-7.36a2.66 2.66 0 0 0 1.33-2.3v-8.72z"
-							fill="url(#product-icon-elements-Sticky-b)"
+							fill="url(#product-icon-automations-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-elements-Sticky-a"
+								id="product-icon-automations-Sticky-a"
 								x1="17.41"
 								y1="2.24"
 								x2="17"
@@ -90,7 +90,7 @@ export default function AutomationsIcon() {
 								<stop offset="1" stopColor="#21CFE0"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-elements-Sticky-b"
+								id="product-icon-automations-Sticky-b"
 								x1="21.95"
 								y1="40.81"
 								x2="30.59"
@@ -108,7 +108,7 @@ export default function AutomationsIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Elements
+					Automations
 				</span>
 			</div>
 		</div>

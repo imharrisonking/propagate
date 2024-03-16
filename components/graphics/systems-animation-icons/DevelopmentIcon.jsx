@@ -3,7 +3,7 @@ export default function DevelopmentIcon() {
 		<div
 			className="
     HomepageFrontdoorIcon
-    HomepageFrontdoorIcon--productIssuing
+    HomepageFrontdoorIcon--productDevelopment
     HomepageFrontdoorIcon--iconSizeLarge
 
   "
@@ -47,7 +47,7 @@ export default function DevelopmentIcon() {
 					data-js-target="HomepageFrontdoorIcon.solidLogo"
 				>
 					<svg
-						className="ProductIcon ProductIcon--Issuing "
+						className="ProductIcon ProductIcon--Development "
 						width="40"
 						height="40"
 						viewBox="0 0 40 40"
@@ -56,7 +56,7 @@ export default function DevelopmentIcon() {
 					>
 						<path
 							d="M7.62 26.48l-.02-.03a2.44 2.44 0 0 1-.7-1.48 2.49 2.49 0 0 1 .11-1.05c.05-.28.13-.54.24-.77l.08-.17L14.67 10h21.85A2.52 2.52 0 0 1 39 12.37l.01.16v22.92A2.52 2.52 0 0 1 36.67 38l-.16.01H19a2.5 2.5 0 0 0 .64-1.97c-.07-.66-.43-1.09-.95-1.47l-.15-.1-10.62-7.73-.14-.1v-.01l.14.1a2.52 2.52 0 0 1-.27-.21l-.03-.03z"
-							fill="url(#product-icon-issuing-Sticky-a)"
+							fill="url(#product-icon-development-Sticky-a)"
 						></path>
 						<path
 							d="M22.05 2.1c.7-.15 1.41 0 1.99.41l6.56 4.72a2.5 2.5 0 0 1 .92 2.8V10l-8.5 26-.05.2-.03.08-.03.09-.15.32-.02.04-.19.29-.03.04a2.9 2.9 0 0 1-.23.25l-.03.02a2.24 2.24 0 0 1-.58.4l-.03.03c-.1.05-.2.1-.31.13h-.05l-.33.08h-.05a2.3 2.3 0 0 1-.36.03H3.53A2.53 2.53 0 0 1 1 35.45v-22.9C1 11.14 2.13 10 3.53 10H16.6l3.8-6.7a2.5 2.5 0 0 1 1.46-1.15l.18-.05z"
@@ -64,11 +64,11 @@ export default function DevelopmentIcon() {
 						></path>
 						<path
 							d="M31.38 10l-8.37 26-.02.1-.02.1-.03.08-.03.09-.07.16-.08.16-.02.04-.1.15-.09.14-.03.04-.11.13-.12.12-.03.02c-.08.09-.17.16-.26.23l-.15.1-.17.08-.03.02-.15.07-.16.06h-.05l-.16.05-.1.01.1-.1c.4-.51.59-1.17.51-1.82-.07-.66-.43-1.09-.95-1.47l-.15-.1-10.62-7.73-.14-.1a2.54 2.54 0 0 1-.26-.26l-.04-.05a2.48 2.48 0 0 1-.12-.14l-.02-.04-.03-.04a2.43 2.43 0 0 1-.17-.3l-.03-.06a2.5 2.5 0 0 1-.15-.42l-.01-.07-.02-.1-.01-.06a2.51 2.51 0 0 1 .05-1.01l.02-.09a2.5 2.5 0 0 1 .04-.1c.03-.25.1-.5.21-.74l.1-.17L16.66 10h14.71z"
-							fill="url(#product-icon-issuing-Sticky-b)"
+							fill="url(#product-icon-development-Sticky-b)"
 						></path>
 						<defs>
 							<linearGradient
-								id="product-icon-issuing-Sticky-a"
+								id="product-icon-development-Sticky-a"
 								x1="22.92"
 								y1="11.68"
 								x2="22.92"
@@ -81,7 +81,7 @@ export default function DevelopmentIcon() {
 								<stop offset="1" stopColor="#FF62DC"></stop>
 							</linearGradient>
 							<linearGradient
-								id="product-icon-issuing-Sticky-b"
+								id="product-icon-development-Sticky-b"
 								x1="31.38"
 								y1="27.93"
 								x2="11.62"
@@ -98,7 +98,7 @@ export default function DevelopmentIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Issuing
+					Development
 				</span>
 			</div>
 		</div>
