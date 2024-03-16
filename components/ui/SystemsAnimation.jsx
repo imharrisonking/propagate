@@ -51,9 +51,6 @@ export const SystemsAnimation = () => {
 			className="DomGraphic"
 			style={{
 				'--aspectRatio': '100%',
-				'--maxWidth': '540px',
-				'--domGraphicWidth': '540px',
-				'--domGraphicHeight': '540px',
 				'--scale': scale,
 			}}
 			aria-hidden="true"
@@ -84,10 +81,10 @@ export const SystemsAnimation = () => {
 							className="HomepageFrontdoorSuiteAnimation__grid"
 							data-js-target="HomepageFrontdoorSuiteAnimation.grid"
 						>
-							{/* <AnalysisIcon /> */}
+							<AnalysisIcon />
 							<CommunityIcon />
 							<CourseIcon />
-							{/* <PaymentsIcon />
+							<PaymentsIcon />
 							<EmailIcon />
 							<OfferIcon />
 							<ContentIcon />
@@ -99,7 +96,7 @@ export const SystemsAnimation = () => {
 							<DevelopmentIcon />
 							<BrandingIcon />
 							<ScalingIcon />
-							<AutomationsIcon /> */}
+							<AutomationsIcon />
 						</div>
 					</div>
 				</div>

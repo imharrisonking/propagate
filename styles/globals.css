@@ -26,6 +26,8 @@
     --willChange: initial;
     --aspectRatio: 100%;
     --maxWidth: 540px;
+    --maxWidthTablet: 540px;
+    --maxWidthPhone: 350px;
     --maxWidthDesktop: 540px;
     --domGraphicHeight: 540px;
     --domGraphicWidth: 540px;
@@ -325,6 +327,7 @@ to {
       @media (max-width: 599px) {
         .DomGraphic {
           max-width: var(--maxWidthPhone, var(--maxWidth));
+          width: var(--maxWidthPhone, var(--maxWidth));
         }
       }
 
@@ -413,6 +416,7 @@ to {
         height: calc(1px*var(--iconScale)*var(--inactiveSize));
         transform-origin: center;
         transform-box: fill-box;
+        --icon-delay-2: var(--icon-delay);
     }
 
     @media (max-width: 599px) {
@@ -442,10 +446,17 @@ to {
         background: var(--color-green-100);
     }
 
+
     .HomepageFrontdoorIcon__icon--solid {
         background: #fff;
         box-shadow: 0 12.6px 25.2px -11.5733px rgba(50,50,93,.25),0 7.56px 15.12px -7.56px rgba(0,0,0,.1);
         opacity: 0;
+    }
+
+    .HomepageFrontdoorIcon__icon--outline,
+    .HomepageFrontdoorIcon__icon--solid {
+        transform-origin: center;
+        transform-box: fill-box;
     }
 
     .HomepageFrontdoorIcon__iconLogo {
@@ -467,10 +478,9 @@ to {
         font-weight: 600;
         letter-spacing: .2px;
         color: var(--color-grey-500);
-        opacity: 0;
     }
 
-    @keyframes iconFadeInOut {
+    @keyframes iconOutlineFadeInOut {
         0%, 60% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
@@ -485,7 +495,7 @@ to {
         }
       }
 
-      @keyframes iconFadeInOutInverse {
+      @keyframes iconSolidFadeInOut {
         0%, 60% {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
@@ -522,52 +532,149 @@ to {
         }
       }
 
-      .HomepageFrontdoorIcon__icon--outline {
-        animation: iconFadeInOut 10s infinite;
+      @keyframes iconSolidFadeInOutTwice {
+        0%, 12.5% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+        17.5%, 42.5% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+        }
+        47.5%, 50%, 62.5% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+        67.5%, 92.5% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+        }
+        97.5%, 100% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
       }
 
-      .HomepageFrontdoorIcon__icon--solid {
-        animation: iconFadeInOutInverse 10s infinite;
+      @keyframes iconSolidFadeInOutTwice {
+        0%, 12.5% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+        17.5%, 42.5% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+        }
+        47.5%, 50%, 62.5% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
+        67.5%, 92.5% {
+          opacity: 1;
+          transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+        }
+        97.5%, 100% {
+          opacity: 0;
+          transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+        }
       }
 
-      .HomepageFrontdoorIcon__label {
-        animation: iconFadeInOutInverse 10s var(--icon-delay) infinite, labelTranslate 10s calc(var(--icon-delay) + 0.15s) infinite;
+      @keyframes svgScaleTwice {
+        0%, 12.5% {
+          transform: scale(1);
+        }
+        17.5%, 42.5% {
+          transform: scale(0.75) translateY(-20%);
+        }
+        47.5%, 62.5% {
+          transform: scale(1);
+        }
+        67.5%, 92.5% {
+          transform: scale(0.75) translateY(-20%);
+        }
+        97.5%, 100% {
+          transform: scale(1);
+        }
       }
 
-    /* Add delays for each icon and transform of size */
-    .HomepageFrontdoorIcon__icon--outline,
-    .HomepageFrontdoorIcon__icon--solid {
-        animation-delay: var(--icon-delay);
-        transform-origin: center;
-        transform-box: fill-box;
+      @keyframes labelTranslateTwice {
+        0%, 12.5% {
+          transform: translateY(0%);
+        }
+        17.5%, 42.5% {
+          transform: translateY(-20%);
+        }
+        47.5%, 62.5% {
+          transform: translateY(0%);
+        }
+        67.5%, 92.5% {
+          transform: translateY(-20%);
+        }
+        97.5%, 100% {
+          transform: translateY(0%);
+        }
+      }
+
+    /* Outline icon animations */
+    .HomepageFrontdoorIcon__icon--outline {
+        animation: iconOutlineFadeInOut 15s var(--icon-delay) infinite;
+      }
+
+    /* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--outline, */
+    .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--outline {
+        animation: iconOutlineFadeInOutTwice var(--icon-delay) 15s infinite;
     }
 
-    /* .HomepageFrontdoorIcon__label {
-        animation-delay: var(--icon-delay), calc(var(--icon-delay) + 0.15s);
-    } */
+    /* Solid icon animations */
+    .HomepageFrontdoorIcon__icon--solid {
+        animation: iconSolidFadeInOut 15s var(--icon-delay) infinite;
+      }
 
+    /* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--solid, */
+    .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--solid {
+        animation: iconSolidFadeInOutTwice 15s var(--icon-delay) infinite;
+    }
+
+    /* Label icon animations */
+    .HomepageFrontdoorIcon__label {
+        animation: iconSolidFadeInOut 15s var(--icon-delay) infinite, labelTranslate 15s calc(var(--icon-delay) + 0.15s) infinite;
+      }
+
+    /* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__label, */
+    .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__label {
+        animation: labelTranslateTwice 15s var(--icon-delay) infinite;
+    }
+
+    /* SVG icon animations */
     .HomepageFrontdoorIcon__icon--solid svg,
     .HomepageFrontdoorIcon__icon--outline svg {
-      /* animation-delay: var(--icon-delay); */
-      animation: svgScale 10s var(--icon-delay) infinite;
+        animation: svgScale 15s var(--icon-delay) infinite;
+    }
+
+    /* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--solid svg,
+    .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--outline svg, */
+    .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--solid svg,
+    .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--outline svg {
+        animation: svgScaleTwice 15s var(--icon-delay) infinite;
     }
 
     .HomepageFrontdoorIcon--productAnalysis {
         grid-area: Analysis;
+        --icon-delay: 1s;
     }
 
     .HomepageFrontdoorIcon--productCommunity {
         grid-area: Community;
-        --icon-delay: 0s;
+        --icon-delay: 4s;
     }
 
     .HomepageFrontdoorIcon--productCourse {
         grid-area: Course;
-        --icon-delay: 1s;
+        --icon-delay: 5s;
     }
 
     .HomepageFrontdoorIcon--productPayments {
         grid-area: Payments;
+        --icon-delay: 12s;
     }
 
     .HomepageFrontdoorIcon--productEmail {
@@ -576,6 +683,7 @@ to {
 
     .HomepageFrontdoorIcon--productOffer {
         grid-area: Offer;
+        --icon-delay: 0s;
     }
 
     .HomepageFrontdoorIcon--productContent {
@@ -584,18 +692,22 @@ to {
 
     .HomepageFrontdoorIcon--productWebsite {
         grid-area: Website;
+        --icon-delay: 12s;
     }
 
     .HomepageFrontdoorIcon--productSales {
         grid-area: Sales;
+        --icon-delay: 9s;
     }
 
     .HomepageFrontdoorIcon--productMarketing {
         grid-area: Marketing;
+        --icon-delay: 1s;
     }
 
     .HomepageFrontdoorIcon--productFunnel {
         grid-area: Funnel;
+        --icon-delay: 9s;
     }
 
     .HomepageFrontdoorIcon--productManagement {
@@ -604,6 +716,7 @@ to {
 
     .HomepageFrontdoorIcon--productDevelopment {
         grid-area: Development;
+        --icon-delay: 11s;
     }
 
     .HomepageFrontdoorIcon--productBranding {

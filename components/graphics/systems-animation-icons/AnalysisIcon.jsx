@@ -44,7 +44,6 @@ export default function AnalysisIcon() {
           HomepageFrontdoorIcon__icon--solid
         "
 				data-js-target="HomepageFrontdoorIcon.solidIcon"
-				// style={{ animationDelay: '1s' }}
 			>
 				<div
 					className="HomepageFrontdoorIcon__iconLogo"
@@ -103,7 +102,7 @@ export default function AnalysisIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Analysis{' '}
+					Analysis
 				</span>
 			</div>
 		</div>
