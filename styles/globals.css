@@ -416,7 +416,6 @@ to {
         height: calc(1px*var(--iconScale)*var(--inactiveSize));
         transform-origin: center;
         transform-box: fill-box;
-        --icon-delay-2: var(--icon-delay);
     }
 
     @media (max-width: 599px) {
@@ -729,6 +728,36 @@ to {
 
     .HomepageFrontdoorIcon--productElements {
         grid-area: Automations;
+    }
+
+    /* Icon grid connections */
+    .HomepageFrontdoorConnection {
+        position: absolute;
+    }
+
+    .HomepageFrontdoorSuiteAnimation__connection--offerFunnel,
+    .HomepageFrontdoorSuiteAnimation__connection--offerSales {
+        --insetX: 4;
+    }
+
+    .HomepageFrontdoorSuiteAnimation__connection--offerFunnel {
+        left: 60%;
+        top: 100%;
+        height: calc(1px*var(--iconScale)*var(--inactiveSize) + 2*var(--rowColumnGap));
+    }
+
+    .HomepageFrontdoorSuiteAnimation__connection--offerSales {
+            height: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap) + 7px);
+            width: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap));
+            left: 100%;
+            bottom: 50%;
+    }
+    @media (min-width: 600px) {
+        .HomepageFrontdoorSuiteAnimation__connection--offerSales {
+            height: 53px;
+            width: calc(1px*var(--iconScale)* 1.5 * var(--inactiveSize) + 2*var(--rowColumnGap));
+            left: 100%;
+        }
     }
 
 @layer base {

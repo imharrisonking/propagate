@@ -98,7 +98,7 @@ export default function DevelopmentIcon() {
 					className="HomepageFrontdoorIcon__label"
 					data-js-target="HomepageFrontdoorIcon.label"
 				>
-					Development
+					Develop
 				</span>
 			</div>
 		</div>

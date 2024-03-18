@@ -1,3 +1,5 @@
+import OfferFunnelConnection from '../systems-animation-connections/OfferFunnelConnection';
+
 export default function OfferIcon() {
 	return (
 		<div
@@ -102,6 +104,9 @@ export default function OfferIcon() {
 					Offer
 				</span>
 			</div>
+
+			{/* Connections */}
+			<OfferFunnelConnection />
 		</div>
 	);
 }

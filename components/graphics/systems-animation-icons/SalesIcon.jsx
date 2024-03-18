@@ -1,3 +1,5 @@
+import OfferSalesConnection from '../systems-animation-connections/OfferSalesConnection';
+
 export default function SalesIcon() {
 	return (
 		<div
@@ -104,6 +106,9 @@ export default function SalesIcon() {
 					Sales
 				</span>
 			</div>
+
+			{/* Connections */}
+			<OfferSalesConnection />
 		</div>
 	);
 }

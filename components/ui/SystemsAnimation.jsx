@@ -22,6 +22,7 @@ import DevelopmentIcon from '../graphics/systems-animation-icons/DevelopmentIcon
 import BrandingIcon from '../graphics/systems-animation-icons/BrandingIcon';
 import ScalingIcon from '../graphics/systems-animation-icons/ScalingIcon';
 import AutomationsIcon from '../graphics/systems-animation-icons/AutomationsIcon';
+import OfferFunnelConnection from '../graphics/systems-animation-connections/OfferFunnelConnection';
 
 export const SystemsAnimation = () => {
 	const [scale, setScale] = useState(1);
@@ -81,6 +82,7 @@ export const SystemsAnimation = () => {
 							className="HomepageFrontdoorSuiteAnimation__grid"
 							data-js-target="HomepageFrontdoorSuiteAnimation.grid"
 						>
+							{/* Icons */}
 							<AnalysisIcon />
 							<CommunityIcon />
 							<CourseIcon />
