@@ -1,0 +1,68 @@
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--color-grey-500);
+  }
+  @media (min-width: 768px) {
+    .outline-text {
+        -webkit-text-stroke: 1px var(--color-grey-500);
+    }
+}
+
+.outline-white-text {
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--color-white);
+  }
+@media (min-width: 768px) {
+    .outline-white-text {
+        -webkit-text-stroke: 1px var(--color-white);
+    }
+}
+
+@keyframes heightAnimation {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 50%;
+    }
+  }
+
+  .highlight-white-text {
+    color: var(--color-green-300);
+    position: relative;
+    display: inline-block; /* or inline-flex */
+    z-index: var(--page-z-index);
+}
+
+.highlight-white-text::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 100%; /* cover the full width of the parent */
+    height: 0; /* start from 0 height */
+    bottom: 0;
+    left: 0; /* start from the left edge of the parent */
+    background: var(--color-green-700);
+    z-index: var(--highlight-z-index);
+    animation: heightAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards; /* animate the height */
+}
+
+.highlight-dark-text {
+    color: var(--color-green-700);
+    position: relative;
+    display: inline-block; /* or inline-flex */
+    z-index: var(--page-z-index);
+}
+
+.highlight-dark-text::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 100%; /* cover the full width of the parent */
+    height: 0; /* start from 0 height */
+    bottom: 0;
+    left: 0; /* start from the left edge of the parent */
+    background: var(--color-green-300);
+    z-index: var(--highlight-z-index);
+    animation: heightAnimation 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards; /* animate the height */
+}

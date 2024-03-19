@@ -1,0 +1,56 @@
+.nav-item, .nav-item-white {
+    position: relative;
+    display: inline-block;
+    transition-behavior: normal;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+/* When active translate the current link to the left */
+.nav-item.active, .nav-item-white.active {
+    transform: translate3d(-10px, 0, 0);
+}
+
+/* The nav elements hover bar */
+.nav-item::after {
+    content: ' ';
+    position: absolute;
+    width: 3rem;
+    top: 50%;
+    right: -3.625rem;
+    height: 1px;
+    background: var(--color-grey-500);
+    transform: translate3d(101%,0,0);
+    transition-behavior: normal;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: transform;
+}
+
+.nav-item-white::after {
+    content: ' ';
+    position: absolute;
+    width: 3rem;
+    top: 50%;
+    right: -3.625rem;
+    height: 1px;
+    background: var(--color-white);
+    transform: translate3d(101%,0,0);
+    transition-behavior: normal;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: transform;
+}
+
+/* Translate the hover bar on hover */
+.nav-item:hover::after, .nav-item-white:hover::after {
+    transform: translate3d(0,0,0);
+}
+
+.nav-item.active::after, .nav-item-white.active::after {
+    transform: translate3d(10px,0,0) scale(1.2);
+}

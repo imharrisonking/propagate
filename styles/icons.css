@@ -1,0 +1,559 @@
+:root {
+    /* Systems Animation */
+    --systemsGraphicIconSize: 78px;
+    --rowColumnGap: 12px;
+    --willChange: initial;
+    --aspectRatio: 100%;
+    --maxWidth: 540px;
+    --maxWidthTablet: 540px;
+    --maxWidthPhone: 348px;
+    --maxWidthDesktop: 540px;
+    --domGraphicHeight: 540px;
+    --domGraphicWidth: 540px;
+    --domGraphicHeight: 540px;
+    --scale: 1;
+    --stroke-length: 176.465px;
+}
+
+.DomGraphic {
+    --maxWidth: 100%;
+    --willChange: initial;
+    position: relative;
+    width: 100%;
+    height: var(--domGraphicHeight);
+}
+
+:root {
+    --domGraphicWidth: var(--maxWidthPhone, var(--maxWidth));
+  }
+
+  @media (min-width: 900px) {
+    :root {
+      --domGraphicWidth: var(--maxWidthDesktop, var(--maxWidth));
+    }
+
+    .DomGraphic {
+      max-width: var(--maxWidthDesktop, var(--maxWidth));
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 899px) {
+    :root {
+      --domGraphicWidth: var(--maxWidthTablet, var(--maxWidth));
+    }
+
+    .DomGraphic {
+      max-width: var(--maxWidthTablet, var(--maxWidth));
+    }
+  }
+
+  @media (max-width: 599px) {
+    .DomGraphic {
+      max-width: var(--maxWidthPhone, var(--maxWidth));
+      width: var(--maxWidthPhone, var(--maxWidth));
+    }
+  }
+
+.DomGraphic__heightContainer {
+    height: 100%;
+    width: 100%;
+    max-width: var(--domGraphicWidth);
+    padding-bottom: var(--aspectRatio);
+}
+
+.DomGraphic__scaleContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    will-change: var(--willChange);
+    width: 100%;
+}
+
+.HomepageFrontdoorSubanimation {
+    display: grid;
+    justify-items: center;
+    position: relative;
+    align-items: center;
+    width: var(--domGraphicWidth, 540px);
+    height: var(--domGraphicHeight, 540px);
+}
+
+@media (max-width: 599px) {
+    .HomepageFrontdoorSubanimation {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+.HomepageFrontdoorSuiteAnimation.HomepageFrontdoorSubanimation {
+    justify-content: flex-start;
+}
+
+.HomepageFrontdoorSuiteAnimation__grid {
+position: relative;
+margin: 0 auto;
+place-items: center;
+max-width: var(--systemsAnimationGraphicWidth);
+display: grid;
+grid: auto/minmax(0,1fr);
+row-gap: 12px;
+column-gap: var(--rowColumnGap);
+grid-template-columns: repeat(4, var(--systemsGraphicIconSize));
+grid-template-areas:
+". Analysis . ."
+"Community . Course Management"
+". Offer . Content"
+"Sales . Marketing ."
+". Funnel Payments ."
+"Branding Development . Website";
+}
+
+@media (max-width: 599px) {
+    .HomepageFrontdoorIcon--productEmail,
+    .HomepageFrontdoorIcon--productCheckout,
+    .HomepageFrontdoorIcon--productScaling,
+    .HomepageFrontdoorIcon--productElements {
+      display: none;
+    }
+  }
+
+@media (min-width: 600px) {
+.HomepageFrontdoorSuiteAnimation__grid {
+    grid-template-columns: repeat(6, var(--systemsGraphicIconSize));
+    grid-template-areas:
+    ". . Analysis . . ."
+    "Community . . Course Payments ."
+    ". Email Offer Content . Website"
+    "Sales . . Marketing . ."
+    ". . Funnel Management Development ."
+    ". Branding . . Scaling Automations";
+}
+}
+
+.HomepageFrontdoorIcon {
+    --inactiveSize: 78;
+    --activeSize: 88;
+    --iconScale: 1;
+    position: relative;
+    width: calc(1px*var(--iconScale)*var(--inactiveSize));
+    height: calc(1px*var(--iconScale)*var(--inactiveSize));
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@media (max-width: 599px) {
+    .HomepageFrontdoorIcon {
+      --inactiveSize: 68;
+      --activeSize: 78;
+    }
+  }
+
+.HomepageFrontdoorIcon__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 1px*var(--activeSize)/2);
+    left: calc(50% - 1px*var(--activeSize)/2);
+    width: calc(1px*var(--activeSize));
+    height: calc(1px*var(--activeSize));
+    border-radius: 8px;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+}
+
+.HomepageFrontdoorIcon__icon--outline {
+    border: calc(1px/var(--iconScale)) solid var(--color-grey-200);
+    background: var(--color-green-100);
+}
+
+
+.HomepageFrontdoorIcon__icon--solid {
+    background: #fff;
+    box-shadow: 0 12.6px 25.2px -11.5733px rgba(50,50,93,.25),0 7.56px 15.12px -7.56px rgba(0,0,0,.1);
+    opacity: 0;
+}
+
+.HomepageFrontdoorIcon__icon--outline,
+.HomepageFrontdoorIcon__icon--solid {
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.HomepageFrontdoorIcon__iconLogo {
+    transform-origin: top center;
+    transform-box: fill-box;
+}
+
+.HomepageFrontdoorIcon__iconLogo svg {
+    display: block;
+}
+
+.HomepageFrontdoorIcon__label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: var(--color-grey-500);
+}
+    /* Icon grid connections */
+    @keyframes drawConnection {
+        0%, 60% {
+            stroke-dashoffset: var(--stroke-length);
+        }
+        63%, 66% {
+            stroke-dashoffset: 0;
+        }
+        66.1%, 69% {
+            stroke-dashoffset: calc(2 * var(--stroke-length));
+        }
+        72%, 100% {
+            stroke-dashoffset: var(--stroke-length);
+        }
+    }
+
+@keyframes iconOutlineFadeInOut {
+    0%, 60% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+    63%, 69% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+    72%, 100% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+  }
+
+  @keyframes iconSolidFadeInOut {
+    0%, 60% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+    63%, 75% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+    }
+    78%, 100% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+  }
+
+  @keyframes svgScale {
+    0%, 60%, 78%, 100% {
+      /* counter scale the SVG to keep it at a fixed size */
+      transform: scale(1);
+    }
+    63%, 75% {
+      /* Scale the SVG size down and move it slightly upwards */
+      transform: scale(0.75) translateY(-20%);
+    }
+  }
+
+  @keyframes labelTranslate {
+    0%, 60%, 78%, 100% {
+      /* Move the label slightly upwards */
+      transform: translateY(0%);
+    }
+    63%, 90% {
+      /* Move the label slightly upwards */
+      transform: translateY(-20%);
+    }
+  }
+
+  @keyframes iconSolidFadeInOutTwice {
+    0%, 12.5% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+    17.5%, 29.5% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+    }
+    34.5%, 62.5% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+    67.5%, 79.5% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+    }
+    84.5%, 100% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+  }
+
+  @keyframes iconSolidFadeInOutTwice {
+    0%, 12.5% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+    17.5%, 29.5% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+    }
+    34.5%, 62.5% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+    67.5%, 79.5% {
+      opacity: 1;
+      transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
+    }
+    84.5%, 100% {
+      opacity: 0;
+      transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
+    }
+  }
+
+  @keyframes svgScaleTwice {
+    0%, 12.5% {
+      transform: scale(1);
+    }
+    17.5%, 29.5% {
+      transform: scale(0.75) translateY(-20%);
+    }
+    34.5%, 62.5% {
+      transform: scale(1);
+    }
+    67.5%, 79.5% {
+      transform: scale(0.75) translateY(-20%);
+    }
+    84.5%, 100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes labelTranslateTwice {
+    0%, 12.5% {
+      transform: translateY(0%);
+    }
+    17.5%, 29.5% {
+      transform: translateY(-20%);
+    }
+    34.5%, 62.5% {
+      transform: translateY(0%);
+    }
+    67.5%, 79.5% {
+      transform: translateY(-20%);
+    }
+    84.5%, 100% {
+      transform: translateY(0%);
+    }
+  }
+
+/* Outline icon animations */
+.HomepageFrontdoorIcon__icon--outline {
+    animation: iconOutlineFadeInOut 15s var(--icon-delay) infinite;
+  }
+
+/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--outline, */
+.HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--outline {
+    animation: iconOutlineFadeInOutTwice var(--icon-delay) 15s infinite;
+}
+
+/* Solid icon animations */
+.HomepageFrontdoorIcon__icon--solid {
+    animation: iconSolidFadeInOut 15s var(--icon-delay) infinite;
+  }
+
+/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--solid, */
+.HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--solid {
+    animation: iconSolidFadeInOutTwice 15s var(--icon-delay) infinite;
+}
+
+/* Label icon animations */
+.HomepageFrontdoorIcon__label {
+    animation: iconSolidFadeInOut 15s var(--icon-delay) infinite, labelTranslate 15s calc(var(--icon-delay) + 0.15s) infinite;
+  }
+
+/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__label, */
+.HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__label {
+    animation: labelTranslateTwice 15s var(--icon-delay) infinite;
+}
+
+/* SVG icon animations */
+.HomepageFrontdoorIcon__icon--solid svg,
+.HomepageFrontdoorIcon__icon--outline svg {
+    animation: svgScale 15s var(--icon-delay) infinite;
+}
+
+/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--solid svg,
+.HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--outline svg, */
+.HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--solid svg,
+.HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--outline svg {
+    animation: svgScaleTwice 15s var(--icon-delay) infinite;
+}
+
+.HomepageFrontdoorIcon--productAnalysis {
+    grid-area: Analysis;
+    --icon-delay: 1s;
+}
+
+.HomepageFrontdoorIcon--productCommunity {
+    grid-area: Community;
+    --icon-delay: 4s;
+}
+
+.HomepageFrontdoorIcon--productCourse {
+    grid-area: Course;
+    --icon-delay: 5s;
+}
+
+.HomepageFrontdoorIcon--productPayments {
+    grid-area: Payments;
+    --icon-delay: 12s;
+}
+
+.HomepageFrontdoorIcon--productEmail {
+    grid-area: Email;
+}
+
+.HomepageFrontdoorIcon--productOffer {
+    grid-area: Offer;
+    --icon-delay: 0s;
+}
+
+.HomepageFrontdoorIcon--productContent {
+    grid-area: Content;
+}
+
+.HomepageFrontdoorIcon--productWebsite {
+    grid-area: Website;
+    --icon-delay: 12s;
+}
+
+.HomepageFrontdoorIcon--productSales {
+    grid-area: Sales;
+    --icon-delay: 9s;
+}
+
+.HomepageFrontdoorIcon--productMarketing {
+    grid-area: Marketing;
+    --icon-delay: 1s;
+}
+
+.HomepageFrontdoorIcon--productFunnel {
+    grid-area: Funnel;
+    --icon-delay: 9s;
+}
+
+.HomepageFrontdoorIcon--productManagement {
+    grid-area: Management;
+}
+
+.HomepageFrontdoorIcon--productDevelopment {
+    grid-area: Development;
+    --icon-delay: 11s;
+}
+
+.HomepageFrontdoorIcon--productBranding {
+    grid-area: Branding;
+}
+
+.HomepageFrontdoorIcon--productScaling {
+    grid-area: Scaling;
+}
+
+.HomepageFrontdoorIcon--productElements {
+    grid-area: Automations;
+}
+
+/* Icon grid connections */
+@keyframes drawConnection {
+    0%, 60% {
+        stroke-dashoffset: var(--stroke-length);
+    }
+    63%, 66% {
+        stroke-dashoffset: 0;
+    }
+    66.1%, 69% {
+        stroke-dashoffset: calc(2 * var(--stroke-length));
+    }
+    72%, 100% {
+        stroke-dashoffset: var(--stroke-length);
+    }
+}
+
+.HomepageFrontdoorSuiteAnimation__connection--offerFunnel,
+.HomepageFrontdoorSuiteAnimation__connection--offerSales {
+    --insetX: 4;
+}
+
+.HomepageFrontdoorSuiteAnimation__connection--offerFunnel {
+    position: relative;
+    left: 55%;
+    top: 100%;
+    height: calc(1px*var(--iconScale)*var(--inactiveSize) + 2*var(--rowColumnGap));
+}
+
+.HomepageFrontdoorSuiteAnimation__connection--offerSales {
+    position: relative;
+    height: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap) + 7px);
+    width: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap));
+    right: 25%;
+    bottom: 0;
+    transform: translateY(-50%);
+}
+@media (min-width: 600px) {
+    .HomepageFrontdoorSuiteAnimation__connection--offerSales {
+        height: 53px;
+        width: calc(1px*var(--iconScale)* 1.5 * var(--inactiveSize) + 2*var(--rowColumnGap));
+        right: 35%;
+        transform: translateX(-50%) translateY(100%);
+        top: -100%
+    }
+}
+
+.HomepageFrontdoorSuiteAnimation__connection--communityCourse {
+    position: relative;
+    left: 100%;
+    top: 50%;
+    width: calc(1px*var(--iconScale) * var(--inactiveSize) + 2*var(--rowColumnGap) + 20px);
+}
+@media (min-width: 600px) {
+    .HomepageFrontdoorSuiteAnimation__connection--communityCourse {
+        width: calc(1px*var(--iconScale) * 2 * var(--inactiveSize) + 3*var(--rowColumnGap));
+    }
+}
+
+.HomepageFrontdoorSuiteAnimation__connection--offerSales--path {
+    --stroke-length: 86.4645px;
+    stroke-dasharray: var(--stroke-length);
+    stroke-dashoffset: var(--stroke-length);
+    animation: drawConnection 15s 8.5s ease-in-out infinite;
+}
+@media (min-width: 600px) {
+    .HomepageFrontdoorSuiteAnimation__connection--offerSales--path {
+        --stroke-length: 176.465px;
+    }
+}
+
+.HomepageFrontdoorSuiteAnimation__connection--offerFunnel--path {
+    --stroke-length: calc(1px*var(--iconScale) * var(--inactiveSize) + 2*var(--rowColumnGap));
+    stroke-dasharray: var(--stroke-length);
+    stroke-dashoffset: var(--stroke-length);
+    animation: drawConnection 15s 8.5s ease-in-out infinite;
+}
+
+.HomepageFrontdoorSuiteAnimation__connection--communityCourse--path {
+    --stroke-length: calc(1px*var(--iconScale) * var(--inactiveSize) + 2*var(--rowColumnGap) + 20px);
+    stroke-dasharray: var(--stroke-length);
+    stroke-dashoffset: var(--stroke-length);
+    animation: drawConnection 15s 4.5s ease-in-out infinite;
+}
+@media (min-width: 600px) {
+    .HomepageFrontdoorSuiteAnimation__connection--communityCourse--path {
+        --stroke-length: calc(1px*var(--iconScale)* 2 * var(--inactiveSize) + 3 *var(--rowColumnGap));
+    }
+}
