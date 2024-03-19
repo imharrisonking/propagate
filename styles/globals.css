@@ -33,6 +33,7 @@
     --domGraphicWidth: 540px;
     --domGraphicHeight: 540px;
     --scale: 1;
+    --stroke-length: 176.465px;
 }
 
 
@@ -731,8 +732,19 @@ to {
     }
 
     /* Icon grid connections */
-    .HomepageFrontdoorConnection {
-        position: absolute;
+    @keyframes drawConnection {
+        0%, 60% {
+            stroke-dashoffset: var(--stroke-length);
+        }
+        65%, 70% {
+            stroke-dashoffset: 0;
+        }
+        70.01%, 75% {
+            stroke-dashoffset: calc(2 * var(--stroke-length));
+        }
+        80%, 100% {
+            stroke-dashoffset: var(--stroke-length);
+        }
     }
 
     .HomepageFrontdoorSuiteAnimation__connection--offerFunnel,
@@ -741,23 +753,51 @@ to {
     }
 
     .HomepageFrontdoorSuiteAnimation__connection--offerFunnel {
-        left: 60%;
+        position: relative;
+        left: 55%;
         top: 100%;
         height: calc(1px*var(--iconScale)*var(--inactiveSize) + 2*var(--rowColumnGap));
     }
 
     .HomepageFrontdoorSuiteAnimation__connection--offerSales {
-            height: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap) + 7px);
-            width: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap));
-            left: 100%;
-            bottom: 50%;
+        position: relative;
+        height: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap) + 7px);
+        width: calc(1px*var(--iconScale)* 0.5 * var(--inactiveSize) + var(--rowColumnGap));
+        right: 25%;
+        bottom: 0;
+        transform: translateY(-50%);
     }
     @media (min-width: 600px) {
         .HomepageFrontdoorSuiteAnimation__connection--offerSales {
             height: 53px;
             width: calc(1px*var(--iconScale)* 1.5 * var(--inactiveSize) + 2*var(--rowColumnGap));
-            left: 100%;
+            right: 35%;
+            transform: translateX(-50%) translateY(100%);
+            top: -100%
         }
+    }
+
+    .HomepageFrontdoorSuiteAnimation__connection--offerSales--path {
+        --stroke-length: 86.4645px;
+        stroke-dasharray: var(--stroke-length);
+        stroke-dashoffset: var(--stroke-length);
+        stroke-dashoffset: 0px;
+        animation: drawConnection 15s 8.5s ease-in-out infinite;
+    }
+    @media (min-width: 600px) {
+        .HomepageFrontdoorSuiteAnimation__connection--offerSales--path {
+            --stroke-length: 176.465px;
+            stroke-dasharray: var(--stroke-length);
+            stroke-dashoffset: var(--stroke-length);
+            animation: drawConnection 15s 8.5s ease-in-out infinite;
+        }
+    }
+
+    .HomepageFrontdoorSuiteAnimation__connection--offerFunnel--path {
+        --stroke-length: 102px;
+        stroke-dasharray: var(--stroke-length);
+        stroke-dashoffset: var(--stroke-length);
+        animation: drawConnection 15s 8.5s ease-in-out infinite;
     }
 
 @layer base {

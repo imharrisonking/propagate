@@ -18,15 +18,16 @@ export default function OfferFunnelConnection() {
 					y1="95.3338122950365"
 					y2="4.666187704965672"
 				>
-					<stop offset="0" stop-color="#11EFE3"></stop>
+					<stop offset="0" stopColor="#11EFE3"></stop>
 
-					<stop offset="1" stop-color="#9966FF"></stop>
+					<stop offset="1" stopColor="#9966FF"></stop>
 				</linearGradient>
 			</defs>
 
 			<path
+				className="HomepageFrontdoorSuiteAnimation__connection--offerFunnel--path"
 				stroke="url(#Standalone-OfferFunnelConnectionGradient)"
-				stroke-width="2"
+				strokeWidth="2"
 				fill="none"
 				data-js-target="HomepageFrontdoorConnection.path"
 				d="M1,1
