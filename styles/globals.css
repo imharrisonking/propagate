@@ -27,7 +27,7 @@
     --aspectRatio: 100%;
     --maxWidth: 540px;
     --maxWidthTablet: 540px;
-    --maxWidthPhone: 350px;
+    --maxWidthPhone: 348px;
     --maxWidthDesktop: 540px;
     --domGraphicHeight: 540px;
     --domGraphicWidth: 540px;
@@ -345,6 +345,7 @@ to {
         left: 0;
         transform-origin: top left;
         will-change: var(--willChange);
+        width: 100%;
     }
 
     .HomepageFrontdoorSubanimation {
@@ -389,7 +390,7 @@ to {
     @media (max-width: 599px) {
         .HomepageFrontdoorIcon--productEmail,
         .HomepageFrontdoorIcon--productCheckout,
-        .HomepageFrontdoorIcon--productSigma,
+        .HomepageFrontdoorIcon--productScaling,
         .HomepageFrontdoorIcon--productElements {
           display: none;
         }
@@ -479,17 +480,32 @@ to {
         letter-spacing: .2px;
         color: var(--color-grey-500);
     }
+        /* Icon grid connections */
+        @keyframes drawConnection {
+            0%, 60% {
+                stroke-dashoffset: var(--stroke-length);
+            }
+            63%, 66% {
+                stroke-dashoffset: 0;
+            }
+            66.1%, 69% {
+                stroke-dashoffset: calc(2 * var(--stroke-length));
+            }
+            72%, 100% {
+                stroke-dashoffset: var(--stroke-length);
+            }
+        }
 
     @keyframes iconOutlineFadeInOut {
         0%, 60% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
-        65%, 90% {
+        63%, 69% {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
-        95%, 100% {
+        72%, 100% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
@@ -500,33 +516,33 @@ to {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
-        65%, 90% {
+        63%, 75% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
         }
-        95%, 100% {
+        78%, 100% {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
       }
 
       @keyframes svgScale {
-        0%, 60%, 95%, 100% {
+        0%, 60%, 78%, 100% {
           /* counter scale the SVG to keep it at a fixed size */
           transform: scale(1);
         }
-        65%, 90% {
+        63%, 75% {
           /* Scale the SVG size down and move it slightly upwards */
           transform: scale(0.75) translateY(-20%);
         }
       }
 
       @keyframes labelTranslate {
-        0%, 60%, 95%, 100% {
+        0%, 60%, 78%, 100% {
           /* Move the label slightly upwards */
           transform: translateY(0%);
         }
-        65%, 90% {
+        63%, 90% {
           /* Move the label slightly upwards */
           transform: translateY(-20%);
         }
@@ -537,19 +553,19 @@ to {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
-        17.5%, 42.5% {
+        17.5%, 29.5% {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
         }
-        47.5%, 50%, 62.5% {
+        34.5%, 62.5% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
-        67.5%, 92.5% {
+        67.5%, 79.5% {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
         }
-        97.5%, 100% {
+        84.5%, 100% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
@@ -560,19 +576,19 @@ to {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
-        17.5%, 42.5% {
+        17.5%, 29.5% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
         }
-        47.5%, 50%, 62.5% {
+        34.5%, 62.5% {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
-        67.5%, 92.5% {
+        67.5%, 79.5% {
           opacity: 1;
           transform: scale(calc(var(--iconScale)*var(--activeSize)/var(--activeSize))); /* solid icon is slightly larger */
         }
-        97.5%, 100% {
+        84.5%, 100% {
           opacity: 0;
           transform: scale(calc(var(--iconScale)*var(--inactiveSize)/var(--activeSize)));
         }
@@ -582,16 +598,16 @@ to {
         0%, 12.5% {
           transform: scale(1);
         }
-        17.5%, 42.5% {
+        17.5%, 29.5% {
           transform: scale(0.75) translateY(-20%);
         }
-        47.5%, 62.5% {
+        34.5%, 62.5% {
           transform: scale(1);
         }
-        67.5%, 92.5% {
+        67.5%, 79.5% {
           transform: scale(0.75) translateY(-20%);
         }
-        97.5%, 100% {
+        84.5%, 100% {
           transform: scale(1);
         }
       }
@@ -600,16 +616,16 @@ to {
         0%, 12.5% {
           transform: translateY(0%);
         }
-        17.5%, 42.5% {
+        17.5%, 29.5% {
           transform: translateY(-20%);
         }
-        47.5%, 62.5% {
+        34.5%, 62.5% {
           transform: translateY(0%);
         }
-        67.5%, 92.5% {
+        67.5%, 79.5% {
           transform: translateY(-20%);
         }
-        97.5%, 100% {
+        84.5%, 100% {
           transform: translateY(0%);
         }
       }
@@ -736,13 +752,13 @@ to {
         0%, 60% {
             stroke-dashoffset: var(--stroke-length);
         }
-        65%, 70% {
+        63%, 66% {
             stroke-dashoffset: 0;
         }
-        70.01%, 75% {
+        66.1%, 69% {
             stroke-dashoffset: calc(2 * var(--stroke-length));
         }
-        80%, 100% {
+        72%, 100% {
             stroke-dashoffset: var(--stroke-length);
         }
     }
@@ -777,27 +793,47 @@ to {
         }
     }
 
+    .HomepageFrontdoorSuiteAnimation__connection--communityCourse {
+        position: relative;
+        left: 100%;
+        top: 50%;
+        width: calc(1px*var(--iconScale) * var(--inactiveSize) + 2*var(--rowColumnGap) + 20px);
+    }
+    @media (min-width: 600px) {
+        .HomepageFrontdoorSuiteAnimation__connection--communityCourse {
+            width: calc(1px*var(--iconScale) * 2 * var(--inactiveSize) + 3*var(--rowColumnGap));
+        }
+    }
+
     .HomepageFrontdoorSuiteAnimation__connection--offerSales--path {
         --stroke-length: 86.4645px;
         stroke-dasharray: var(--stroke-length);
         stroke-dashoffset: var(--stroke-length);
-        stroke-dashoffset: 0px;
         animation: drawConnection 15s 8.5s ease-in-out infinite;
     }
     @media (min-width: 600px) {
         .HomepageFrontdoorSuiteAnimation__connection--offerSales--path {
             --stroke-length: 176.465px;
-            stroke-dasharray: var(--stroke-length);
-            stroke-dashoffset: var(--stroke-length);
-            animation: drawConnection 15s 8.5s ease-in-out infinite;
         }
     }
 
     .HomepageFrontdoorSuiteAnimation__connection--offerFunnel--path {
-        --stroke-length: 102px;
+        --stroke-length: calc(1px*var(--iconScale) * var(--inactiveSize) + 2*var(--rowColumnGap));
         stroke-dasharray: var(--stroke-length);
         stroke-dashoffset: var(--stroke-length);
         animation: drawConnection 15s 8.5s ease-in-out infinite;
+    }
+
+    .HomepageFrontdoorSuiteAnimation__connection--communityCourse--path {
+        --stroke-length: calc(1px*var(--iconScale) * var(--inactiveSize) + 2*var(--rowColumnGap) + 20px);
+        stroke-dasharray: var(--stroke-length);
+        stroke-dashoffset: var(--stroke-length);
+        animation: drawConnection 15s 4.5s ease-in-out infinite;
+    }
+    @media (min-width: 600px) {
+        .HomepageFrontdoorSuiteAnimation__connection--communityCourse--path {
+            --stroke-length: calc(1px*var(--iconScale)* 2 * var(--inactiveSize) + 3 *var(--rowColumnGap));
+        }
     }
 
 @layer base {

@@ -1,3 +1,5 @@
+import CommunityCourseConnection from '../systems-animation-connections/CommunityCourseConnection';
+
 export default function CommunityIcon() {
 	return (
 		<div
@@ -8,6 +10,9 @@ export default function CommunityIcon() {
 
   "
 		>
+			{/* Connections */}
+			<CommunityCourseConnection />
+
 			<div
 				className="
           HomepageFrontdoorIcon__icon
