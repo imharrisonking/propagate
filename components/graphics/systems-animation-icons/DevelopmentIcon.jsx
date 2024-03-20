@@ -1,3 +1,6 @@
+import DevelopmentPaymentsConnection from '../systems-animation-connections/DevelopmentPaymentsConnection';
+import DevelopmentWebsiteConnection from '../systems-animation-connections/DevelopmentWebsiteConnection';
+
 export default function DevelopmentIcon() {
 	return (
 		<div
@@ -8,6 +11,10 @@ export default function DevelopmentIcon() {
 
   "
 		>
+			{/* Connections */}
+			<DevelopmentPaymentsConnection />
+			<DevelopmentWebsiteConnection />
+
 			<div
 				className="
           HomepageFrontdoorIcon__icon

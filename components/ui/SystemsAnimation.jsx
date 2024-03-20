@@ -86,16 +86,16 @@ export const SystemsAnimation = () => {
 							<AnalysisIcon />
 							<CommunityIcon />
 							<CourseIcon />
-							<PaymentsIcon />
 							<EmailIcon />
 							<OfferIcon />
 							<ContentIcon />
-							<WebsiteIcon />
 							<SalesIcon />
 							<MarketingIcon />
 							<FunnelIcon />
 							<ManagementIcon />
 							<DevelopmentIcon />
+							<PaymentsIcon />
+							<WebsiteIcon />
 							<BrandingIcon />
 							<ScalingIcon />
 							<AutomationsIcon />

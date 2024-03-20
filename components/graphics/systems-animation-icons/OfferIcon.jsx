@@ -1,5 +1,6 @@
 import OfferFunnelConnection from '../systems-animation-connections/OfferFunnelConnection';
 import OfferSalesConnection from '../systems-animation-connections/OfferSalesConnection';
+import OfferMarketingConnection from '../systems-animation-connections/OfferMarketingConnection';
 
 export default function OfferIcon() {
 	return (
@@ -14,6 +15,8 @@ export default function OfferIcon() {
 			{/* Connections */}
 			<OfferFunnelConnection />
 			<OfferSalesConnection />
+			<OfferMarketingConnection />
+
 			<div
 				className="
           HomepageFrontdoorIcon__icon

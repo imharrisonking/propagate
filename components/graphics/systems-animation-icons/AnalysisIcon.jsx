@@ -1,3 +1,5 @@
+import OfferAnalysisConnection from '../systems-animation-connections/OfferAnalysisConnection';
+
 export default function AnalysisIcon() {
 	return (
 		<div
@@ -7,13 +9,15 @@ export default function AnalysisIcon() {
     HomepageFrontdoorIcon--iconSizeLarge
   "
 		>
+			{/* Connections */}
+			<OfferAnalysisConnection />
+
 			<div
 				className="
           HomepageFrontdoorIcon__icon
           HomepageFrontdoorIcon__icon--outline
         "
 				data-js-target="HomepageFrontdoorIcon.outlineIcon"
-				// style={{ animationDelay: '0s' }}
 			>
 				<div
 					className="HomepageFrontdoorIcon__iconLogo"
