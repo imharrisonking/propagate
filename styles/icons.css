@@ -261,13 +261,17 @@ grid-template-areas:
 }
 
 @keyframes labelTranslate {
-    0%, 12.5%, 30.5%, 100% {
-      /* Move the label slightly upwards */
+    0%, 12.5% {
+      opacity: 0;
       transform: translateY(0%);
     }
-    15.5%, 42.5% {
-      /* Move the label slightly upwards */
-      transform: translateY(-20%);
+    15.5%, 25.5% {
+      opacity: 1;
+      transform: translateY(-20%)
+    }
+    28.5%, 100% {
+      opacity: 0;
+      transform: translateY(0%)
     }
 }
 
@@ -358,7 +362,6 @@ grid-template-areas:
     animation: iconOutlineFadeInOut 15s var(--icon-delay) infinite;
   }
 
-/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--outline, */
 .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--outline {
     animation: iconOutlineFadeInOutTwice var(--icon-delay) 15s infinite;
 }
@@ -368,7 +371,6 @@ grid-template-areas:
     animation: iconSolidFadeInOut 15s var(--icon-delay) infinite;
   }
 
-/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--solid, */
 .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--solid {
     animation: iconSolidFadeInOutTwice 15s var(--icon-delay) infinite;
 }
@@ -378,7 +380,6 @@ grid-template-areas:
     animation: iconSolidFadeInOut 15s var(--icon-delay) infinite, labelTranslate 15s calc(var(--icon-delay) + 0.15s) infinite;
   }
 
-/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__label, */
 .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__label {
     animation: labelTranslateTwice 15s var(--icon-delay) infinite;
 }
@@ -389,8 +390,6 @@ grid-template-areas:
     animation: svgScale 15s var(--icon-delay) infinite;
 }
 
-/* .HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--solid svg,
-.HomepageFrontdoorIcon--productSales .HomepageFrontdoorIcon__icon--outline svg, */
 .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--solid svg,
 .HomepageFrontdoorIcon--productOffer .HomepageFrontdoorIcon__icon--outline svg {
     animation: svgScaleTwice 15s var(--icon-delay) infinite;
@@ -549,7 +548,7 @@ grid-template-areas:
 @media (min-width: 600px) {
     .HomepageFrontdoorSuiteAnimation__connection--developmentWebsite {
         position: absolute;
-        left: 0%;
+        left: 55%;
         bottom: 100%;
         width: 45px;
         height: 143px;
@@ -616,9 +615,9 @@ grid-template-areas:
 
 .HomepageFrontdoorSuiteAnimation__connection--developmentWebsite--path {
     --stroke-length: 124px;
-    /* stroke-dasharray: var(--stroke-length);
-    stroke-dashoffset: var(--stroke-length); */
-    /* animation: drawConnection 15s 11.5s ease-in-out infinite; */
+    stroke-dasharray: var(--stroke-length);
+    stroke-dashoffset: var(--stroke-length);
+    animation: drawConnection 15s 11.5s ease-in-out infinite;
 }
 @media (min-width: 600px) {
     .HomepageFrontdoorSuiteAnimation__connection--developmentWebsite--path {

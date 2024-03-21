@@ -28,7 +28,7 @@ export default function DevelopmentPaymentsConnection() {
 				className="hidden sm:block
                 HomepageFrontdoorSuiteAnimation__connection--developmentPayments--path"
 				stroke="url(#Standalone-IssuingCapitalConnectionGradient)"
-				stroke-width="2"
+				strokeWidth="2"
 				fill="none"
 				data-js-target="HomepageFrontdoorConnection.path"
 				d="M1,193 L1,1"
@@ -36,7 +36,7 @@ export default function DevelopmentPaymentsConnection() {
 			<path
 				className="block sm:hidden HomepageFrontdoorSuiteAnimation__connection--developmentPayments--path"
 				stroke="url(#Standalone-IssuingCapitalConnectionGradient)"
-				stroke-width="2"
+				strokeWidth="2"
 				fill="none"
 				data-js-target="HomepageFrontdoorConnection.path"
 				d="M1,44
