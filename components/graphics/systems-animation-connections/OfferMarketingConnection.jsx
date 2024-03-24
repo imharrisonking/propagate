@@ -19,9 +19,9 @@ export default function OfferMarketingConnection() {
 					y1="78.91068382953209"
 					y2="21.089316170258776"
 				>
-					<stop offset="0" stopColor="#ff5996"></stop>
+					<stop offset="0" stopColor="#5BA5C3"></stop>
 
-					<stop offset="1" stopColor="#9966ff"></stop>
+					<stop offset="1" stopColor="#A2C7E2"></stop>
 				</linearGradient>
 			</defs>
 

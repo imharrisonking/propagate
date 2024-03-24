@@ -18,9 +18,9 @@ export default function OfferFunnelConnection() {
 					y1="95.3338122950365"
 					y2="4.666187704965672"
 				>
-					<stop offset="0" stopColor="#11EFE3"></stop>
+					<stop offset="0" stopColor="#5BA5C3"></stop>
 
-					<stop offset="1" stopColor="#9966FF"></stop>
+					<stop offset="1" stopColor="#A2C7E2"></stop>
 				</linearGradient>
 			</defs>
 

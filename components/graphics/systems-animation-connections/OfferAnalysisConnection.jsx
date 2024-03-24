@@ -19,9 +19,9 @@ export default function OfferAnalysisConnection() {
 					y1="99.56939071079549"
 					y2="0.4306092891709312"
 				>
-					<stop offset="0" stopColor="#ff5996"></stop>
+					<stop offset="0" stopColor="#A2C7E2"></stop>
 
-					<stop offset="1" stopColor="#9966ff"></stop>
+					<stop offset="1" stopColor="#5BA5C3"></stop>
 				</linearGradient>
 			</defs>
 

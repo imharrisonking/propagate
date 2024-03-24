@@ -18,9 +18,9 @@ export default function DevelopmentPaymentsConnection() {
 					y1="57.28256815924007"
 					y2="42.717431840760106"
 				>
-					<stop offset="0" stopColor="#0073e6"></stop>
+					<stop offset="0" stopColor="#D0696B"></stop>
 
-					<stop offset="1" stopColor="#ff80ff"></stop>
+					<stop offset="1" stopColor="#F39934"></stop>
 				</linearGradient>
 			</defs>
 
@@ -44,7 +44,6 @@ export default function DevelopmentPaymentsConnection() {
                 Q52,44
                 52,24
                 L52,1"
-				// style="stroke-dasharray: 86.4645px; stroke-dashoffset: 86.4645px;"
 			></path>
 		</svg>
 	);

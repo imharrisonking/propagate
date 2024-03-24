@@ -19,9 +19,9 @@ export default function DevelopmentWebsiteConnection() {
 						y1="94.49074638838917"
 						y2="5.509253611618362"
 					>
-						<stop offset="0" stopColor="#0073e6"></stop>
+						<stop offset="0" stopColor="#D0696B"></stop>
 
-						<stop offset="1" stopColor="#ff80ff"></stop>
+						<stop offset="1" stopColor="#F39934"></stop>
 					</linearGradient>
 				</defs>
 
@@ -54,9 +54,9 @@ export default function DevelopmentWebsiteConnection() {
 						y1="65.59601926525724"
 						y2="34.403980734986305"
 					>
-						<stop offset="0" stopColor="#0073e6"></stop>
+						<stop offset="0" stopColor="#D0696B"></stop>
 
-						<stop offset="1" stopColor="#ff80ff"></stop>
+						<stop offset="1" stopColor="#F39934"></stop>
 					</linearGradient>
 				</defs>
 

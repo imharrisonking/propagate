@@ -5,7 +5,6 @@ export default function CommunityCourseConnection() {
             HomepageFrontdoorSuiteAnimation__connection--communityCourse"
 			data-js-controller="HomepageFrontdoorConnection"
 			data-js-id="Standalone-CommunityCourseConnection"
-			// style="left: 77px; top: 128px; width: 194px; height: 4px;"
 		>
 			<defs>
 				<linearGradient
@@ -20,9 +19,9 @@ export default function CommunityCourseConnection() {
 					y1="79.05290626864166"
 					y2="20.94709373156695"
 				>
-					<stop offset="0" stopColor="#FFD848"></stop>
+					<stop offset="0" stopColor="#A1FFCD"></stop>
 
-					<stop offset="1" stopColor="#00D924"></stop>
+					<stop offset="1" stopColor="#33B68E"></stop>
 				</linearGradient>
 			</defs>
 
@@ -34,7 +33,6 @@ export default function CommunityCourseConnection() {
 				data-js-target="HomepageFrontdoorConnection.path"
 				d="M1,1
                 L193,1"
-				// style="stroke-dasharray: 192px; stroke-dashoffset: 0px;"
 			></path>
 		</svg>
 	);

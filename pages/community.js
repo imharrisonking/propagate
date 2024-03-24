@@ -12,7 +12,7 @@ export default function Community() {
 	return (
 		<Template theme={theme} colour={'blue'}>
 			<Layout title={'Community | Propagate'}>
-				<div className="bg-blue">
+				<div className="bg-blue-300">
 					<GridContainer>
 						<div className={'pt-36 md:pt-60'}>
 							<Grid>
