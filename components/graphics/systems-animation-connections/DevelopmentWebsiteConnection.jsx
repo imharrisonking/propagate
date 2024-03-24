@@ -37,7 +37,7 @@ export default function DevelopmentWebsiteConnection() {
 				></path>
 			</svg>
 			<svg
-				class="HomepageFrontdoorConnection HomepageFrontdoorSuiteAnimation__connection--developmentWebsite"
+				className="HomepageFrontdoorConnection HomepageFrontdoorSuiteAnimation__connection--developmentWebsite"
 				data-js-controller="HomepageFrontdoorConnection"
 				data-js-id="Standalone-DevelopmentWebsiteConnection"
 			>
