@@ -14,7 +14,7 @@ export const pageThemes = {
 export const pageColours = {
 	'/': 'white',
 	'/testimonials': 'white',
-	'/community': 'blue',
+	'/community': 'blue-300',
 	'/blog': 'white',
 	'/about': 'green-700',
 	'/contact': 'grey-950',
@@ -37,5 +37,5 @@ export const fontColourMapping = {
 	white: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
 	'grey-950': { mono: 'text-grey-400', sans: 'text-white', outline: 'outline-white-text' },
 	'green-700': { mono: 'text-grey-200', sans: 'text-white', outline: 'outline-white-text' },
-	blue: { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
+	'blue-300': { mono: 'text-grey-400', sans: 'text-grey-500', outline: 'outline-text' },
 };

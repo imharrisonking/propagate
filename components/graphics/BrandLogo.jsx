@@ -28,10 +28,8 @@ const brandLogos = {
 	obsStudio: OBSStudio,
 	stripe: Stripe,
 	typeform: Typeform,
-	vercel: Vercel,
 	zapier: Zapier,
 	youtube: YouTube,
-	tailwindCSS: TailwindCSS,
 	wistia: Wistia,
 };
 

@@ -10,10 +10,8 @@ const logos = [
 	{ src: 'obsStudio', alt: 'OBSStudio' },
 	{ src: 'stripe', alt: 'Stripe' },
 	{ src: 'typeform', alt: 'Typeform' },
-	{ src: 'vercel', alt: 'Vercel' },
 	{ src: 'zapier', alt: 'Zapier' },
 	{ src: 'youtube', alt: 'YouTube' },
-	{ src: 'tailwindCSS', alt: 'TailwindCSS' },
 	{ src: 'wistia', alt: 'Wistia' },
 ];
 

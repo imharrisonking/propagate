@@ -15,6 +15,8 @@ import { ContainerScrollAnimation } from '@/components/ui/ContainerScrollAnimati
 import { SystemsAnimation } from '@/components/ui/SystemsAnimation';
 
 import logos from '../images/logos';
+import OfferCreationLaptop from '../components/graphics/offer-creation/OfferCreationLaptop';
+import ResponsesChart from '../components/graphics/offer-creation/ResponsesChart';
 
 export default function Home() {
 	const theme = pageThemes['/'];
@@ -148,7 +150,7 @@ export default function Home() {
 									<BrandLogo
 										src={logo.src}
 										alt={logo.alt}
-										className="fill-grey-500 h-full w-auto"
+										className="fill-grey-300 h-full w-auto"
 									/>
 								</div>
 							</div>
@@ -193,8 +195,11 @@ export default function Home() {
 								</Link>
 							</Cell>
 							<Cell colsS={8} colsM={8} colsL={7} colsXL={7}>
-								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
-									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
+								<div className="flex justify-center items-center">
+									<div className="w-[350px] sm:w-[500px] relative">
+										<OfferCreationLaptop />
+										<ResponsesChart />
+									</div>
 								</div>
 							</Cell>
 

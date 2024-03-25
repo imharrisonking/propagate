@@ -10,7 +10,7 @@ export default function Community() {
 	const theme = pageThemes['/community'];
 
 	return (
-		<Template theme={theme} colour={'blue'}>
+		<Template theme={theme} colour={'blue-300'}>
 			<Layout title={'Community | Propagate'}>
 				<div className="bg-blue-300">
 					<GridContainer>
