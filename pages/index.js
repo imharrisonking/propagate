@@ -12,11 +12,12 @@ import Button from '@/components/buttons/Button';
 import BrandLogo from '@/components/graphics/BrandLogo';
 import { BackgroundGradientAnimation } from '@/components/ui/BackgroundGradientAnimation';
 import { ContainerScrollAnimation } from '@/components/ui/ContainerScrollAnimation';
-import { SystemsAnimation } from '@/components/ui/SystemsAnimation';
+import { SystemsAnimation } from '@/components/graphics/SystemsAnimation';
 
 import logos from '../images/logos';
 import OfferCreationLaptop from '../components/graphics/offer-creation/OfferCreationLaptop';
 import ResponsesChart from '../components/graphics/offer-creation/ResponsesChart';
+import RecurringRevenue from '../components/graphics/RecurringRevenue';
 
 export default function Home() {
 	const theme = pageThemes['/'];
@@ -221,8 +222,8 @@ export default function Home() {
 								</Link>
 							</Cell>
 							<Cell colsS={8} colsM={8} colsL={7} colsXL={7}>
-								<div className="flex justify-center items-start md:items-center h-[350px] md:h-[500px]">
-									<div className="h-[350px] w-[350px] md:w-[500px] placeholder"></div>
+								<div className="flex justify-center items-center w-[350px] md:w-full h-[540px]">
+									<RecurringRevenue />
 								</div>
 							</Cell>
 

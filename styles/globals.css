@@ -7,10 +7,12 @@
 @import 'type.css';
 @import 'fields.css';
 @import 'graphics.css';
+@import 'revenue.css';
 
 :root {
     --color-white: #FFFFFF;
     --color-black: #000000;
+
     --color-grey-100: #EBEBEB;
     --color-grey-200: #CFCFCE;
     --color-grey-300: #7e7e7e;
@@ -18,9 +20,23 @@
     --color-grey-500: #424242;
     --color-grey-800: #494949;
     --color-grey-950: #1C1C1C;
+
     --color-green-100: #E8F9F0;
     --color-green-300: #A1FFCD;
+    --color-greem-400: #33B68E;
     --color-green-700: #478978;
+    --color-green-950: #24332B;
+
+    --color-blue-300: #A2C7E2;
+    --color-blue-400: #5BA5C3;
+    --color-blue-500: #3A5895;
+
+    --color-red-300: #D0696B;
+
+    --color-orange-300: #E07F51;
+
+    --color-yellow-500: #F39934;
+
     --highlight-z-index: -10;
     --page-z-index: 20;
     --modal-z-index: 30;

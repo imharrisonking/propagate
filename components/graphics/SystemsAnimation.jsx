@@ -1,28 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useScrollInfo } from '@faceless-ui/scroll-info';
 
-import AnalysisIcon from '../graphics/systems-animation-icons/AnalysisIcon';
+import AnalysisIcon from './systems-animation-icons/AnalysisIcon';
 
-import CommunityIcon from '../graphics/systems-animation-icons/CommunityIcon';
-import CourseIcon from '../graphics/systems-animation-icons/CourseIcon';
-import PaymentsIcon from '../graphics/systems-animation-icons/PaymentsIcon';
+import CommunityIcon from './systems-animation-icons/CommunityIcon';
+import CourseIcon from './systems-animation-icons/CourseIcon';
+import PaymentsIcon from './systems-animation-icons/PaymentsIcon';
 
-import EmailIcon from '../graphics/systems-animation-icons/EmailIcon';
-import OfferIcon from '../graphics/systems-animation-icons/OfferIcon';
-import ContentIcon from '../graphics/systems-animation-icons/ContentIcon';
-import WebsiteIcon from '../graphics/systems-animation-icons/WebsiteIcon';
+import EmailIcon from './systems-animation-icons/EmailIcon';
+import OfferIcon from './systems-animation-icons/OfferIcon';
+import ContentIcon from './systems-animation-icons/ContentIcon';
+import WebsiteIcon from './systems-animation-icons/WebsiteIcon';
 
-import SalesIcon from '../graphics/systems-animation-icons/SalesIcon';
-import MarketingIcon from '../graphics/systems-animation-icons/MarketingIcon';
+import SalesIcon from './systems-animation-icons/SalesIcon';
+import MarketingIcon from './systems-animation-icons/MarketingIcon';
 
-import FunnelIcon from '../graphics/systems-animation-icons/FunnelIcon';
-import ManagementIcon from '../graphics/systems-animation-icons/ManagementIcon';
-import DevelopmentIcon from '../graphics/systems-animation-icons/DevelopmentIcon';
+import FunnelIcon from './systems-animation-icons/FunnelIcon';
+import ManagementIcon from './systems-animation-icons/ManagementIcon';
+import DevelopmentIcon from './systems-animation-icons/DevelopmentIcon';
 
-import BrandingIcon from '../graphics/systems-animation-icons/BrandingIcon';
-import ScalingIcon from '../graphics/systems-animation-icons/ScalingIcon';
-import AutomationsIcon from '../graphics/systems-animation-icons/AutomationsIcon';
-import OfferFunnelConnection from '../graphics/systems-animation-connections/OfferFunnelConnection';
+import BrandingIcon from './systems-animation-icons/BrandingIcon';
+import ScalingIcon from './systems-animation-icons/ScalingIcon';
+import AutomationsIcon from './systems-animation-icons/AutomationsIcon';
+import OfferFunnelConnection from './systems-animation-connections/OfferFunnelConnection';
 
 export const SystemsAnimation = () => {
 	const [scale, setScale] = useState(1);
