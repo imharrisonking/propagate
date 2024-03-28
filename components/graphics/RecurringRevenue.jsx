@@ -5,11 +5,11 @@ import RevenueHeader from './recurring-revenue/RevenueHeader';
 
 export default function RecurringRevenue() {
 	return (
-		<div className="bg-white w-[520px] h-[426px] rounded-lg">
+		<div className="bg-white w-[520px] h-[426px] rounded-lg shadow-xl">
 			<RevenueHeader />
 			<div className="HomepageFrontdoorBillingGraphic__tierListContainer">
 				<OneTier />
-				{/* <TwoTiers/> */}
+				<TwoTiers />
 				{/* <ThreeTiers/> */}
 			</div>
 		</div>

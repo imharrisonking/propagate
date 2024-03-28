@@ -4,13 +4,13 @@ export default function OneTier() {
 			className="
         HomepageFrontdoorBillingGraphic__tierList
         HomepageFrontdoorBillingGraphic__tierList--accentYellow
+        HomepageFrontdoorBillingGraphic__tierList--oneTier
       "
 		>
 			<div
 				className="
-    HomepageFrontdoorBillingGraphicTier
-
-    HomepageFrontdoorBillingGraphicTier--isOutlined
+                HomepageFrontdoorBillingGraphicTier
+                HomepageFrontdoorBillingGraphicTier--isOutlined
   "
 				data-js-target-list="HomepageFrontdoorBillingAnimation.tiers"
 				data-js-brand="Typographic"
