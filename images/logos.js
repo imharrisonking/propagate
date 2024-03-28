@@ -7,6 +7,7 @@ const logos = [
 	{ src: 'hubSpot', alt: 'HubSpot' },
 	{ src: 'loom', alt: 'Loom' },
 	{ src: 'notion', alt: 'Notion' },
+	{ src: 'skool', alt: 'Skool' },
 	{ src: 'obsStudio', alt: 'OBSStudio' },
 	{ src: 'stripe', alt: 'Stripe' },
 	{ src: 'typeform', alt: 'Typeform' },

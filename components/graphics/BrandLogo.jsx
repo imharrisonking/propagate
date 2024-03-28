@@ -9,7 +9,9 @@ import Loom from '../../images/brand-logos/loom.svg';
 import Notion from '../../images/brand-logos/notion.svg';
 import OBSStudio from '../../images/brand-logos/obs-studio.svg';
 import Stripe from '../../images/brand-logos/stripe.svg';
+import Skool from '../../images/brand-logos/skool.svg';
 import Typeform from '../../images/brand-logos/typeform.svg';
+import TypeScript from '../../images/brand-logos/typescript.svg';
 import Vercel from '../../images/brand-logos/vercel.svg';
 import Zapier from '../../images/brand-logos/zapier.svg';
 import YouTube from '../../images/brand-logos/youtube.svg';
@@ -27,6 +29,7 @@ const brandLogos = {
 	notion: Notion,
 	obsStudio: OBSStudio,
 	stripe: Stripe,
+	skool: Skool,
 	typeform: Typeform,
 	zapier: Zapier,
 	youtube: YouTube,
